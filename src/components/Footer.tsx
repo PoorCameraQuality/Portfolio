@@ -25,9 +25,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <h3 className="text-2xl font-display font-bold text-text-primary mb-2">
-                Braxcraft
-              </h3>
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
+                  <div className="text-text-primary text-lg">🦌</div>
+                </div>
+                <h3 className="text-2xl font-display font-bold text-text-primary">
+                  BraxCraft
+                </h3>
+              </div>
               <p className="text-text-primary/80 mb-4 max-w-md">
                 Affordable websites, built for local businesses — no gimmicks, no lock-in.
               </p>
@@ -107,7 +112,7 @@ export default function Footer() {
         <div className="border-t border-surface-light/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-text-primary/60 text-sm">
-              © 2024 Braxcraft. All rights reserved.
+              © 2024 BraxCraft. All rights reserved.
             </p>
             <p className="text-text-primary/60 text-sm">
               Built with Next.js & Tailwind CSS

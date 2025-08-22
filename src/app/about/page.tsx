@@ -19,25 +19,25 @@ const timeline = [
   {
     year: '2023 - Present',
     title: 'Local Business Website Specialist',
-    company: 'Freelance',
+    company: 'Freelance @ BraxCraft',
     description: 'Focusing on helping small businesses in Central PA get affordable, effective websites.',
   },
   {
     year: '2021 - 2023',
     title: 'Full-Stack Developer',
-    company: 'TechCorp',
+    company: 'BraxCraft',
     description: 'Built scalable web applications and led development teams.',
   },
   {
     year: '2019 - 2021',
     title: 'Frontend Developer',
-    company: 'DesignStudio',
+    company: 'MMO.TM',
     description: 'Created responsive websites and interactive user interfaces.',
   },
   {
-    year: '2018 - 2019',
+    year: '2013 - 2016',
     title: 'Junior Developer',
-    company: 'StartupHub',
+    company: 'Freelance Dec',
     description: 'Started my journey in web development and design.',
   },
 ]
@@ -62,12 +62,19 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <div className="relative">
-                <div className="w-full h-96 bg-gradient-to-br from-brand to-brand-accent rounded-2xl overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
-                    alt="Professional headshot"
-                    className="w-full h-full object-cover mix-blend-overlay"
-                  />
+                <div className="w-full h-96 bg-gradient-to-br from-brand to-brand-accent rounded-2xl overflow-hidden flex items-center justify-center">
+                  {/* BraxCraft Logo */}
+                  <div className="text-center">
+                    <div className="w-48 h-48 mx-auto mb-6 relative">
+                      {/* Deer Skull Icon */}
+                      <div className="w-full h-full bg-surface rounded-full flex items-center justify-center">
+                        <div className="text-6xl">🦌</div>
+                      </div>
+                    </div>
+                    <div className="text-2xl font-display font-bold text-text-primary">
+                      BRAXCRAFT
+                    </div>
+                  </div>
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-surface rounded-2xl shadow-large flex items-center justify-center">
                   <Award className="w-12 h-12 text-brand" />
