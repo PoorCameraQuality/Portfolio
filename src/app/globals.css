@@ -6,29 +6,79 @@
 
 @layer base {
   :root {
-    /* Custom color palette */
-    --color-blackgrey: 55 53 62;
-    --color-brown: 68 68 78;
-    --color-night: 113 90 90;
-    --color-dark: 211 218 217;
-    
+    /* New sophisticated color palette */
+    --color-barn-red: 120 0 0;
+    --color-barn-red-100: 24 0 0;
+    --color-barn-red-200: 49 0 0;
+    --color-barn-red-300: 73 0 0;
+    --color-barn-red-400: 98 0 0;
+    --color-barn-red-500: 120 0 0;
+    --color-barn-red-600: 200 0 0;
+    --color-barn-red-700: 255 22 22;
+    --color-barn-red-800: 255 100 100;
+    --color-barn-red-900: 255 177 177;
+
+    --color-fire-brick: 193 18 31;
+    --color-fire-brick-100: 38 4 6;
+    --color-fire-brick-200: 77 7 12;
+    --color-fire-brick-300: 115 11 18;
+    --color-fire-brick-400: 153 14 23;
+    --color-fire-brick-500: 193 18 31;
+    --color-fire-brick-600: 235 35 48;
+    --color-fire-brick-700: 240 90 100;
+    --color-fire-brick-800: 245 145 152;
+    --color-fire-brick-900: 250 200 203;
+
+    --color-papaya-whip: 253 240 213;
+    --color-papaya-whip-100: 89 60 4;
+    --color-papaya-whip-200: 177 121 8;
+    --color-papaya-whip-300: 245 174 34;
+    --color-papaya-whip-400: 249 207 123;
+    --color-papaya-whip-500: 253 240 213;
+    --color-papaya-whip-600: 253 242 220;
+    --color-papaya-whip-700: 254 245 229;
+    --color-papaya-whip-800: 254 249 237;
+    --color-papaya-whip-900: 255 252 246;
+
+    --color-prussian-blue: 0 48 73;
+    --color-prussian-blue-100: 0 9 14;
+    --color-prussian-blue-200: 0 19 29;
+    --color-prussian-blue-300: 0 28 43;
+    --color-prussian-blue-400: 0 37 57;
+    --color-prussian-blue-500: 0 48 73;
+    --color-prussian-blue-600: 0 103 159;
+    --color-prussian-blue-700: 0 160 247;
+    --color-prussian-blue-800: 80 194 255;
+    --color-prussian-blue-900: 167 224 255;
+
+    --color-air-superiority-blue: 102 155 188;
+    --color-air-superiority-blue-100: 18 32 40;
+    --color-air-superiority-blue-200: 35 63 81;
+    --color-air-superiority-blue-300: 53 95 121;
+    --color-air-superiority-blue-400: 71 127 162;
+    --color-air-superiority-blue-500: 102 155 188;
+    --color-air-superiority-blue-600: 133 175 201;
+    --color-air-superiority-blue-700: 164 195 215;
+    --color-air-superiority-blue-800: 194 215 228;
+    --color-air-superiority-blue-900: 225 235 242;
+
     /* Semantic colors */
-    --color-bg: 55 53 62;
-    --color-bg-secondary: 68 68 78;
-    --color-bg-tertiary: 113 90 90;
-    --color-bg-light: 211 218 217;
-    
-    --color-surface: 68 68 78;
-    --color-surface-secondary: 113 90 90;
-    --color-surface-light: 211 218 217;
-    
-    --color-brand: 113 90 90;
-    --color-brand-light: 211 218 217;
-    --color-brand-accent: 68 68 78;
-    
-    --color-text-primary: 211 218 217;
-    --color-text-secondary: 113 90 90;
-    --color-text-muted: 68 68 78;
+    --color-bg: 0 48 73; /* prussian-blue */
+    --color-bg-secondary: 18 32 40; /* air-superiority-blue-100 */
+    --color-bg-tertiary: 120 0 0; /* barn-red */
+    --color-bg-light: 253 240 213; /* papaya-whip */
+
+    --color-surface: 18 32 40; /* air-superiority-blue-100 */
+    --color-surface-secondary: 35 63 81; /* air-superiority-blue-200 */
+    --color-surface-light: 253 240 213; /* papaya-whip */
+
+    --color-brand: 193 18 31; /* fire-brick */
+    --color-brand-light: 240 90 100; /* fire-brick-700 */
+    --color-brand-accent: 120 0 0; /* barn-red */
+
+    --color-text-primary: 253 240 213; /* papaya-whip */
+    --color-text-secondary: 102 155 188; /* air-superiority-blue */
+    --color-text-muted: 53 95 121; /* air-superiority-blue-300 */
   }
 
   body {
@@ -103,7 +153,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-brand via-brand-accent to-night bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand via-brand-accent to-barn-red bg-clip-text text-transparent;
   }
 
   .gradient-bg {

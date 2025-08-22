@@ -9,8 +9,8 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 gradient-bg">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(113,90,90,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(68,68,78,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(193,18,31,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(18,32,40,0.1),transparent_50%)]" />
       </div>
 
       {/* Floating elements */}
@@ -27,7 +27,7 @@ export default function Hero() {
         }}
       />
       <motion.div
-        className="absolute bottom-20 right-10 w-40 h-40 bg-night/10 rounded-full blur-3xl"
+        className="absolute bottom-20 right-10 w-40 h-40 bg-barn-red/10 rounded-full blur-3xl"
         animate={{
           y: [0, 20, 0],
           opacity: [0.3, 0.6, 0.3],

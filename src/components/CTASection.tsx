@@ -9,8 +9,8 @@ export default function CTASection() {
     <section className="section bg-brand relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(211,218,217,0.3),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(68,68,78,0.3),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(253,240,213,0.3),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(18,32,40,0.3),transparent_50%)]" />
       </div>
 
       <div className="container relative z-10">

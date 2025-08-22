@@ -14,13 +14,13 @@ const features = [
     icon: Palette,
     title: 'UI/UX Design',
     description: 'Beautiful, intuitive interfaces that enhance user experience. I focus on creating designs that are both aesthetically pleasing and highly functional.',
-    color: 'from-night to-brand',
+    color: 'from-barn-red to-brand',
   },
   {
     icon: Zap,
     title: 'Performance Optimization',
     description: 'Lightning-fast websites that rank well and convert better. I optimize for speed, SEO, and user engagement across all devices.',
-    color: 'from-brand-accent to-night',
+    color: 'from-brand-accent to-barn-red',
   },
 ]
 

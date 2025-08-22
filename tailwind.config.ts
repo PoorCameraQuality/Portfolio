@@ -9,32 +9,88 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Custom color palette
-        'blackgrey': '#37353E',
-        'brown': '#44444E', 
-        'night': '#715A5A',
-        'dark': '#D3DAD9',
+        // New sophisticated color palette
+        'barn-red': {
+          DEFAULT: '#780000',
+          100: '#180000',
+          200: '#310000',
+          300: '#490000',
+          400: '#620000',
+          500: '#780000',
+          600: '#c80000',
+          700: '#ff1616',
+          800: '#ff6464',
+          900: '#ffb1b1'
+        },
+        'fire-brick': {
+          DEFAULT: '#c1121f',
+          100: '#260406',
+          200: '#4d070c',
+          300: '#730b12',
+          400: '#990e17',
+          500: '#c1121f',
+          600: '#eb2330',
+          700: '#f05a64',
+          800: '#f59198',
+          900: '#fac8cb'
+        },
+        'papaya-whip': {
+          DEFAULT: '#fdf0d5',
+          100: '#593c04',
+          200: '#b17908',
+          300: '#f5ae22',
+          400: '#f9cf7b',
+          500: '#fdf0d5',
+          600: '#fdf2dc',
+          700: '#fef5e5',
+          800: '#fef9ed',
+          900: '#fffcf6'
+        },
+        'prussian-blue': {
+          DEFAULT: '#003049',
+          100: '#00090e',
+          200: '#00131d',
+          300: '#001c2b',
+          400: '#002539',
+          500: '#003049',
+          600: '#00679f',
+          700: '#00a0f7',
+          800: '#50c2ff',
+          900: '#a7e0ff'
+        },
+        'air-superiority-blue': {
+          DEFAULT: '#669bbc',
+          100: '#122028',
+          200: '#233f51',
+          300: '#355f79',
+          400: '#477fa2',
+          500: '#669bbc',
+          600: '#85afc9',
+          700: '#a4c3d7',
+          800: '#c2d7e4',
+          900: '#e1ebf2'
+        },
         // Semantic color mapping
         bg: {
-          DEFAULT: '#37353E',
-          secondary: '#44444E',
-          tertiary: '#715A5A',
-          light: '#D3DAD9',
+          DEFAULT: '#003049', // prussian-blue
+          secondary: '#122028', // air-superiority-blue-100
+          tertiary: '#780000', // barn-red
+          light: '#fdf0d5', // papaya-whip
         },
         surface: {
-          DEFAULT: '#44444E',
-          secondary: '#715A5A',
-          light: '#D3DAD9',
+          DEFAULT: '#122028', // air-superiority-blue-100
+          secondary: '#233f51', // air-superiority-blue-200
+          light: '#fdf0d5', // papaya-whip
         },
         brand: {
-          DEFAULT: '#715A5A',
-          light: '#D3DAD9',
-          accent: '#44444E',
+          DEFAULT: '#c1121f', // fire-brick
+          light: '#f05a64', // fire-brick-700
+          accent: '#780000', // barn-red
         },
         text: {
-          primary: '#D3DAD9',
-          secondary: '#715A5A',
-          muted: '#44444E',
+          primary: '#fdf0d5', // papaya-whip
+          secondary: '#669bbc', // air-superiority-blue
+          muted: '#355f79', // air-superiority-blue-300
         }
       },
       fontFamily: {
