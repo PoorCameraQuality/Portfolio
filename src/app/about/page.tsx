@@ -53,9 +53,7 @@ export default function AboutPage() {
               About Me
             </h1>
             <p className="lead text-text-primary/80 max-w-3xl mx-auto">
-              I specialize in helping small businesses get a professional online presence without the hassle. 
-              With years of web development and design experience, I've shifted my focus to making it easy 
-              for local shops and services to show up online, look professional, and connect with their community.
+              I've been building websites and backend systems for over 4 years, specializing in modern web design and search engine optimization. My goal is simple: help local businesses in Shippensburg and the surrounding towns get online with a site that looks professional, works smoothly, and brings in customers.
             </p>
           </div>
 
@@ -77,9 +75,13 @@ export default function AboutPage() {
 
             <div className="space-y-6">
               <h2 className="h2 text-text-primary">
-                My Approach is{' '}
-                <span className="gradient-text">Straightforward</span>
+                One-on-One{' '}
+                <span className="gradient-text">Client Focus</span>
               </h2>
+              
+              <p className="text-text-primary/80 text-body">
+                I work one-on-one with every client to make sure your site not only represents your business but also gets found on Google, Maps, Yelp, and beyond.
+              </p>
               
               <p className="text-text-primary/80 text-body">
                 My approach combines technical expertise with creative vision, ensuring that 

@@ -55,7 +55,7 @@ export default function Hero() {
           >
             <Sparkles className="w-4 h-4 text-brand" />
             <span className="text-text-primary/80 text-sm font-medium">
-              Developer Tools & Business Websites
+              Local Business Websites
             </span>
           </motion.div>
         </motion.div>
@@ -66,8 +66,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Building Solutions for{' '}
-          <span className="gradient-text">Developers & Businesses</span>
+          Modern Websites for{' '}
+          <span className="gradient-text">Local Businesses</span>
         </motion.h1>
 
         <motion.p
@@ -76,8 +76,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          I create developer tools that solve real problems and build websites that help local businesses succeed. 
-          From Unity dependency management to mobile-optimized business sites, I focus on practical solutions.
+          For just $50 upfront and $15/month hosting, I'll build your business a professional website 
+          that looks great, shows up on Google, and helps you attract more customers.
         </motion.p>
 
         <motion.div
@@ -86,12 +86,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          <Link href="/work" className="btn-primary group">
-            View My Work
+          <Link href="/services" className="btn-primary group">
+            View Packages
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link href="/contact" className="btn-secondary">
-            Let's Work Together
+            Book a Consultation
           </Link>
         </motion.div>
 
@@ -103,8 +103,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
         >
           {[
-            { number: 'Unity Tool', label: 'Developer Solution' },
-            { number: 'Local Sites', label: 'Business Websites' },
+            { number: '$50', label: 'Upfront Cost' },
+            { number: '$15', label: 'Monthly Hosting' },
             { number: '24hrs', label: 'Response Time' },
           ].map((stat, index) => (
             <div key={stat.label} className="text-center">

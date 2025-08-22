@@ -45,8 +45,8 @@ export default function ContactPage() {
               Let's Get Your Business Online
             </h1>
             <p className="lead text-text-primary/80 max-w-2xl mx-auto">
-              Fill out the form or reach out directly. I'll respond within 24 hours to talk about 
-              your business needs, pricing, and timeline.
+              Book a free consultation to talk about your business needs. I'll walk you through the best options, 
+              give you transparent pricing, and get you set up quickly.
             </p>
           </div>
 
@@ -68,9 +68,8 @@ export default function ContactPage() {
                   Get In Touch
                 </h2>
                 <p className="text-text-primary/80 text-body mb-8">
-                  Whether you have a project in mind or just want to explore possibilities, 
-                  I'm here to help. Let's discuss how we can work together to create 
-                  something amazing.
+                  Whether you want me to handle everything or just give your team the tools to run the site, 
+                  I'll make the process easy. Let's discuss how we can work together to create something amazing.
                 </p>
               </div>
 
@@ -120,7 +119,7 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-                    <span>Flat-rate monthly cost</span>
+                    <span>Transparent pricing and timelines</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />

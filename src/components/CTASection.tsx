@@ -54,7 +54,7 @@ export default function CTASection() {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             Whether you run a shop, service, or local event, I'll create a website that helps you stand out. 
-            For just $15/month, you'll have a professional site, hosting, and ongoing support.
+            For just $50 upfront and $15/month, you'll have a professional site, hosting, and ongoing support.
           </motion.p>
 
           <motion.div
@@ -65,11 +65,11 @@ export default function CTASection() {
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             <Link href="/contact" className="btn-primary bg-surface text-text-primary hover:bg-surface-light group">
-              Get Started Today
+              Book a Free Consultation
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/work" className="btn-ghost text-text-primary border-text-primary/30 hover:bg-surface/20">
-              View Examples
+            <Link href="/services" className="btn-ghost text-text-primary border-text-primary/30 hover:bg-surface/20">
+              View Packages
             </Link>
           </motion.div>
 

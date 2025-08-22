@@ -1,127 +1,117 @@
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react'
+'use client'
 
-const navigation = {
-  main: [
-    { name: 'About', href: '/about' },
-    { name: 'Work', href: '/work' },
-    { name: 'Services', href: '/services' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
-  ],
-  social: [
-    {
-      name: 'GitHub',
-      href: 'https://github.com',
-      icon: Github,
-    },
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com',
-      icon: Linkedin,
-    },
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com',
-      icon: Twitter,
-    },
-    {
-      name: 'Email',
-      href: 'mailto:hello@braxcraft.com',
-      icon: Mail,
-    },
-  ],
-}
+import Link from 'next/link'
+import { Mail, MapPin, Phone } from 'lucide-react'
+
+const quickLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Work', href: '/work' },
+  { name: 'Contact', href: '/contact' },
+]
+
+const socialLinks = [
+  { name: 'GitHub', href: 'https://github.com/yourusername', icon: '🐙' },
+  { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', icon: '💼' },
+  { name: 'Twitter', href: 'https://twitter.com/yourusername', icon: '🐦' },
+]
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-secondary">
-      <div className="container">
-        <div className="py-16 lg:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
-            {/* Brand */}
-            <div className="lg:col-span-2">
-              <Link href="/" className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
-                  <span className="text-text-primary font-display font-bold text-lg">B</span>
-                </div>
-                <span className="text-text-primary font-display font-semibold text-xl">
-                  Braxcraft
-                </span>
-              </Link>
-              <p className="text-text-primary/80 text-body max-w-md mb-6">
-                Creative developer and designer crafting digital experiences that inspire, 
-                engage, and deliver results. Let's build something amazing together.
+    <footer className="bg-surface border-t border-surface-light/20">
+      <div className="container py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <div className="mb-6">
+              <h3 className="text-2xl font-display font-bold text-text-primary mb-2">
+                Braxcraft
+              </h3>
+              <p className="text-text-primary/80 mb-4 max-w-md">
+                Affordable websites, built for local businesses — no gimmicks, no lock-in.
               </p>
-              <div className="flex space-x-4">
-                {navigation.social.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="w-10 h-10 bg-surface rounded-lg flex items-center justify-center text-text-primary/80 hover:text-text-primary hover:bg-brand transition-all duration-200"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <item.icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
             </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-text-primary font-display font-semibold text-lg mb-6">
-                Quick Links
-              </h3>
-              <ul className="space-y-4">
-                {navigation.main.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-text-primary/80 hover:text-text-primary transition-colors duration-200"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h3 className="text-text-primary font-display font-semibold text-lg mb-6">
-                Get In Touch
-              </h3>
-              <div className="space-y-4">
-                <p className="text-text-primary/80 text-body">
-                  Ready to start your next project?
-                </p>
-                <Link
-                  href="/contact"
-                  className="btn-primary inline-block"
+            
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4 text-brand" />
+                <a
+                  href="mailto:hello@braxcraft.com"
+                  className="text-text-primary/80 hover:text-brand transition-colors"
                 >
-                  Let's Talk
-                </Link>
+                  hello@braxcraft.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-4 h-4 text-brand" />
+                <span className="text-text-primary/80">
+                  Shippensburg, PA
+                </span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-brand" />
+                <a
+                  href="tel:+15551234567"
+                  className="text-text-primary/80 hover:text-brand transition-colors"
+                >
+                  +1 (555) 123-4567
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Bottom Bar */}
-          <div className="pt-8 mt-8 border-t border-surface-light/20">
-            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-              <p className="text-text-primary/60 text-sm">
-                © {new Date().getFullYear()} Braxcraft. All rights reserved.
-              </p>
-              <div className="flex space-x-6 text-sm text-text-primary/60">
-                <Link href="/privacy" className="hover:text-text-primary transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms" className="hover:text-text-primary transition-colors">
-                  Terms of Service
-                </Link>
-              </div>
-            </div>
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold text-text-primary mb-4">
+              Quick Links
+            </h4>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-text-primary/80 hover:text-brand transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h4 className="text-lg font-semibold text-text-primary mb-4">
+              Connect
+            </h4>
+            <ul className="space-y-2">
+              {socialLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-primary/80 hover:text-brand transition-colors inline-flex items-center space-x-2"
+                  >
+                    <span>{link.icon}</span>
+                    <span>{link.name}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="border-t border-surface-light/20 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            <p className="text-text-primary/60 text-sm">
+              © 2024 Braxcraft. All rights reserved.
+            </p>
+            <p className="text-text-primary/60 text-sm">
+              Built with Next.js & Tailwind CSS
+            </p>
           </div>
         </div>
       </div>
