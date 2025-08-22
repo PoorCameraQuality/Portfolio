@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { CheckCircle, Award, Users, Clock } from 'lucide-react'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About Me',
@@ -66,13 +67,15 @@ export default function AboutPage() {
                   {/* BraxCraft Logo */}
                   <div className="text-center">
                     <div className="w-48 h-48 mx-auto mb-6 relative">
-                      {/* Deer Skull Icon */}
-                      <div className="w-full h-full bg-surface rounded-full flex items-center justify-center">
-                        <div className="text-6xl">🦌</div>
-                      </div>
-                    </div>
-                    <div className="text-2xl font-display font-bold text-text-primary">
-                      BRAXCRAFT
+                      {/* BraxCraft Logo Image */}
+                      <Image
+                        src="/braxcraft-logo.png"
+                        alt="BraxCraft Logo - Deer Skull with Antlers and BRAXCRAFT Text"
+                        width={192}
+                        height={192}
+                        className="w-full h-full object-contain"
+                        priority
+                      />
                     </div>
                   </div>
                 </div>
@@ -153,7 +156,7 @@ export default function AboutPage() {
                   </div>
                   <div className="w-full bg-surface-light/20 rounded-full h-2">
                     <div
-                      className="bg-gradient-to-r from-brand to-brand-accent h-2 rounded-full"
+                      className="bg-gradient-to-br from-brand to-brand-accent h-2 rounded-full"
                       style={{ width: `${skill.level}%` }}
                     />
                   </div>

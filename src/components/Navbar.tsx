@@ -10,6 +10,8 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Work', href: '/work' },
+  { name: 'Feed Store Mockup', href: '/feed-store-mockup' },
+  { name: 'Photography Mockup', href: '/photography-mockup' },
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
