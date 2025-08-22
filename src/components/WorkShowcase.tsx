@@ -3,53 +3,41 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, ExternalLink } from 'lucide-react'
+import { ArrowRight, ExternalLink, Code, Package, Zap, Users } from 'lucide-react'
 
 const featuredWork = [
   {
-    id: 'shippensburg-brews',
-    title: 'Shippensburg Brews',
-    description: 'Coffee shop website with menu, photo gallery, and online ordering. Mobile-first design that drives foot traffic.',
+    id: 'unity-synclock',
+    title: 'Unity SyncLock',
+    description: 'A Unity development tool that eliminates dependency headaches by keeping teams in sync with one simple lockfile system. Built for game developers, hackathons, and teams.',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop',
+    tags: ['Unity Tool', 'Dependency Management', 'Game Development'],
+    category: 'Developer Tools',
+    link: 'https://unitysynclockwebsite.vercel.app/',
+    external: true,
+    features: ['Dependency Lockfile', 'UPM + Asset Store', 'Cache Import', 'Game Jam Friendly'],
+  },
+  {
+    id: 'local-business-websites',
+    title: 'Local Business Websites',
+    description: 'Custom websites for small businesses in Shippensburg and Central PA. Mobile-first design with local SEO optimization and affordable monthly hosting.',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-    tags: ['Coffee Shop', 'Menu', 'Gallery'],
-    category: 'Food & Beverage',
-    link: '/work/shippensburg-brews',
+    tags: ['Small Business', 'Local SEO', 'Mobile-First'],
+    category: 'Web Development',
+    link: '/work/local-business',
+    external: false,
+    features: ['Google Visibility', 'Mobile Optimization', 'Local SEO', 'Affordable Hosting'],
   },
   {
-    id: 'cumberland-auto',
-    title: 'Cumberland Auto Repair',
-    description: 'Online booking form, services list, and customer testimonials. Increased appointment bookings by 40%.',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
-    tags: ['Auto Repair', 'Booking', 'Services'],
-    category: 'Automotive',
-    link: '/work/cumberland-auto',
-  },
-  {
-    id: 'main-street-barber',
-    title: 'Main Street Barber',
-    description: 'Clean single-page site with hours, contact info, and photo gallery. Simple design that gets customers in the door.',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
-    tags: ['Barber Shop', 'Hours', 'Contact'],
-    category: 'Personal Care',
-    link: '/work/main-street-barber',
-  },
-  {
-    id: 'petal-stem-florals',
-    title: 'Petal & Stem Florals',
-    description: 'Simple shop gallery and contact form. Beautiful showcase of floral arrangements with easy ordering.',
-    image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&h=600&fit=crop',
-    tags: ['Florist', 'Gallery', 'Contact'],
-    category: 'Retail',
-    link: '/work/petal-stem-florals',
-  },
-  {
-    id: 'iron-core-fitness',
-    title: 'Iron Core Fitness',
-    description: 'Class schedule with sign-up buttons and membership info. Streamlined booking process for fitness classes.',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
-    tags: ['Fitness', 'Classes', 'Booking'],
-    category: 'Health & Fitness',
-    link: '/work/iron-core-fitness',
+    id: 'portfolio-website',
+    title: 'Portfolio Website',
+    description: 'Modern Next.js portfolio built with Tailwind CSS and Framer Motion. Demonstrates clean design, responsive layout, and modern web development practices.',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
+    tags: ['Next.js', 'Tailwind CSS', 'Portfolio'],
+    category: 'Web Development',
+    link: '/work/portfolio',
+    external: false,
+    features: ['Next.js 14', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
   },
 ]
 
@@ -86,16 +74,16 @@ export default function WorkShowcase() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="h2 text-text-primary mb-6">
-            Sample Local Sites
+            Featured Projects
           </h2>
           <p className="lead text-text-primary/80 max-w-2xl mx-auto">
-            Here are some examples of websites I've built for local businesses. 
-            Each one is designed to help businesses get found online and attract customers.
+            Here are some examples of my work, from developer tools to business websites. 
+            Each project solves real problems and delivers measurable results.
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -107,48 +95,81 @@ export default function WorkShowcase() {
               className="group"
               variants={itemVariants}
             >
-              <Link href={project.link} className="block">
-                <div className="relative overflow-hidden rounded-2xl mb-6 group-hover:scale-105 transition-transform duration-300">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={800}
-                    height={600}
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-4 right-4 w-10 h-10 bg-brand rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
+              <div className="relative overflow-hidden rounded-2xl mb-6 group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={800}
+                  height={600}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-4 right-4 w-10 h-10 bg-brand rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
+                  {project.external ? (
                     <ExternalLink className="w-5 h-5 text-text-primary" />
-                  </div>
+                  ) : (
+                    <ArrowRight className="w-5 h-5 text-text-primary" />
+                  )}
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-brand font-medium">
+                    {project.category}
+                  </span>
+                </div>
+                
+                <h3 className="h3 text-text-primary group-hover:text-brand transition-colors duration-200">
+                  {project.title}
+                </h3>
+                
+                <p className="text-text-primary/80 text-body">
+                  {project.description}
+                </p>
+
+                {/* Project Features */}
+                <div className="space-y-2">
+                  {project.features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-2 text-sm text-text-primary/70">
+                      <div className="w-1.5 h-1.5 bg-brand rounded-full" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-surface rounded-full text-xs text-text-primary/80"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
 
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-brand font-medium">
-                      {project.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="h3 text-text-primary group-hover:text-brand transition-colors duration-200">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-text-primary/80 text-body">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 bg-surface rounded-full text-xs text-text-primary/80"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
+                {/* Action Button */}
+                {project.external ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-brand hover:text-brand-light transition-colors text-sm font-medium"
+                  >
+                    View Live Site
+                    <ExternalLink className="w-4 h-4 ml-1" />
+                  </a>
+                ) : (
+                  <Link
+                    href={project.link}
+                    className="inline-flex items-center text-brand hover:text-brand-light transition-colors text-sm font-medium"
+                  >
+                    View Details
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                )}
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -164,7 +185,7 @@ export default function WorkShowcase() {
             href="/work"
             className="btn-secondary group inline-flex items-center"
           >
-            View All Examples
+            View All Projects
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
