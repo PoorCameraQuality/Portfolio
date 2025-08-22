@@ -8,39 +8,95 @@ export const metadata: Metadata = {
 }
 
 const starterPackage = [
-  'Custom design with Next.js (fast, modern tech)',
-  'Search Engine Optimization built in',
-  'Google Maps, Yelp, Yellow Pages overhaul for visibility',
-  'Up to 5 static pages (Home, About, Services, Contact, etc.)',
-  'Domain & hosting setup handled for you',
-  'Ongoing updates and support',
+  'Up to 5 custom pages',
+  'Google Maps + SEO setup',
+  'Directory listings (Yelp, Yellow Pages, Bing)',
+  'Hosting & domain setup included',
+  'Includes source code (you own your site)',
+  'Mobile-first responsive design',
 ]
 
 const addOns = [
   {
-    title: 'E-commerce Setup',
-    description: 'Payment processing, shopping cart, and product management',
-    icon: ShoppingCart,
-  },
-  {
-    title: 'Booking Systems',
+    title: 'Booking System',
     description: 'Online scheduling and appointment booking for your services',
+    price: '$100',
     icon: Calendar,
   },
   {
-    title: 'Content Management',
-    description: 'Easy-to-use CMS so you can update content yourself',
+    title: 'CMS Integration',
+    description: 'Easy-to-use content management system so you can update content yourself',
+    price: '$75',
     icon: Edit,
   },
   {
-    title: 'Custom Photography',
-    description: 'On-site photo shoots to showcase your business (small fee)',
+    title: 'Social Media Integration',
+    description: 'Connect your website with your social media accounts',
+    price: '$50',
+    icon: Share2,
+  },
+  {
+    title: 'On-site Photos & B-roll',
+    description: 'Professional photography to showcase your business (small fee)',
+    price: '$150',
     icon: Camera,
   },
   {
-    title: 'Staff Training',
+    title: 'Staff Training Session',
     description: 'Training session so your team can manage the site',
+    price: '$75',
     icon: Users,
+  },
+]
+
+const packages = [
+  {
+    name: 'Starter Website',
+    price: '$50',
+    monthly: '$15',
+    description: 'Perfect for small businesses who need a professional online presence',
+    features: [
+      'Up to 5 custom pages',
+      'Google Maps + SEO setup',
+      'Directory listings',
+      'Hosting & domain included',
+      'Source code ownership',
+      'Mobile-first design',
+    ],
+    popular: false,
+    cta: 'Get Started Today',
+  },
+  {
+    name: 'Professional Package',
+    price: '$250',
+    monthly: '$25',
+    description: 'For businesses needing advanced features and functionality',
+    features: [
+      'Everything in Starter',
+      'Booking/e-commerce systems',
+      'Advanced CMS included',
+      'Custom photography',
+      'Staff training',
+      'Priority support',
+    ],
+    popular: true,
+    cta: 'Get Professional',
+  },
+  {
+    name: 'Premium Package',
+    price: 'Custom',
+    monthly: 'Custom',
+    description: 'Full-service solution with ongoing marketing support',
+    features: [
+      'Everything in Professional',
+      'Ongoing SEO campaigns',
+      'Paid ad setup/management',
+      'Social media automation',
+      'Priority support',
+      'Custom development',
+    ],
+    popular: false,
+    cta: 'Get Custom Quote',
   },
 ]
 
@@ -52,7 +108,7 @@ export default function ServicesPage() {
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
             <h1 className="h1 text-text-primary mb-6">
-              Services & Pricing
+              Simple Pricing, Real Results
             </h1>
             <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               Transparent pricing with no hidden fees. Every website includes full source code, 
@@ -60,46 +116,56 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Main Package */}
-          <div className="max-w-4xl mx-auto">
-            <div className="card text-center relative overflow-hidden">
-              {/* Popular Badge */}
-              <div className="absolute top-6 right-6 bg-brand text-text-primary px-4 py-2 rounded-full text-sm font-semibold">
-                Most Popular
-              </div>
-
-              <div className="mb-8">
-                <h2 className="h2 text-text-primary mb-4">
-                  Starter Website Package
-                </h2>
-                <div className="flex items-baseline justify-center space-x-2 mb-6">
-                  <span className="text-5xl font-display font-bold text-brand">$50</span>
-                  <span className="text-text-primary/60">upfront</span>
-                  <span className="text-2xl font-display font-bold text-text-primary">+</span>
-                  <span className="text-3xl font-display font-bold text-brand">$15</span>
-                  <span className="text-text-primary/60">/month hosting</span>
-                </div>
-                <p className="text-text-primary/80 max-w-lg mx-auto">
-                  Perfect for small businesses who need a professional online presence. 
-                  Get found on Google, look great on mobile, and attract more customers.
-                </p>
-              </div>
-
-              {/* Features */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-left">
-                {starterPackage.map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-brand mt-0.5 flex-shrink-0" />
-                    <span className="text-text-primary/80">{feature}</span>
+          {/* Pricing Packages */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+            {packages.map((pkg, index) => (
+              <div
+                key={pkg.name}
+                className={`card relative ${pkg.popular ? 'ring-2 ring-brand' : ''}`}
+              >
+                {pkg.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand text-text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                    Most Popular
                   </div>
-                ))}
-              </div>
+                )}
 
-              {/* CTA */}
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Get Started Today
-              </Link>
-            </div>
+                <div className="text-center mb-8">
+                  <h3 className="h3 text-text-primary mb-4">{pkg.name}</h3>
+                  <div className="flex items-baseline justify-center space-x-2 mb-2">
+                    <span className="text-4xl font-display font-bold text-brand">{pkg.price}</span>
+                    {pkg.price !== 'Custom' && (
+                      <>
+                        <span className="text-text-primary/60">setup</span>
+                        <span className="text-2xl font-display font-bold text-text-primary">+</span>
+                        <span className="text-2xl font-display font-bold text-brand">{pkg.monthly}</span>
+                        <span className="text-text-primary/60">/month</span>
+                      </>
+                    )}
+                  </div>
+                  <p className="text-text-primary/80 text-sm">{pkg.description}</p>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {pkg.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 text-brand mt-0.5 flex-shrink-0" />
+                      <span className="text-text-primary/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href={pkg.name === 'Premium Package' ? '/contact' : '/contact'}
+                  className={`w-full text-center py-3 px-6 rounded-xl font-medium transition-all duration-200 ${
+                    pkg.popular
+                      ? 'bg-brand text-text-primary hover:bg-brand-accent'
+                      : 'bg-surface text-text-primary hover:bg-surface-secondary border border-surface-light/20'
+                  }`}
+                >
+                  {pkg.cta}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -109,11 +175,11 @@ export default function ServicesPage() {
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
             <h2 className="h2 text-text-primary mb-6">
-              Optional Add-Ons
+              Add-On Options
             </h2>
             <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               Need more functionality? These add-ons can be included based on your specific needs. 
-              Each one is quoted individually to keep costs transparent.
+              All prices are one-time fees with no recurring charges.
             </p>
           </div>
 
@@ -128,15 +194,25 @@ export default function ServicesPage() {
                   {addon.title}
                 </h3>
                 
-                <p className="text-text-primary/80 text-body mb-6">
+                <p className="text-text-primary/80 text-body mb-4">
                   {addon.description}
                 </p>
 
+                <div className="text-2xl font-display font-bold text-brand mb-4">
+                  {addon.price}
+                </div>
+
                 <div className="text-sm text-text-primary/60">
-                  <span className="font-medium">Priced individually</span> based on complexity
+                  <span className="font-medium">One-time fee</span> - no recurring charges
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-text-primary/60 text-sm">
+              <strong>Note:</strong> Complex features like e-commerce, payment systems, or advanced databases are quoted individually.
+            </p>
           </div>
         </div>
       </section>
@@ -205,14 +281,6 @@ export default function ServicesPage() {
 }
 
 // Icon components
-function ShoppingCart(props: any) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-    </svg>
-  )
-}
-
 function Calendar(props: any) {
   return (
     <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -226,6 +294,17 @@ function Edit(props: any) {
     <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
       <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+    </svg>
+  )
+}
+
+function Share2(props: any) {
+  return (
+    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <path d="M8.59 13.51l6.83 3.98M8.59 10.49l6.82-3.98" />
     </svg>
   )
 }

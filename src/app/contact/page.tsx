@@ -111,7 +111,7 @@ export default function ContactPage() {
                 <ul className="space-y-3 text-text-primary/80">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-                    <span>Quick response within 24 hours</span>
+                    <span>Quick replies (within 24 hours)</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-                    <span>Transparent pricing and timelines</span>
+                    <span>Flat monthly cost, no hidden fees</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />

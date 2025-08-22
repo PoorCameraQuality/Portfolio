@@ -74,7 +74,7 @@ export default function WorkShowcase() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="h2 text-text-primary mb-6">
-            Featured Projects
+            Sample Sites
           </h2>
           <p className="lead text-text-primary/80 max-w-2xl mx-auto">
             Here are some examples of my work, from developer tools to business websites. 

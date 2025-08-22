@@ -66,7 +66,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Modern Websites for{' '}
+          Affordable Websites for{' '}
           <span className="gradient-text">Local Businesses</span>
         </motion.h1>
 
@@ -86,16 +86,16 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          <Link href="/services" className="btn-primary group">
-            View Packages
+          <Link href="/work" className="btn-primary group">
+            View Example Sites
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link href="/contact" className="btn-secondary">
-            Book a Consultation
+            Book a Free Consultation
           </Link>
         </motion.div>
 
-        {/* Stats */}
+        {/* Mini-features */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
@@ -103,12 +103,12 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
         >
           {[
-            { number: '$50', label: 'Upfront Cost' },
-            { number: '$15', label: 'Monthly Hosting' },
-            { number: '24hrs', label: 'Response Time' },
+            { number: 'Show up on', label: 'Google' },
+            { number: 'Mobile-First', label: 'Design' },
+            { number: 'Flat Monthly', label: 'Fee' },
           ].map((stat, index) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl font-display font-bold text-brand mb-2">
+              <div className="text-2xl font-display font-bold text-brand mb-2">
                 {stat.number}
               </div>
               <div className="text-text-primary/60 text-sm">

@@ -50,10 +50,12 @@ export default function AboutPage() {
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
             <h1 className="h1 text-text-primary mb-6">
-              About Me
+              Helping Local Businesses Shine Online
             </h1>
             <p className="lead text-text-primary/80 max-w-3xl mx-auto">
-              I've been building websites and backend systems for over 4 years, specializing in modern web design and search engine optimization. My goal is simple: help local businesses in Shippensburg and the surrounding towns get online with a site that looks professional, works smoothly, and brings in customers.
+              I've spent 4 years building websites and backend systems, specializing in design and SEO. 
+              My goal is simple: help small businesses get online with a site that looks professional, 
+              works smoothly, and brings in customers. I handle the tech, hosting, and updates—you focus on your business.
             </p>
           </div>
 
@@ -97,9 +99,9 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-3 gap-6 pt-6">
                 {[
-                  { icon: Users, number: '25+', label: 'Local Businesses' },
-                  { icon: Award, number: '100%', label: 'Satisfaction' },
-                  { icon: Clock, number: '24hrs', label: 'Response Time' },
+                  { icon: Users, number: '50+', label: 'Projects Completed' },
+                  { icon: Award, number: '4 Years', label: 'Experience' },
+                  { icon: Clock, number: '2-Week', label: 'Turnaround' },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="w-12 h-12 bg-surface rounded-xl flex items-center justify-center mx-auto mb-3">
