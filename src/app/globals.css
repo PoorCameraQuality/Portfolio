@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Custom color palette */
+    --color-blackgrey: 55 53 62;
+    --color-brown: 68 68 78;
+    --color-night: 113 90 90;
+    --color-dark: 211 218 217;
+    
+    /* Semantic colors */
+    --color-bg: 55 53 62;
+    --color-bg-secondary: 68 68 78;
+    --color-bg-tertiary: 113 90 90;
+    --color-bg-light: 211 218 217;
+    
+    --color-surface: 68 68 78;
+    --color-surface-secondary: 113 90 90;
+    --color-surface-light: 211 218 217;
+    
+    --color-brand: 113 90 90;
+    --color-brand-light: 211 218 217;
+    --color-brand-accent: 68 68 78;
+    
+    --color-text-primary: 211 218 217;
+    --color-text-secondary: 113 90 90;
+    --color-text-muted: 68 68 78;
+  }
+
+  body {
+    @apply bg-bg text-text-primary font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+
+  p {
+    @apply text-body leading-relaxed;
+  }
+
+  .lead {
+    @apply text-lead;
+  }
+
+  .display {
+    @apply text-display font-display font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .section {
+    @apply py-20 lg:py-32;
+  }
+
+  .section-sm {
+    @apply py-16 lg:py-24;
+  }
+
+  .card {
+    @apply bg-surface rounded-2xl shadow-medium p-6 lg:p-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-bg focus:ring-brand disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand text-text-primary hover:bg-brand-accent hover:scale-105 shadow-medium hover:shadow-large;
+  }
+
+  .btn-secondary {
+    @apply btn bg-surface text-text-primary hover:bg-surface-secondary hover:scale-105 border border-surface-light/20;
+  }
+
+  .btn-ghost {
+    @apply btn text-text-primary hover:bg-surface hover:scale-105;
+  }
+
+  .link {
+    @apply text-brand hover:text-brand-light transition-colors duration-200 underline-offset-4 hover:underline;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand via-brand-accent to-night bg-clip-text text-transparent;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-bg via-bg-secondary to-bg-tertiary;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
