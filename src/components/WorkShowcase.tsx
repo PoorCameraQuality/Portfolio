@@ -7,31 +7,49 @@ import { ArrowRight, ExternalLink } from 'lucide-react'
 
 const featuredWork = [
   {
-    id: 'ecommerce-platform',
-    title: 'E-commerce Platform',
-    description: 'A modern, scalable e-commerce solution with advanced features and seamless user experience.',
+    id: 'shippensburg-brews',
+    title: 'Shippensburg Brews',
+    description: 'Coffee shop website with menu, photo gallery, and online ordering. Mobile-first design that drives foot traffic.',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    category: 'Web Development',
-    link: '/work/ecommerce-platform',
+    tags: ['Coffee Shop', 'Menu', 'Gallery'],
+    category: 'Food & Beverage',
+    link: '/work/shippensburg-brews',
   },
   {
-    id: 'mobile-app',
-    title: 'Fitness Mobile App',
-    description: 'A comprehensive fitness tracking application with personalized workout plans and progress analytics.',
+    id: 'cumberland-auto',
+    title: 'Cumberland Auto Repair',
+    description: 'Online booking form, services list, and customer testimonials. Increased appointment bookings by 40%.',
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
-    tags: ['React Native', 'Firebase', 'TypeScript'],
-    category: 'Mobile Development',
-    link: '/work/fitness-app',
+    tags: ['Auto Repair', 'Booking', 'Services'],
+    category: 'Automotive',
+    link: '/work/cumberland-auto',
   },
   {
-    id: 'brand-identity',
-    title: 'Brand Identity Design',
-    description: 'Complete brand identity package including logo design, color palette, and brand guidelines.',
+    id: 'main-street-barber',
+    title: 'Main Street Barber',
+    description: 'Clean single-page site with hours, contact info, and photo gallery. Simple design that gets customers in the door.',
     image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
-    tags: ['Branding', 'Logo Design', 'Typography'],
-    category: 'Design',
-    link: '/work/brand-identity',
+    tags: ['Barber Shop', 'Hours', 'Contact'],
+    category: 'Personal Care',
+    link: '/work/main-street-barber',
+  },
+  {
+    id: 'petal-stem-florals',
+    title: 'Petal & Stem Florals',
+    description: 'Simple shop gallery and contact form. Beautiful showcase of floral arrangements with easy ordering.',
+    image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&h=600&fit=crop',
+    tags: ['Florist', 'Gallery', 'Contact'],
+    category: 'Retail',
+    link: '/work/petal-stem-florals',
+  },
+  {
+    id: 'iron-core-fitness',
+    title: 'Iron Core Fitness',
+    description: 'Class schedule with sign-up buttons and membership info. Streamlined booking process for fitness classes.',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
+    tags: ['Fitness', 'Classes', 'Booking'],
+    category: 'Health & Fitness',
+    link: '/work/iron-core-fitness',
   },
 ]
 
@@ -68,16 +86,16 @@ export default function WorkShowcase() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="h2 text-text-primary mb-6">
-            Featured Work
+            Sample Local Sites
           </h2>
           <p className="lead text-text-primary/80 max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills in 
-            design, development, and problem-solving.
+            Here are some examples of websites I've built for local businesses. 
+            Each one is designed to help businesses get found online and attract customers.
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -146,7 +164,7 @@ export default function WorkShowcase() {
             href="/work"
             className="btn-secondary group inline-flex items-center"
           >
-            View All Projects
+            View All Examples
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>

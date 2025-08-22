@@ -55,7 +55,7 @@ export default function Hero() {
           >
             <Sparkles className="w-4 h-4 text-brand" />
             <span className="text-text-primary/80 text-sm font-medium">
-              Creative Developer & Designer
+              Local Business Websites
             </span>
           </motion.div>
         </motion.div>
@@ -66,20 +66,18 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Crafting Digital{' '}
-          <span className="gradient-text">Experiences</span>{' '}
-          That Inspire
+          Affordable Websites for{' '}
+          <span className="gradient-text">Local Businesses</span>
         </motion.h1>
 
         <motion.p
-          className="lead text-text-primary/80 mb-12 max-w-2xl mx-auto"
+          className="lead text-text-primary/80 mb-12 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          I transform ideas into exceptional digital experiences. From concept to code, 
-          I create websites and applications that not only look stunning but deliver 
-          real results for your business.
+          I build clean, modern websites for small businesses in Shippensburg and surrounding towns. 
+          Get found online, attract more customers, and keep it simple.
         </motion.p>
 
         <motion.div
@@ -89,11 +87,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.7 }}
         >
           <Link href="/work" className="btn-primary group">
-            View My Work
+            View Example Sites
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link href="/contact" className="btn-secondary">
-            Let's Talk
+            Start Your Website
           </Link>
         </motion.div>
 
@@ -105,9 +103,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
         >
           {[
-            { number: '50+', label: 'Projects Completed' },
-            { number: '5+', label: 'Years Experience' },
-            { number: '100%', label: 'Client Satisfaction' },
+            { number: '$15', label: 'Monthly Fee' },
+            { number: '2 Weeks', label: 'Turnaround' },
+            { number: '24hrs', label: 'Response Time' },
           ].map((stat, index) => (
             <div key={stat.label} className="text-center">
               <div className="text-3xl font-display font-bold text-brand mb-2">

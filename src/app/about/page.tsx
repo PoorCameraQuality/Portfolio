@@ -7,20 +7,20 @@ export const metadata: Metadata = {
 }
 
 const skills = [
-  { name: 'React/Next.js', level: 95 },
-  { name: 'TypeScript', level: 90 },
-  { name: 'Node.js', level: 85 },
-  { name: 'UI/UX Design', level: 88 },
-  { name: 'Tailwind CSS', level: 92 },
-  { name: 'Figma', level: 85 },
+  { name: 'Local SEO', level: 95 },
+  { name: 'Mobile-First Design', level: 90 },
+  { name: 'Small Business Websites', level: 85 },
+  { name: 'Google Business Setup', level: 88 },
+  { name: 'Affordable Hosting', level: 92 },
+  { name: 'Local Marketing', level: 85 },
 ]
 
 const timeline = [
   {
     year: '2023 - Present',
-    title: 'Senior Creative Developer',
+    title: 'Local Business Website Specialist',
     company: 'Freelance',
-    description: 'Working with clients worldwide to create exceptional digital experiences.',
+    description: 'Focusing on helping small businesses in Central PA get affordable, effective websites.',
   },
   {
     year: '2021 - 2023',
@@ -53,8 +53,9 @@ export default function AboutPage() {
               About Me
             </h1>
             <p className="lead text-text-primary/80 max-w-3xl mx-auto">
-              I'm a passionate creative developer and designer with over 5 years of experience 
-              crafting digital experiences that make a difference.
+              I specialize in helping small businesses get a professional online presence without the hassle. 
+              With years of web development and design experience, I've shifted my focus to making it easy 
+              for local shops and services to show up online, look professional, and connect with their community.
             </p>
           </div>
 
@@ -76,15 +77,9 @@ export default function AboutPage() {
 
             <div className="space-y-6">
               <h2 className="h2 text-text-primary">
-                Passionate About Creating
-                <span className="gradient-text"> Digital Magic</span>
+                My Approach is{' '}
+                <span className="gradient-text">Straightforward</span>
               </h2>
-              
-              <p className="text-text-primary/80 text-body">
-                I believe that great design and development go hand in hand. Every project 
-                I work on is an opportunity to push boundaries, solve complex problems, 
-                and create something truly remarkable.
-              </p>
               
               <p className="text-text-primary/80 text-body">
                 My approach combines technical expertise with creative vision, ensuring that 
@@ -92,12 +87,17 @@ export default function AboutPage() {
                 constantly learning and evolving, staying up-to-date with the latest 
                 technologies and design trends.
               </p>
+              
+              <p className="text-text-primary/80 text-body">
+                <strong>Clean design, reliable hosting, and simple maintenance</strong> — 
+                so you can focus on running your business.
+              </p>
 
               <div className="grid grid-cols-3 gap-6 pt-6">
                 {[
-                  { icon: Users, number: '50+', label: 'Happy Clients' },
-                  { icon: Award, number: '100+', label: 'Projects' },
-                  { icon: Clock, number: '5+', label: 'Years Exp.' },
+                  { icon: Users, number: '25+', label: 'Local Businesses' },
+                  { icon: Award, number: '100%', label: 'Satisfaction' },
+                  { icon: Clock, number: '24hrs', label: 'Response Time' },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="w-12 h-12 bg-surface rounded-xl flex items-center justify-center mx-auto mb-3">
@@ -122,11 +122,10 @@ export default function AboutPage() {
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
             <h2 className="h2 text-text-primary mb-6">
-              Skills & Expertise
+              What I Specialize In
             </h2>
             <p className="lead text-text-primary/80 max-w-2xl mx-auto">
-              I've developed a diverse skill set that allows me to handle every aspect 
-              of digital product development.
+              I focus on the specific skills that help local businesses succeed online.
             </p>
           </div>
 
@@ -162,8 +161,7 @@ export default function AboutPage() {
               My Journey
             </h2>
             <p className="lead text-text-primary/80 max-w-2xl mx-auto">
-              From my first line of code to leading development teams, here's how 
-              my career has evolved.
+              From general web development to specializing in local business websites.
             </p>
           </div>
 

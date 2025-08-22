@@ -1,26 +1,32 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code, Palette, Zap } from 'lucide-react'
+import { Search, Smartphone, DollarSign, Clock } from 'lucide-react'
 
 const features = [
   {
-    icon: Code,
-    title: 'Web Development',
-    description: 'Custom websites and web applications built with modern technologies. From responsive design to complex functionality, I bring your vision to life.',
+    icon: Search,
+    title: 'Google Visibility',
+    description: 'Optimized to appear on Google Maps & search results. Get found when customers search for your services.',
     color: 'from-brand to-brand-accent',
   },
   {
-    icon: Palette,
-    title: 'UI/UX Design',
-    description: 'Beautiful, intuitive interfaces that enhance user experience. I focus on creating designs that are both aesthetically pleasing and highly functional.',
+    icon: Smartphone,
+    title: 'Mobile-Ready',
+    description: 'Looks great on phones, tablets, and desktops. Most customers browse on mobile - your site will too.',
     color: 'from-barn-red to-brand',
   },
   {
-    icon: Zap,
-    title: 'Performance Optimization',
-    description: 'Lightning-fast websites that rank well and convert better. I optimize for speed, SEO, and user engagement across all devices.',
+    icon: DollarSign,
+    title: 'Flat Monthly Fee',
+    description: '$15/month covers hosting, updates, and support. No hidden fees or surprise charges.',
     color: 'from-brand-accent to-barn-red',
+  },
+  {
+    icon: Clock,
+    title: 'Fast Turnaround',
+    description: 'Most sites ready in under two weeks. Get online quickly and start attracting customers.',
+    color: 'from-prussian-blue to-air-superiority-blue',
   },
 ]
 
@@ -57,16 +63,15 @@ export default function FeatureSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="h2 text-text-primary mb-6">
-            What I Do Best
+            What You Get With Every Site
           </h2>
           <p className="lead text-text-primary/80 max-w-2xl mx-auto">
-            I specialize in creating exceptional digital experiences that combine 
-            stunning design with powerful functionality.
+            Every website I build includes these essential features that help local businesses succeed online.
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

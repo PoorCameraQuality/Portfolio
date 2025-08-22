@@ -30,7 +30,7 @@ export default function CTASection() {
           >
             <MessageCircle className="w-4 h-4 text-text-primary" />
             <span className="text-text-primary text-sm font-medium">
-              Ready to Get Started?
+              Ready to Get Online?
             </span>
           </motion.div>
 
@@ -41,9 +41,9 @@ export default function CTASection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Let's Build Something
+            Your Business Deserves to{' '}
             <br />
-            <span className="text-surface-light">Amazing Together</span>
+            <span className="text-surface-light">Be Online</span>
           </motion.h2>
 
           <motion.p
@@ -53,8 +53,8 @@ export default function CTASection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            Whether you have a project in mind or just want to explore possibilities, 
-            I'd love to hear from you. Let's discuss how we can bring your ideas to life.
+            Whether you run a shop, service, or local event, I'll create a website that helps you stand out. 
+            For just $15/month, you'll have a professional site, hosting, and ongoing support.
           </motion.p>
 
           <motion.div
@@ -65,11 +65,11 @@ export default function CTASection() {
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             <Link href="/contact" className="btn-primary bg-surface text-text-primary hover:bg-surface-light group">
-              Start a Project
+              Get Started Today
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link href="/work" className="btn-ghost text-text-primary border-text-primary/30 hover:bg-surface/20">
-              View My Work
+              View Examples
             </Link>
           </motion.div>
 
@@ -94,7 +94,7 @@ export default function CTASection() {
               <div>
                 <div className="text-text-primary/80 text-sm mb-2">Location</div>
                 <div className="text-text-primary">
-                  Remote / Worldwide
+                  Shippensburg, PA
                 </div>
               </div>
               <div>

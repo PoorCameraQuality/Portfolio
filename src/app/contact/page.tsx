@@ -17,7 +17,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Location',
-    value: 'Remote / Worldwide',
+    value: 'Shippensburg, PA',
     link: null,
   },
   {
@@ -42,11 +42,11 @@ export default function ContactPage() {
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
             <h1 className="h1 text-text-primary mb-6">
-              Let's Work Together
+              Let's Get Your Business Online
             </h1>
             <p className="lead text-text-primary/80 max-w-2xl mx-auto">
-              Ready to start your next project? I'd love to hear about your ideas 
-              and help bring them to life.
+              Fill out the form or reach out directly. I'll respond within 24 hours to talk about 
+              your business needs, pricing, and timeline.
             </p>
           </div>
 
@@ -116,15 +116,15 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-                    <span>Free consultation and project discussion</span>
+                    <span>Free consultation — no obligation</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-                    <span>Transparent pricing and timelines</span>
+                    <span>Flat-rate monthly cost</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-                    <span>Ongoing support and maintenance</span>
+                    <span>Local support you can count on</span>
                   </li>
                 </ul>
               </div>
