@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X, Camera } from 'lucide-react'
+import { ChevronDown, Menu, X, Camera, Home, Info, Phone, Image, DollarSign } from 'lucide-react'
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -17,6 +17,11 @@ export default function Nav() {
 
   return (
     <nav className="bg-surface border-b border-border sticky top-0 z-50">
+      {/* Example Site Banner */}
+      <div className="bg-accent text-white text-center py-2 text-sm font-medium">
+        📸 EXAMPLE SITE - Photography Business Demo for Portfolio 📸
+      </div>
+      
       <div className="container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -27,7 +32,8 @@ export default function Nav() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/photography-business" className="text-ink hover:text-accent transition-colors">
+            <Link href="/photography-business" className="flex items-center text-ink hover:text-accent transition-colors">
+              <Home className="w-4 h-4 mr-1" />
               Home
             </Link>
             
@@ -57,15 +63,23 @@ export default function Nav() {
               )}
             </div>
             
-            <Link href="#portfolio" className="text-ink hover:text-accent transition-colors">
+            <Link href="#portfolio" className="flex items-center text-ink hover:text-accent transition-colors">
+              <Image className="w-4 h-4 mr-1" />
               Portfolio
             </Link>
             
-            <Link href="#pricing" className="text-ink hover:text-accent transition-colors">
+            <Link href="#pricing" className="flex items-center text-ink hover:text-accent transition-colors">
+              <DollarSign className="w-4 h-4 mr-1" />
               Pricing
             </Link>
             
-            <Link href="#contact" className="text-ink hover:text-accent transition-colors">
+            <Link href="/photography-business/about" className="flex items-center text-ink hover:text-accent transition-colors">
+              <Info className="w-4 h-4 mr-1" />
+              About
+            </Link>
+            
+            <Link href="#contact" className="flex items-center text-ink hover:text-accent transition-colors">
+              <Phone className="w-4 h-4 mr-1" />
               Contact
             </Link>
           </div>
@@ -85,9 +99,10 @@ export default function Nav() {
             <div className="flex flex-col space-y-4">
               <Link 
                 href="/photography-business" 
-                className="text-ink hover:text-accent transition-colors"
+                className="flex items-center text-ink hover:text-accent transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
+                <Home className="w-4 h-4 mr-2" />
                 Home
               </Link>
               
@@ -109,25 +124,37 @@ export default function Nav() {
               
               <Link 
                 href="#portfolio" 
-                className="text-ink hover:text-accent transition-colors"
+                className="flex items-center text-ink hover:text-accent transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
+                <Image className="w-4 h-4 mr-2" />
                 Portfolio
               </Link>
               
               <Link 
                 href="#pricing" 
-                className="text-ink hover:text-accent transition-colors"
+                className="flex items-center text-ink hover:text-accent transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
+                <DollarSign className="w-4 h-4 mr-2" />
                 Pricing
               </Link>
               
               <Link 
-                href="#contact" 
-                className="text-ink hover:text-accent transition-colors"
+                href="/photography-business/about" 
+                className="flex items-center text-ink hover:text-accent transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
+                <Info className="w-4 h-4 mr-2" />
+                About
+              </Link>
+              
+              <Link 
+                href="#contact" 
+                className="flex items-center text-ink hover:text-accent transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Phone className="w-4 h-4 mr-2" />
                 Contact
               </Link>
             </div>
