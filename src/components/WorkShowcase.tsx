@@ -18,26 +18,26 @@ const featuredWork = [
     features: ['Dependency Lockfile', 'UPM + Asset Store', 'Cache Import', 'Game Jam Friendly'],
   },
   {
-    id: 'local-business-websites',
-    title: 'Local Business Websites',
-    description: 'Custom websites for small businesses in Shippensburg and Central PA. Mobile-first design with local SEO optimization and affordable monthly hosting.',
+    id: 'feed-store-mockup',
+    title: 'Feed Store Website',
+    description: 'Professional website mockup for a local feed store business. Demonstrates e-commerce capabilities, product showcases, and local business optimization.',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-    tags: ['Small Business', 'Local SEO', 'Mobile-First'],
-    category: 'Web Development',
-    link: '/work/local-business',
+    tags: ['E-commerce', 'Local Business', 'Product Showcase'],
+    category: 'Business Websites',
+    link: '/feed-store-mockup',
     external: false,
-    features: ['Google Visibility', 'Mobile Optimization', 'Local SEO', 'Affordable Hosting'],
+    features: ['Product Catalog', 'Local Delivery', 'Customer Reviews', 'Mobile-First Design'],
   },
   {
-    id: 'portfolio-website',
-    title: 'Portfolio Website',
-    description: 'Modern Next.js portfolio built with Tailwind CSS and Framer Motion. Demonstrates clean design, responsive layout, and modern web development practices.',
+    id: 'photography-mockup',
+    title: 'Photography Business',
+    description: 'Creative business website mockup showcasing portfolio work, service packages, and client testimonials. Perfect for creative service businesses.',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
-    tags: ['Next.js', 'Tailwind CSS', 'Portfolio'],
-    category: 'Web Development',
-    link: '/work/portfolio',
+    tags: ['Portfolio', 'Creative Services', 'Service Packages'],
+    category: 'Business Websites',
+    link: '/photography-mockup',
     external: false,
-    features: ['Next.js 14', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
+    features: ['Portfolio Gallery', 'Service Pricing', 'Client Testimonials', 'Booking System'],
   },
 ]
 
@@ -74,11 +74,11 @@ export default function WorkShowcase() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="h2 text-text-primary mb-6">
-            Sample Sites
+            Portfolio Examples
           </h2>
           <p className="lead text-text-primary/80 max-w-2xl mx-auto">
-            Here are some examples of my work, from developer tools to business websites. 
-            Each project solves real problems and delivers measurable results.
+            Here are some examples of my work, from developer tools to business website mockups. 
+            Each project demonstrates different capabilities and business solutions.
           </p>
         </motion.div>
 
