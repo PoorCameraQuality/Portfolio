@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import Nav from './_components/Nav'
 import Footer from './_components/Footer'
-import '../../../../styles/feed.css'
+import '../../../styles/feed.css'
 
 const inter = Inter({ 
   subsets: ['latin'],
