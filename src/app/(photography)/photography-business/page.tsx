@@ -4,7 +4,7 @@ import Portfolio from './_components/Portfolio'
 import Pricing from './_components/Pricing'
 import Testimonials from './_components/Testimonials'
 import Stats from './_components/Stats'
-import { MapPin, Phone, Mail, Instagram, Clock } from 'lucide-react'
+import { MapPin, Phone, Mail, Instagram, Clock, HelpCircle, CheckCircle, Camera, Heart, Award } from 'lucide-react'
 
 export default function PhotographyBusinessPage() {
   return (
@@ -16,6 +16,113 @@ export default function PhotographyBusinessPage() {
       <Pricing />
       <Testimonials />
       
+      {/* Process Section */}
+      <section className="section bg-surface">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">How I Work</h2>
+            <p className="text-lg text-muted max-w-2xl mx-auto">
+              A simple, stress-free process to capture your perfect moments
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-accent">1</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Consultation</h3>
+              <p className="text-muted">We discuss your vision, location preferences, and any special requirements.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-accent">2</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Planning</h3>
+              <p className="text-muted">I'll scout locations, plan timing, and prepare for the perfect lighting conditions.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-accent">3</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Shoot</h3>
+              <p className="text-muted">Relax and enjoy the session while I capture authentic, beautiful moments.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-accent">4</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Delivery</h3>
+              <p className="text-muted">Receive your professionally edited photos within 2-3 weeks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-muted max-w-2xl mx-auto">
+              Common questions about my photography services
+            </p>
+          </div>
+          
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="bg-surface rounded-lg p-6">
+              <div className="flex items-start">
+                <HelpCircle className="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">How far in advance should I book?</h3>
+                  <p className="text-muted">For weddings, I recommend booking 6-12 months in advance. For portraits and events, 2-4 weeks notice is usually sufficient. I do occasionally have last-minute availability.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-surface rounded-lg p-6">
+              <div className="flex items-start">
+                <HelpCircle className="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">What's included in your packages?</h3>
+                  <p className="text-muted">All packages include the photo session, professional editing, and digital delivery. Print packages include additional items like prints, albums, and wall art. I'm happy to customize packages to fit your needs.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-surface rounded-lg p-6">
+              <div className="flex items-start">
+                <HelpCircle className="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Do you travel for sessions?</h3>
+                  <p className="text-muted">Yes! I'm based in Central Pennsylvania but travel throughout the region. Travel fees apply for locations more than 30 miles from my base. For destination weddings, I love to travel and can provide custom quotes.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-surface rounded-lg p-6">
+              <div className="flex items-start">
+                <HelpCircle className="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">How long does editing take?</h3>
+                  <p className="text-muted">Portrait sessions are typically ready in 1-2 weeks. Weddings and events take 2-3 weeks due to the larger number of photos. I'll provide a few preview images within 48 hours of your session.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-surface rounded-lg p-6">
+              <div className="flex items-start">
+                <HelpCircle className="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Can I get the raw photos?</h3>
+                  <p className="text-muted">I don't provide raw photos as they don't represent my final work. However, I'm happy to discuss any specific editing preferences you have, and I always provide both color and black & white versions of your favorites.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="section" id="contact">
         <div className="container">

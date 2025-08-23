@@ -2,7 +2,7 @@ import Hero from './_components/Hero'
 import CategoryFilter from './_components/CategoryFilter'
 import ProductGrid from './_components/ProductGrid'
 import { products, categories } from './_data/products'
-import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Star, Quote, Users, Award, Truck } from 'lucide-react'
 
 export default function FeedStorePage() {
   return (
@@ -23,8 +23,44 @@ export default function FeedStorePage() {
         </div>
       </section>
 
-      {/* Category descriptions for SEO */}
+      {/* Why Choose Us Section */}
       <section className="section bg-surface">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Why Choose Our Feed Store?</h2>
+            <p className="text-lg text-muted max-w-2xl mx-auto">
+              We're more than just a store - we're your partners in farming success
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-accent-2">Local Expertise</h3>
+              <p className="text-muted">Our team has decades of combined farming experience in Central PA.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Truck className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-accent-2">Fast Delivery</h3>
+              <p className="text-muted">Same-day local delivery for urgent needs, next-day for regular orders.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-accent-2">Quality Guaranteed</h3>
+              <p className="text-muted">We only stock products we trust for our own farms and animals.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category descriptions for SEO */}
+      <section className="section">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
@@ -50,6 +86,92 @@ export default function FeedStorePage() {
             <div className="text-center">
               <h3 className="text-xl font-semibold mb-3 text-accent-2">Garden</h3>
               <p className="text-muted">Soil, seed, and simple gear for this season's projects.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="section bg-surface">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
+            <p className="text-lg text-muted max-w-2xl mx-auto">
+              Don't just take our word for it - hear from the farmers who trust us
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="card">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+              </div>
+              <Quote className="w-8 h-8 text-accent/30 mb-4" />
+              <p className="text-muted mb-4">
+                "The quality of their feed has made a noticeable difference in our egg production. 
+                Plus, their delivery service is a lifesaver during busy seasons."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-accent font-semibold text-sm">S</span>
+                </div>
+                <div>
+                  <p className="font-semibold">Sarah Mitchell</p>
+                  <p className="text-sm text-muted">Chicken Farmer</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="card">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+              </div>
+              <Quote className="w-8 h-8 text-accent/30 mb-4" />
+              <p className="text-muted mb-4">
+                "Been buying from them for 15 years. Their advice on livestock nutrition 
+                has saved me thousands in vet bills over the years."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-accent font-semibold text-sm">M</span>
+                </div>
+                <div>
+                  <p className="font-semibold">Mike Thompson</p>
+                  <p className="text-sm text-muted">Cattle Rancher</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="card">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+              </div>
+              <Quote className="w-8 h-8 text-accent/30 mb-4" />
+              <p className="text-muted mb-4">
+                "Great selection of garden supplies and the staff really knows their stuff. 
+                They've helped me troubleshoot everything from soil issues to pest problems."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-accent font-semibold text-sm">L</span>
+                </div>
+                <div>
+                  <p className="font-semibold">Lisa Chen</p>
+                  <p className="text-sm text-muted">Market Gardener</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

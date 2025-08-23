@@ -8,7 +8,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="hero-section relative overflow-hidden min-h-[80vh] flex items-center">
+    <section className="hero-section relative overflow-hidden min-h-[60vh] lg:min-h-[70vh] flex items-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -27,22 +27,22 @@ export default function Hero() {
       <div className="container relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-accent rounded-full mb-4">
-              <Camera className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-accent rounded-full mb-4">
+              <Camera className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Capture Life's
             <span className="block text-accent">Precious Moments</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted mb-6 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-muted mb-6 max-w-3xl mx-auto">
             Professional photography services for weddings, portraits, events, and more. 
             Creating timeless memories in Central Pennsylvania.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 lg:mb-8">
             <button 
               onClick={scrollToServices}
               className="btn-primary text-base px-6 py-3"
@@ -67,28 +67,28 @@ export default function Hero() {
         </div>
         
         {/* Feature Icons */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-3xl mx-auto mb-8 lg:mb-12">
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
-              <Award className="w-6 h-6 text-accent" />
+            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+              <Award className="w-5 h-5 lg:w-6 lg:h-6 text-accent" />
             </div>
             <span className="text-sm font-medium text-muted">15+ Years Experience</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
-              <Heart className="w-6 h-6 text-accent" />
+            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+              <Heart className="w-5 h-5 lg:w-6 lg:h-6 text-accent" />
             </div>
             <span className="text-sm font-medium text-muted">Authentic Moments</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
-              <Users className="w-6 h-6 text-accent" />
+            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+              <Users className="w-5 h-5 lg:w-6 lg:h-6 text-accent" />
             </div>
             <span className="text-sm font-medium text-muted">500+ Happy Clients</span>
           </div>
         </div>
         
-        <div className="mt-8 text-center">
+        <div className="mt-6 lg:mt-8 text-center">
           <button 
             onClick={scrollToServices}
             className="inline-flex items-center text-muted hover:text-accent transition-colors"

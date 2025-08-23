@@ -8,7 +8,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="section grain-bg relative overflow-hidden min-h-[80vh] flex items-center">
+    <section className="section grain-bg relative overflow-hidden min-h-[60vh] lg:min-h-[70vh] flex items-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -27,29 +27,29 @@ export default function Hero() {
       <div className="container text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center">
-              <Store className="w-10 h-10 text-white" />
+            <div className="w-16 h-16 lg:w-20 lg:h-20 bg-accent rounded-full flex items-center justify-center">
+              <Store className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6">
             Farm & Feed Essentials
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl text-muted mb-6 lg:mb-8 max-w-3xl mx-auto">
             Everyday supplies for poultry, livestock, pets, and the homestead—curated for local needs.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 lg:mb-8">
             <button 
               onClick={scrollToShop}
-              className="btn-primary text-lg px-8 py-4"
+              className="btn-primary text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4"
             >
               Shop Essentials
             </button>
             <a 
               href="/feed-store/about"
-              className="btn-secondary text-lg px-8 py-4"
+              className="btn-secondary text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4"
             >
               Learn About Us
             </a>
@@ -57,28 +57,28 @@ export default function Hero() {
         </div>
         
         {/* Feature Icons */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-3xl mx-auto mb-8 lg:mb-12">
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
-              <Truck className="w-6 h-6 text-accent" />
+            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+              <Truck className="w-5 h-5 lg:w-6 lg:h-6 text-accent" />
             </div>
             <span className="text-sm font-medium text-muted">Local Delivery</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
-              <Package className="w-6 h-6 text-accent" />
+            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+              <Package className="w-5 h-5 lg:w-6 lg:h-6 text-accent" />
             </div>
             <span className="text-sm font-medium text-muted">Quality Products</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
-              <Shield className="w-6 h-6 text-accent" />
+            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+              <Shield className="w-5 h-5 lg:w-6 lg:h-6 text-accent" />
             </div>
             <span className="text-sm font-medium text-muted">Expert Advice</span>
           </div>
         </div>
         
-        <div className="mt-8">
+        <div className="mt-6 lg:mt-8">
           <button 
             onClick={scrollToShop}
             className="flex items-center justify-center mx-auto text-muted hover:text-accent transition-colors"

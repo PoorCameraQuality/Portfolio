@@ -1,56 +1,94 @@
-import { MapPin, Phone, Mail, Clock, Truck, Package, Shield, Users, Award, Heart } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Users, Award, Truck, Heart, Leaf, Shield, CheckCircle } from 'lucide-react'
 import Breadcrumb from '../_components/Breadcrumb'
 
-export default function AboutPage() {
+export default function FeedStoreAboutPage() {
   return (
     <>
       <Breadcrumb items={[{ label: 'About Us' }]} />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-accent to-accent-2 py-20">
-        <div className="container text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Feed Store</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Serving Central Pennsylvania's farming community with quality products, 
-            expert advice, and reliable service since 1985.
+      <section className="section grain-bg relative overflow-hidden min-h-[40vh] flex items-center">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c1121f' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundRepeat: 'repeat'
+          }} />
+        </div>
+        
+        <div className="container text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Our Feed Store</h1>
+          <p className="text-lg md:text-xl text-muted max-w-3xl mx-auto">
+            Serving Central Pennsylvania's farming community since 1985
           </p>
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Our Story */}
       <section className="section">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-accent">Our Story</h2>
-              <div className="space-y-4 text-muted">
-                <p>
-                  What started as a small family operation in 1985 has grown into Central Pennsylvania's 
-                  most trusted source for farm and feed essentials. Founded by the Thompson family, 
-                  our store began with a simple mission: provide local farmers with the quality products 
-                  they need to succeed.
-                </p>
-                <p>
-                  Over the years, we've expanded our inventory to serve not just traditional farmers, 
-                  but also hobby farmers, pet owners, and gardeners. Our commitment to quality and 
-                  customer service has never wavered.
-                </p>
-                <p>
-                  Today, we're proud to serve thousands of customers across the region, offering 
-                  everything from premium animal feeds to essential farming tools and supplies.
-                </p>
-              </div>
+              <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+              <p className="text-lg text-muted mb-6">
+                What started as a small family operation has grown into Central Pennsylvania's most trusted 
+                source for farm and feed supplies. Founded by the Thompson family in 1985, we've been 
+                helping local farmers succeed for over three decades.
+              </p>
+              <p className="text-lg text-muted mb-6">
+                Our journey began when Grandpa Thompson realized that local farmers needed a reliable source 
+                for quality feed and supplies. What started with just a few products has grown into a 
+                comprehensive selection that serves every aspect of modern farming.
+              </p>
+              <p className="text-lg text-muted">
+                Today, we're proud to serve over 500 local farms and continue the tradition of quality, 
+                service, and community that Grandpa Thompson started all those years ago.
+              </p>
             </div>
-            <div className="bg-surface rounded-lg p-8 text-center">
-              <div className="text-6xl mb-4">🏡</div>
-              <h3 className="text-xl font-semibold mb-2 text-accent">Family Owned & Operated</h3>
-              <p className="text-muted">Three generations of farming expertise</p>
+            <div className="bg-surface rounded-lg p-8">
+              <div className="space-y-6">
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl font-bold text-accent">1985</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Store Founded</h3>
+                    <p className="text-sm text-muted">Started as a small family operation</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl font-bold text-accent">1995</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Expanded Selection</h3>
+                    <p className="text-sm text-muted">Added garden and pet supplies</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl font-bold text-accent">2005</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Delivery Service</h3>
+                    <p className="text-sm text-muted">Launched local delivery program</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl font-bold text-accent">2020</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Online Store</h3>
+                    <p className="text-sm text-muted">Added e-commerce capabilities</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Our Values */}
       <section className="section bg-surface">
         <div className="container">
           <div className="text-center mb-12">
@@ -60,150 +98,148 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-accent">Community First</h3>
-              <p className="text-muted">
-                We're more than a store - we're part of the community. Supporting local farmers 
-                and helping our neighbors succeed is what drives us.
-              </p>
+              <h3 className="text-xl font-semibold mb-3 text-accent-2">Community First</h3>
+              <p className="text-muted">We're not just a store - we're part of the farming community. We support local events, sponsor 4-H programs, and give back to the community that supports us.</p>
             </div>
-            
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Leaf className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-accent">Quality Assured</h3>
-              <p className="text-muted">
-                Every product we carry meets our high standards. We test, research, and 
-                carefully select each item to ensure it serves our customers well.
-              </p>
+              <h3 className="text-xl font-semibold mb-3 text-accent-2">Sustainable Practices</h3>
+              <p className="text-muted">We're committed to environmental responsibility, offering eco-friendly products and working with suppliers who share our values.</p>
             </div>
-            
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-accent">Expert Service</h3>
-              <p className="text-muted">
-                Our team brings decades of combined farming experience. We're here to answer 
-                questions and provide guidance, not just sell products.
-              </p>
+              <h3 className="text-xl font-semibold mb-3 text-accent-2">Quality Guaranteed</h3>
+              <p className="text-muted">Every product we carry meets our high standards. If you're not satisfied, we'll make it right - no questions asked.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Our Team */}
       <section className="section">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              The knowledgeable professionals behind our success
+              The knowledgeable people behind our success
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-surface rounded-lg p-6 text-center">
-              <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-white font-bold">
-                JT
+            <div className="text-center">
+              <div className="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl font-bold text-accent">J</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-accent">John Thompson</h3>
-              <p className="text-muted mb-2">Founder & Owner</p>
-              <p className="text-sm text-muted">
-                40+ years of farming experience. Knows every product and every customer by name.
-              </p>
+              <h3 className="text-xl font-semibold mb-2">John Thompson</h3>
+              <p className="text-accent font-medium mb-2">Owner & Founder</p>
+              <p className="text-muted text-sm">John has been farming for over 40 years and knows what local farmers need. He's the heart of our operation.</p>
             </div>
-            
-            <div className="bg-surface rounded-lg p-6 text-center">
-              <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-white font-bold">
-                ST
+            <div className="text-center">
+              <div className="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl font-bold text-accent">S</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-accent">Sarah Thompson</h3>
-              <p className="text-muted mb-2">Operations Manager</p>
-              <p className="text-sm text-muted">
-                Ensures smooth operations and maintains our high standards of customer service.
-              </p>
+              <h3 className="text-xl font-semibold mb-2">Sarah Thompson</h3>
+              <p className="text-accent font-medium mb-2">Store Manager</p>
+              <p className="text-muted text-sm">Sarah runs the day-to-day operations and ensures every customer gets the attention they deserve.</p>
             </div>
-            
-            <div className="bg-surface rounded-lg p-6 text-center">
-              <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-white font-bold">
-                MT
+            <div className="text-center">
+              <div className="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl font-bold text-accent">M</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-accent">Mike Thompson</h3>
-              <p className="text-muted mb-2">Product Specialist</p>
-              <p className="text-sm text-muted">
-                Expert in animal nutrition and farming equipment. Always ready to help with advice.
-              </p>
+              <h3 className="text-xl font-semibold mb-2">Mike Rodriguez</h3>
+              <p className="text-accent font-medium mb-2">Livestock Specialist</p>
+              <p className="text-muted text-sm">Mike's expertise in animal nutrition helps farmers make the best choices for their livestock.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="section bg-accent text-white">
+      {/* Contact Info */}
+      <section className="section bg-surface">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold mb-2">38+</div>
-              <p className="text-white/80">Years in Business</p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">5,000+</div>
-              <p className="text-white/80">Happy Customers</p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">2,500+</div>
-              <p className="text-white/80">Products Available</p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">24/7</div>
-              <p className="text-white/80">Emergency Support</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="section">
-        <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-lg text-muted mb-8 max-w-2xl mx-auto">
-            Visit our store or browse our online catalog. Our team is ready to help you 
-            find exactly what you need for your farm, pets, or garden.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/feed-store#shop" 
-              className="btn-primary"
-            >
-              Shop Now
-            </a>
-            <a 
-              href="/feed-store#contact" 
-              className="btn-secondary"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Example Site Notice */}
-      <section className="bg-yellow-50 border-t border-yellow-200 py-8">
-        <div className="container text-center">
-          <div className="bg-white rounded-lg p-6 max-w-2xl mx-auto">
-            <h3 className="text-lg font-semibold text-yellow-800 mb-2">
-              🚧 This is an EXAMPLE SITE for Portfolio Demonstration 🚧
-            </h3>
-            <p className="text-yellow-700 text-sm">
-              This feed store website is a demo created to showcase web development skills. 
-              All content, images, and contact information are fictional and for demonstration purposes only.
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Visit Us Today</h2>
+            <p className="text-lg text-muted max-w-2xl mx-auto">
+              Stop by and see why we're Central Pennsylvania's favorite feed store
             </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-accent">Store Information</h3>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <MapPin className="w-6 h-6 text-accent mr-4 mt-1" />
+                  <div>
+                    <h4 className="font-semibold mb-1">Address</h4>
+                    <p className="text-muted">123 Farm Road<br />Central PA 17000</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Phone className="w-6 h-6 text-accent mr-4 mt-1" />
+                  <div>
+                    <h4 className="font-semibold mb-1">Phone</h4>
+                    <p className="text-muted">(717) 555-0123</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Mail className="w-6 h-6 text-accent mr-4 mt-1" />
+                  <div>
+                    <h4 className="font-semibold mb-1">Email</h4>
+                    <p className="text-muted">info@feedstore.com</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Clock className="w-6 h-6 text-accent mr-4 mt-1" />
+                  <div>
+                    <h4 className="font-semibold mb-1">Store Hours</h4>
+                    <div className="text-muted">
+                      <p>Monday - Friday: 7AM - 6PM</p>
+                      <p>Saturday: 8AM - 4PM</p>
+                      <p>Sunday: Closed</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-surface rounded-lg p-8 border border-border">
+              <h3 className="text-2xl font-semibold mb-6 text-accent">Special Services</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-accent mr-3" />
+                  <span className="text-muted">Bulk order discounts</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-accent mr-3" />
+                  <span className="text-muted">Local delivery service</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-accent mr-3" />
+                  <span className="text-muted">Expert farming advice</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-accent mr-3" />
+                  <span className="text-muted">Product demonstrations</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-accent mr-3" />
+                  <span className="text-muted">Loyalty rewards program</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
