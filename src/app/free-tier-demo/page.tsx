@@ -1,11 +1,20 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, MapPin, Clock, Phone, Mail, Globe, Smartphone, Star, ArrowRight, ExternalLink } from 'lucide-react'
+import { Check, MapPin, Clock, Phone, Mail, Globe, Star, ArrowRight, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
 
-const features = [
+const businessInfo = {
+  name: 'Sample Business',
+  tagline: 'Your Local Service Provider',
+  description: 'This is exactly what your free tier website will look like - a simple, professional 1-page site that gets your business online quickly.',
+  hours: 'Mon-Fri: 9AM-6PM | Sat: 10AM-4PM | Sun: Closed',
+  phone: '(555) 123-4567',
+  email: 'info@samplebusiness.com',
+  address: '123 Main Street, Anytown, ST 12345',
+}
+
+const freeTierFeatures = [
   '1-page scrolling site',
   'Business basics (logo, name, hours)',
   'Contact info + Google Maps',
@@ -15,335 +24,278 @@ const features = [
   'Footer credit',
 ]
 
-const businessInfo = {
-  name: 'Sample Business',
-  tagline: 'Your Local Service Provider',
-  description: 'This is a demonstration of what your free tier website would look like. It includes all the essential elements to get your business online quickly and professionally.',
-  hours: 'Mon-Fri: 9AM-6PM | Sat: 10AM-4PM | Sun: Closed',
-  phone: '(555) 123-4567',
-  email: 'info@samplebusiness.com',
-  address: '123 Main Street, Anytown, ST 12345',
-}
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-    },
-  },
-}
-
 export default function FreeTierDemoPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-bg via-bg-secondary to-bg-tertiary">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="container relative z-10">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="card bg-surface/30 backdrop-blur-md border border-surface-light/10 shadow-large">
-              <div className="inline-flex items-center px-4 py-2 bg-brand/20 text-brand rounded-full text-sm font-medium mb-6">
+    <main className="min-h-screen bg-white">
+      {/* Hero Section - Simple and Clean */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
                 <Star className="w-4 h-4 mr-2" />
                 Free Tier Demo
               </div>
-              <h1 className="text-5xl lg:text-7xl font-display font-bold text-text-primary mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
                 {businessInfo.name}
               </h1>
-              <p className="text-xl lg:text-2xl text-text-primary/80 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-6">
                 {businessInfo.tagline}
               </p>
-              <p className="text-lg text-text-primary/70 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-gray-500 max-w-2xl mx-auto">
                 {businessInfo.description}
               </p>
-            </div>
-          </motion.div>
-        </div>
-        
-        {/* Background decorative elements with subtle darkening */}
-        <div className="absolute inset-0 overflow-hidden bg-bg/20">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-brand-accent/10 rounded-full blur-3xl"></div>
-        </div>
-      </section>
-
-      {/* Business Info Section */}
-      <section className="py-20 bg-surface/50 relative">
-        <div className="absolute inset-0 bg-bg/10"></div>
-        <div className="container relative z-10">
-          <div className="card bg-surface/40 backdrop-blur-md border border-surface-light/10 shadow-large">
-            <motion.div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <motion.div variants={itemVariants}>
-                <h2 className="text-3xl lg:text-4xl font-display font-bold text-text-primary mb-8">
-                  About Our Business
-                </h2>
-                <p className="text-lg text-text-primary/80 mb-8 leading-relaxed">
-                  This demo showcases a professional business website that includes all the essential elements 
-                  your customers need to find and contact you. It's mobile-friendly, SEO-optimized, and 
-                  designed to convert visitors into customers.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-brand rounded-full"></div>
-                    <span className="text-text-primary/80">Professional appearance</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-brand rounded-full"></div>
-                    <span className="text-text-primary/80">Mobile-first design</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-brand rounded-full"></div>
-                    <span className="text-text-primary/80">Easy to navigate</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-brand rounded-full"></div>
-                    <span className="text-text-primary/80">Contact information prominent</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div variants={itemVariants} className="space-y-6">
-                <div className="card bg-surface/90 backdrop-blur-sm border border-surface-light/20 shadow-medium">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
-                      <Clock className="w-6 h-6 text-text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-text-primary">Business Hours</h3>
-                      <p className="text-text-primary/80">{businessInfo.hours}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card bg-surface/90 backdrop-blur-sm border border-surface-light/20 shadow-medium">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-text-primary">Phone</h3>
-                      <p className="text-text-primary/80">{businessInfo.phone}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card bg-surface/90 backdrop-blur-sm border border-surface-light/20 shadow-medium">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-text-primary">Email</h3>
-                      <p className="text-text-primary/80">{businessInfo.email}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card bg-surface/90 backdrop-blur-sm border border-surface-light/20 shadow-medium">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-text-primary">Address</h3>
-                      <p className="text-text-primary/80">{businessInfo.address}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-bg relative">
-        <div className="absolute inset-0 bg-bg-secondary/20"></div>
-        <div className="container relative z-10">
-          <div className="card bg-surface/30 backdrop-blur-md border border-surface-light/10 shadow-large">
+      {/* Business Info Section - Simple Cards */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
             <motion.div
-              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                About Our Business
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                This demo shows exactly what your free tier website will include - all the essential information your customers need to find and contact you.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Clock className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Business Hours</h3>
+                    <p className="text-gray-600">{businessInfo.hours}</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
+                    <p className="text-gray-600">{businessInfo.phone}</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
+                    <p className="text-gray-600">{businessInfo.email}</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-orange-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Address</h3>
+                    <p className="text-gray-600">{businessInfo.address}</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section - What's Included */}
+      <section className="py-16 bg-gray-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                What's Included in Your Free Site
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Every free tier website includes these essential features to get your business online quickly.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {freeTierFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-center space-x-3 bg-white border border-gray-200 rounded-lg p-4 shadow-sm"
+                >
+                  <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                  <span className="text-gray-700">{feature}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Notice - Simple and Clear */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl lg:text-4xl font-display font-bold text-text-primary mb-6">
-                What's Included in Your Free Site
-              </h2>
-              <p className="text-lg text-text-primary/80 max-w-2xl mx-auto">
-                Every free tier website includes these essential features to get your business online quickly.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="card bg-surface/90 backdrop-blur-sm border border-surface-light/20 shadow-medium hover:scale-105 transition-transform duration-300"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-brand to-brand-accent rounded-xl flex items-center justify-center mb-4">
-                    <Check className="w-6 h-6 text-text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-text-primary mb-2">{feature}</h3>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Demo Notice */}
-      <section className="py-20 bg-surface/50 relative">
-        <div className="absolute inset-0 bg-bg/15"></div>
-        <div className="container relative z-10">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="card bg-surface/90 backdrop-blur-md border-2 border-brand/30 shadow-large">
-              <div className="w-16 h-16 bg-brand/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Globe className="w-8 h-8 text-brand" />
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Globe className="w-8 h-8 text-blue-600" />
               </div>
-              <h2 className="text-2xl lg:text-3xl font-display font-bold text-text-primary mb-4">
-                This is a Demo Site
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                This is Your Free Tier Website
               </h2>
-              <p className="text-lg text-text-primary/80 mb-8 leading-relaxed">
-                This page demonstrates exactly what your free tier website would look like. 
-                It's fully responsive, SEO-optimized, and includes all the essential business information 
-                your customers need to find and contact you.
+              <p className="text-lg text-gray-600 mb-8">
+                This page demonstrates exactly what your free tier website will look like. 
+                It's simple, professional, and includes everything your customers need to find and contact you.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="card bg-surface/60 backdrop-blur-sm border border-surface-light/20 text-left">
-                  <h3 className="text-lg font-semibold text-text-primary mb-3">What You Get:</h3>
-                  <ul className="space-y-2 text-text-primary/80">
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-4 h-4 text-brand" />
-                      <span>Professional design</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-4 h-4 text-brand" />
-                      <span>Mobile-friendly layout</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-4 h-4 text-brand" />
-                      <span>Contact information</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-4 h-4 text-brand" />
-                      <span>Business hours</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="card bg-surface/60 backdrop-blur-sm border border-surface-light/20 text-left">
-                  <h3 className="text-lg font-semibold text-text-primary mb-3">Technical Features:</h3>
-                  <ul className="space-y-2 text-text-primary/80">
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-4 h-4 text-brand" />
-                      <span>SEO optimized</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-4 h-4 text-brand" />
-                      <span>Fast loading</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-4 h-4 text-brand" />
-                      <span>Google Maps integration</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-4 h-4 text-brand" />
-                      <span>Subdomain hosting</span>
-                    </li>
-                  </ul>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+                <h3 className="text-lg font-semibold text-blue-900 mb-3">What You Get:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                  <div>
+                    <ul className="space-y-2 text-blue-800">
+                      <li className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-blue-600" />
+                        <span>Professional design</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-blue-600" />
+                        <span>Mobile-friendly layout</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-blue-600" />
+                        <span>Contact information</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul className="space-y-2 text-blue-800">
+                      <li className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-blue-600" />
+                        <span>Business hours</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-blue-600" />
+                        <span>Google Maps integration</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-blue-600" />
+                        <span>SEO optimized</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="btn-primary inline-flex items-center justify-center"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-colors"
                 >
                   Get Your Free Site
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
                 <Link
                   href="/services"
-                  className="btn-secondary inline-flex items-center justify-center"
+                  className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-colors"
                 >
                   View All Packages
                   <ExternalLink className="w-4 h-4 ml-2" />
                 </Link>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-bg relative">
-        <div className="absolute inset-0 bg-bg-tertiary/10"></div>
-        <div className="container relative z-10">
-          <div className="card bg-surface/40 backdrop-blur-md border border-surface-light/10 shadow-large">
+      {/* Simple CTA Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container">
+          <div className="max-w-2xl mx-auto text-center">
             <motion.div
-              className="text-center max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl lg:text-4xl font-display font-bold text-text-primary mb-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Ready to Get Your Business Online?
               </h2>
-              <p className="text-lg text-text-primary/80 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-600 mb-8">
                 Your free tier website is just a consultation away. Get started today and have your 
                 professional business website up and running in no time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="btn-primary text-lg px-8 py-4 inline-flex items-center justify-center"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center transition-colors"
                 >
                   Start Your Free Site
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   href="/services"
-                  className="btn-ghost text-lg px-8 py-4 inline-flex items-center justify-center"
+                  className="bg-white hover:bg-gray-50 text-gray-700 px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center border border-gray-200 transition-colors"
                 >
                   View Pricing
                   <ExternalLink className="w-5 h-5 ml-2" />
@@ -353,6 +305,15 @@ export default function FreeTierDemoPage() {
           </div>
         </div>
       </section>
+
+      {/* Footer Credit - As specified in free tier */}
+      <footer className="py-8 bg-gray-100 border-t border-gray-200">
+        <div className="container">
+          <div className="text-center text-gray-500">
+            <p>Website by <Link href="/" className="text-blue-600 hover:text-blue-700">BraxCraft</Link> - Free Tier Demo</p>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
