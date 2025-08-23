@@ -51,6 +51,25 @@ const addOns = [
 
 const packages = [
   {
+    name: '🌱 Free Tier – "Online Business Card"',
+    price: 'Free',
+    monthly: '$0',
+    description: 'Perfect for businesses who want a simple online presence to start',
+    features: [
+      '1-page site (scrolling layout)',
+      'Business basics: logo, name, tagline, hours',
+      'Contact info + Google Maps embed',
+      'Contact button (phone/email links)',
+      'Template-based design (clean + professional)',
+      'Mobile-ready (phones and tablets)',
+      'Basic SEO for Google searches',
+      'Hosted on subdomain (businessname.braxcraft.com)',
+      'Footer credit ("Site built by Braxcraft")',
+    ],
+    popular: false,
+    cta: 'Get Free Site',
+  },
+  {
     name: 'Starter Website',
     price: '$50',
     monthly: '$15',
@@ -117,7 +136,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Pricing Packages */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {packages.map((pkg, index) => (
               <div
                 key={pkg.name}
@@ -133,14 +152,16 @@ export default function ServicesPage() {
                   <h3 className="h3 text-text-primary mb-4">{pkg.name}</h3>
                   <div className="flex items-baseline justify-center space-x-2 mb-2">
                     <span className="text-4xl font-display font-bold text-brand">{pkg.price}</span>
-                    {pkg.price !== 'Custom' && (
+                    {pkg.price === 'Free' ? (
+                      <span className="text-text-primary/60 text-lg">forever</span>
+                    ) : pkg.price !== 'Custom' ? (
                       <>
                         <span className="text-text-primary/60">setup</span>
                         <span className="text-2xl font-display font-bold text-text-primary">+</span>
                         <span className="text-2xl font-display font-bold text-brand">{pkg.monthly}</span>
                         <span className="text-text-primary/60">/month</span>
                       </>
-                    )}
+                    ) : null}
                   </div>
                   <p className="text-text-primary/80 text-sm">{pkg.description}</p>
                 </div>
