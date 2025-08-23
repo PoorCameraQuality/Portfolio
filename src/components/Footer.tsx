@@ -19,46 +19,48 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-surface border-t border-surface-light/20">
+    <footer style={{ backgroundColor: '#f8f9fa', borderTop: '1px solid rgba(58, 71, 80, 0.2)' }}>
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="mb-6">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
-                  <div className="text-text-primary text-lg">🦌</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#be3144' }}>
+                  <div className="text-white text-lg">🦌</div>
                 </div>
-                <h3 className="text-2xl font-display font-bold text-text-primary">
+                <h3 className="text-2xl font-display font-bold" style={{ color: '#303841' }}>
                   BraxCraft
                 </h3>
               </div>
-              <p className="text-text-primary/80 mb-4 max-w-md">
+              <p className="mb-4 max-w-md" style={{ color: '#3a4750' }}>
                 Affordable websites, built for local businesses — no gimmicks, no lock-in.
               </p>
             </div>
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-brand" />
+                <Mail className="w-4 h-4" style={{ color: '#be3144' }} />
                 <a
                   href="mailto:hello@braxcraft.com"
-                  className="text-text-primary/80 hover:text-brand transition-colors"
+                  className="transition-colors hover:text-[#be3144]"
+                  style={{ color: '#3a4750' }}
                 >
                   hello@braxcraft.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-brand" />
-                <span className="text-text-primary/80">
+                <MapPin className="w-4 h-4" style={{ color: '#be3144' }} />
+                <span style={{ color: '#3a4750' }}>
                   Shippensburg, PA
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-brand" />
+                <Phone className="w-4 h-4" style={{ color: '#be3144' }} />
                 <a
                   href="tel:+15551234567"
-                  className="text-text-primary/80 hover:text-brand transition-colors"
+                  className="transition-colors hover:text-[#be3144]"
+                  style={{ color: '#3a4750' }}
                 >
                   +1 (555) 123-4567
                 </a>
@@ -68,7 +70,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-text-primary mb-4">
+            <h4 className="text-lg font-semibold mb-4" style={{ color: '#303841' }}>
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -76,7 +78,8 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-text-primary/80 hover:text-brand transition-colors"
+                    className="transition-colors hover:text-[#be3144]"
+                    style={{ color: '#3a4750' }}
                   >
                     {link.name}
                   </Link>
@@ -87,7 +90,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="text-lg font-semibold text-text-primary mb-4">
+            <h4 className="text-lg font-semibold mb-4" style={{ color: '#303841' }}>
               Connect
             </h4>
             <ul className="space-y-2">
@@ -97,7 +100,8 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-text-primary/80 hover:text-brand transition-colors inline-flex items-center space-x-2"
+                    className="transition-colors inline-flex items-center space-x-2 hover:text-[#be3144]"
+                    style={{ color: '#3a4750' }}
                   >
                     <span>{link.icon}</span>
                     <span>{link.name}</span>
@@ -109,12 +113,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-surface-light/20 mt-12 pt-8">
+        <div className="border-t mt-12 pt-8" style={{ borderColor: 'rgba(58, 71, 80, 0.2)' }}>
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <p className="text-text-primary/60 text-sm">
+            <p className="text-sm" style={{ color: 'rgba(48, 56, 65, 0.6)' }}>
               © 2024 BraxCraft. All rights reserved.
             </p>
-            <p className="text-text-primary/60 text-sm">
+            <p className="text-sm" style={{ color: 'rgba(48, 56, 65, 0.6)' }}>
               Built with Next.js & Tailwind CSS
             </p>
           </div>

@@ -26,8 +26,8 @@ export default function ProductGrid({ category }: ProductGridProps) {
       
       {filteredProducts.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-muted text-lg">No products found in this category.</p>
-          <p className="text-sm text-muted mt-2">Tip: Try "All" or another category.</p>
+          <p className="text-[#2c786c] text-lg">No products found in this category.</p>
+          <p className="text-sm text-[#2c786c] mt-2">Tip: Try "All" or another category.</p>
         </div>
       )}
     </div>

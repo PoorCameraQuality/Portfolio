@@ -100,34 +100,34 @@ const packages = [
     cta: 'Get Professional',
   },
   {
-    name: 'Premium Package',
+    name: 'Enterprise Package',
     price: 'Custom',
     monthly: 'Custom',
-    description: 'Full-service solution with ongoing marketing support',
+    description: 'Enterprise-level solutions requiring custom development and ongoing support',
     features: [
       'Everything in Professional',
-      'Ongoing SEO campaigns',
-      'Paid ad setup/management',
-      'Social media automation',
-      'Priority support',
-      'Custom development',
+      'Custom enterprise features',
+      'Advanced integrations',
+      'Dedicated account manager',
+      '24/7 priority support',
+      'Custom development roadmap',
     ],
     popular: false,
-    cta: 'Get Custom Quote',
+    cta: 'Get Enterprise Quote',
   },
 ]
 
 export default function ServicesPage() {
   return (
-    <main className="pt-32">
+    <main className="pt-32" style={{ backgroundColor: '#d3d6db' }}>
       {/* Hero Section */}
-      <section className="section bg-bg">
+      <section className="section">
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
-            <h1 className="h1 text-text-primary mb-6">
+            <h1 className="h1 mb-6" style={{ color: '#303841' }}>
               Simple Pricing, Real Results
             </h1>
-            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
+            <p className="lead max-w-2xl mx-auto" style={{ color: '#3a4750' }}>
               Transparent pricing with no hidden fees. Every website includes full source code, 
               so you own it completely — no lock-in.
             </p>
@@ -138,46 +138,55 @@ export default function ServicesPage() {
             {packages.map((pkg, index) => (
               <div
                 key={pkg.name}
-                className={`card relative ${pkg.popular ? 'ring-2 ring-brand' : ''}`}
+                className="relative rounded-2xl shadow-medium p-6 lg:p-8"
+                style={{ 
+                  backgroundColor: 'white', 
+                  border: pkg.popular ? '2px solid #be3144' : '1px solid rgba(58, 71, 80, 0.2)' 
+                }}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand text-text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: '#be3144', color: 'white' }}>
                     Most Popular
                   </div>
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="h3 text-text-primary mb-4">{pkg.name}</h3>
+                  <h3 className="h3 mb-4" style={{ color: '#303841' }}>{pkg.name}</h3>
                   <div className="flex items-baseline justify-center space-x-2 mb-2">
-                    <span className="text-4xl font-display font-bold text-brand">{pkg.price}</span>
+                    <span className="text-4xl font-display font-bold" style={{ color: '#be3144' }}>{pkg.price}</span>
                     {pkg.price !== 'Free' && pkg.price !== 'Custom' ? (
                       <>
-                        <span className="text-text-primary/60">setup</span>
-                        <span className="text-2xl font-display font-bold text-text-primary">+</span>
-                        <span className="text-2xl font-display font-bold text-brand">{pkg.monthly}</span>
-                        <span className="text-text-primary/60">/month</span>
+                        <span style={{ color: 'rgba(48, 56, 65, 0.6)' }}>setup</span>
+                        <span className="text-2xl font-display font-bold" style={{ color: '#303841' }}>+</span>
+                        <span className="text-2xl font-display font-bold" style={{ color: '#be3144' }}>{pkg.monthly}</span>
+                        <span style={{ color: 'rgba(48, 56, 65, 0.6)' }}>/month</span>
                       </>
                     ) : null}
                   </div>
-                  <p className="text-text-primary/80 text-sm">{pkg.description}</p>
+                  <p className="text-sm" style={{ color: '#3a4750' }}>{pkg.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {pkg.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
-                      <Check className="w-5 h-5 text-brand mt-0.5 flex-shrink-0" />
-                      <span className="text-text-primary/80 text-sm">{feature}</span>
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#be3144' }} />
+                      <span className="text-sm" style={{ color: '#3a4750' }}>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <Link
-                  href={pkg.name === 'Premium Package' ? '/contact' : '/contact'}
+                  href={pkg.name === 'Enterprise Package' ? '/contact' : '/contact'}
                   className={`w-full text-center py-3 px-6 rounded-xl font-medium transition-all duration-200 ${
                     pkg.popular
-                      ? 'bg-brand text-text-primary hover:bg-brand-accent'
-                      : 'bg-surface text-text-primary hover:bg-surface-secondary border border-surface-light/20'
+                      ? 'text-white'
+                      : 'border'
                   }`}
+                  style={{ 
+                    backgroundColor: pkg.popular ? '#be3144' : '#f8f9fa',
+                    color: pkg.popular ? 'white' : '#303841',
+                    borderColor: 'rgba(58, 71, 80, 0.2)'
+                  }}
                 >
                   {pkg.cta}
                 </Link>
@@ -187,7 +196,8 @@ export default function ServicesPage() {
                   <div className="mt-4 text-center">
                     <Link
                       href="/free-tier-demo"
-                      className="text-brand hover:text-brand-light transition-colors text-sm font-medium inline-flex items-center"
+                      className="text-sm font-medium inline-flex items-center transition-colors hover:text-[#a02838]"
+                      style={{ color: '#be3144' }}
                     >
                       See Demo Site
                       <ArrowRight className="w-4 h-4 ml-1" />
@@ -201,13 +211,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Add-Ons Section */}
-      <section className="section bg-surface">
+      <section className="section" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
-            <h2 className="h2 text-text-primary mb-6">
+            <h2 className="h2 mb-6" style={{ color: '#303841' }}>
               Add-On Options
             </h2>
-            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
+            <p className="lead max-w-2xl mx-auto" style={{ color: '#3a4750' }}>
               Need more functionality? These add-ons can be included based on your specific needs. 
               All prices are one-time fees with no recurring charges.
             </p>
@@ -215,24 +225,24 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {addOns.map((addon, index) => (
-              <div key={index} className="card group hover:scale-105 transition-transform duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-brand to-brand-accent rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <addon.icon className="w-8 h-8 text-text-primary" />
+              <div key={index} className="group hover:scale-105 transition-transform duration-300 rounded-2xl shadow-medium p-6 lg:p-8" style={{ backgroundColor: 'white', border: '1px solid rgba(58, 71, 80, 0.2)' }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, #be3144, #a02838)' }}>
+                  <addon.icon className="w-8 h-8" style={{ color: 'white' }} />
                 </div>
                 
-                <h3 className="h3 text-text-primary mb-4">
+                <h3 className="h3 mb-4" style={{ color: '#303841' }}>
                   {addon.title}
                 </h3>
                 
-                <p className="text-text-primary/80 text-body mb-4">
+                <p className="text-body mb-4" style={{ color: '#3a4750' }}>
                   {addon.description}
                 </p>
 
-                <div className="text-2xl font-display font-bold text-brand mb-4">
+                <div className="text-2xl font-display font-bold mb-4" style={{ color: '#be3144' }}>
                   {addon.price}
                 </div>
 
-                <div className="text-sm text-text-primary/60">
+                <div className="text-sm" style={{ color: 'rgba(48, 56, 65, 0.6)' }}>
                   <span className="font-medium">One-time fee</span> - no recurring charges
                 </div>
               </div>
@@ -240,48 +250,48 @@ export default function ServicesPage() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-text-primary/60 text-sm">
-              <strong>Note:</strong> Complex features like e-commerce, payment systems, or advanced databases are quoted individually.
+            <p className="text-sm" style={{ color: 'rgba(48, 56, 65, 0.6)' }}>
+              <strong style={{ color: '#303841' }}>Note:</strong> Enterprise-level features like complex e-commerce, payment systems, advanced databases, and custom integrations require individual quotes.
             </p>
           </div>
         </div>
       </section>
 
       {/* Pricing Transparency */}
-      <section className="section bg-bg">
+      <section className="section">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="h2 text-text-primary mb-6">
+              <h2 className="h2 mb-6" style={{ color: '#303841' }}>
                 Pricing Transparency
               </h2>
-              <p className="lead text-text-primary/80">
+              <p className="lead" style={{ color: '#3a4750' }}>
                 No surprises, no hidden fees, no lock-in.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="card text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-brand to-brand-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-text-primary" />
+              <div className="text-center rounded-2xl shadow-medium p-6 lg:p-8" style={{ backgroundColor: 'white', border: '1px solid rgba(58, 71, 80, 0.2)' }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{ background: 'linear-gradient(135deg, #be3144, #a02838)' }}>
+                  <Shield className="w-8 h-8" style={{ color: 'white' }} />
                 </div>
-                <h3 className="h3 text-text-primary mb-4">
+                <h3 className="h3 mb-4" style={{ color: '#303841' }}>
                   No Lock-In
                 </h3>
-                <p className="text-text-primary/80">
+                <p style={{ color: '#3a4750' }}>
                   Every site includes full source code. You own it completely and can take it anywhere.
                 </p>
               </div>
 
-              <div className="card text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-brand to-brand-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-text-primary" />
+              <div className="text-center rounded-2xl shadow-medium p-6 lg:p-8" style={{ backgroundColor: 'white', border: '1px solid rgba(58, 71, 80, 0.2)' }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{ background: 'linear-gradient(135deg, #be3144, #a02838)' }}>
+                  <Zap className="w-8 h-8" style={{ color: 'white' }} />
                 </div>
-                <h3 className="h3 text-text-primary mb-4">
-                  Custom Quotes
+                <h3 className="h3 mb-4" style={{ color: '#303841' }}>
+                  Enterprise Solutions
                 </h3>
-                <p className="text-text-primary/80">
-                  More complex designs and advanced features are quoted individually to keep costs fair.
+                <p style={{ color: '#3a4750' }}>
+                  Enterprise-level features and custom development are quoted individually based on your specific requirements.
                 </p>
               </div>
             </div>
@@ -293,17 +303,17 @@ export default function ServicesPage() {
       <section className="section">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="h2 text-text-primary mb-6">
+            <h2 className="h2 mb-6" style={{ color: '#303841' }}>
               See What's Possible
             </h2>
-            <p className="lead text-text-primary/80">
+            <p className="lead" style={{ color: '#3a4750' }}>
               Check out our free demo one-pagers to see how your business could look online. 
               No commitment, just inspiration.
             </p>
           </div>
           
           <div className="text-center">
-            <Link href="/demo" className="btn-secondary text-lg px-8 py-4 inline-flex items-center gap-2">
+            <Link href="/demo" className="text-lg px-8 py-4 inline-flex items-center gap-2 rounded-xl font-medium transition-all duration-200 border hover:bg-[#d3d6db]" style={{ backgroundColor: '#f8f9fa', color: '#303841', borderColor: 'rgba(58, 71, 80, 0.2)' }}>
               View Demo One-Pagers
               <ArrowRight className="w-5 h-5" />
             </Link>
@@ -312,17 +322,17 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section bg-surface">
+      <section className="section" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="h2 text-text-primary mb-6">
+            <h2 className="h2 mb-6" style={{ color: '#303841' }}>
               Ready to Get Your Business Online?
             </h2>
-            <p className="lead text-text-primary/80 mb-8">
+            <p className="lead mb-8" style={{ color: '#3a4750' }}>
               Book a free consultation to discuss your needs. I'll walk you through the best options, 
               give you transparent pricing, and get you set up quickly.
             </p>
-            <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+            <Link href="/contact" className="text-lg px-8 py-4 rounded-xl font-bold text-white transition-all duration-200 inline-flex items-center gap-2 hover:bg-[#a02838]" style={{ backgroundColor: '#be3144' }}>
               Book a Free Consultation
             </Link>
           </div>

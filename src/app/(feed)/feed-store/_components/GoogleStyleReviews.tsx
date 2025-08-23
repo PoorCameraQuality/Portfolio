@@ -22,23 +22,23 @@ export default function GoogleStyleReviews() {
   return (
     <section className="section">
       <div className="container">
-        <h2 className="text-2xl font-bold mb-8 text-center">What Locals Are Saying</h2>
+        <h2 className="text-2xl font-bold mb-8 text-center text-[#004445]">What Locals Are Saying</h2>
         <div className="max-w-4xl mx-auto space-y-6">
           {REVIEWS.map((r, i) => (
-            <div key={i} className="bg-surface rounded-lg p-6 border border-border">
+            <div key={i} className="bg-surface rounded-lg p-6 border border-[#2c786c]">
               <div className="flex items-center mb-2">
-                <div className="w-9 h-9 rounded-full bg-accent/20 flex items-center justify-center mr-3">
-                  <span className="text-accent font-semibold">{r.author.charAt(0)}</span>
+                <div className="w-9 h-9 rounded-full bg-[#f8b400]/20 flex items-center justify-center mr-3">
+                  <span className="text-[#f8b400] font-semibold">{r.author.charAt(0)}</span>
                 </div>
-                <div className="font-semibold mr-2">{r.author}</div>
-                <div className="flex text-yellow-400 mr-2">
+                <div className="font-semibold mr-2 text-[#004445]">{r.author}</div>
+                <div className="flex text-[#f8b400] mr-2">
                   {Array.from({ length: 5 }).map((_, j) => (
-                    <Star key={j} className={`w-4 h-4 ${j < r.rating ? 'fill-current' : 'text-muted'}`} />
+                    <Star key={j} className={`w-4 h-4 ${j < r.rating ? 'fill-current' : 'text-[#2c786c]'}`} />
                   ))}
                 </div>
-                <span className="text-xs text-muted">{r.timeAgo}</span>
+                <span className="text-xs text-[#2c786c]">{r.timeAgo}</span>
               </div>
-              <p className="text-muted">{`"${r.text}"`}</p>
+              <p className="text-[#2c786c]">{`"${r.text}"`}</p>
             </div>
           ))}
         </div>

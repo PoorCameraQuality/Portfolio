@@ -27,8 +27,8 @@ const freeTierFeatures = [
 
 export default function FreeTierDemoPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
-      <div className="bg-yellow-50 text-yellow-900 text-center py-3 border-b border-yellow-200">
+    <main className="min-h-screen" style={{ backgroundColor: '#f8f398' }}>
+      <div className="text-center py-3 border-b" style={{ backgroundColor: '#e46161', color: 'white' }}>
         🚧 Demo site built by <a href="https://cheaplocalwebsites.com" target="_blank" rel="noopener" className="underline">CheapLocalWebsites.com</a> — example only.
       </div>
       {/* Hero Section - Card showing the actual website */}
@@ -41,14 +41,14 @@ export default function FreeTierDemoPage() {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6" style={{ backgroundColor: '#cbf078', color: '#2d5016' }}>
                 <Star className="w-4 h-4 mr-2" />
                 Free Tier Demo
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6" style={{ color: '#2d5016' }}>
                 This is Your Free Website
               </h1>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="text-xl max-w-2xl mx-auto" style={{ color: '#4a5d3a' }}>
                 Below is exactly what your free tier website will look like - wrapped in clear cards to show what's included.
               </p>
             </motion.div>
@@ -58,20 +58,21 @@ export default function FreeTierDemoPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden"
+              className="rounded-2xl shadow-xl border overflow-hidden"
+              style={{ backgroundColor: 'white', borderColor: '#f1b963' }}
             >
               {/* Website Header */}
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 text-center">
+              <div className="text-white p-8 text-center" style={{ backgroundColor: '#cbf078' }}>
                 <div className="flex items-center justify-center mb-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mr-4" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }}>
                     <Building2 className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-left">
-                    <h2 className="text-3xl font-bold">{businessInfo.name}</h2>
-                    <p className="text-blue-100 text-lg">{businessInfo.tagline}</p>
+                    <h2 className="text-3xl font-bold" style={{ color: '#2d5016' }}>{businessInfo.name}</h2>
+                    <p className="text-lg" style={{ color: '#4a5d3a' }}>{businessInfo.tagline}</p>
                   </div>
                 </div>
-                <p className="text-blue-100 max-w-2xl mx-auto">
+                <p className="max-w-2xl mx-auto" style={{ color: '#4a5d3a' }}>
                   {businessInfo.description}
                 </p>
               </div>
@@ -81,63 +82,63 @@ export default function FreeTierDemoPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   {/* Business Info Cards */}
                   <div className="space-y-4">
-                    <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                    <div className="rounded-lg p-4 border" style={{ backgroundColor: '#f8f398', borderColor: '#f1b963' }}>
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                          <Clock className="w-5 h-5 text-blue-600" />
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#cbf078' }}>
+                          <Clock className="w-5 h-5" style={{ color: '#2d5016' }} />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-gray-900">Business Hours</h3>
-                          <p className="text-gray-600 text-sm">{businessInfo.hours}</p>
+                          <h3 className="font-semibold" style={{ color: '#2d5016' }}>Business Hours</h3>
+                          <p className="text-sm" style={{ color: '#4a5d3a' }}>{businessInfo.hours}</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                    <div className="rounded-lg p-4 border" style={{ backgroundColor: '#f8f398', borderColor: '#f1b963' }}>
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                          <Phone className="w-5 h-5 text-green-600" />
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#cbf078' }}>
+                          <Phone className="w-5 h-5" style={{ color: '#2d5016' }} />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-gray-900">Phone</h3>
-                          <p className="text-gray-600 text-sm">{businessInfo.phone}</p>
+                          <h3 className="font-semibold" style={{ color: '#2d5016' }}>Phone</h3>
+                          <p className="text-sm" style={{ color: '#4a5d3a' }}>{businessInfo.phone}</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                    <div className="rounded-lg p-4 border" style={{ backgroundColor: '#f8f398', borderColor: '#f1b963' }}>
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                          <Mail className="w-5 h-5 text-purple-600" />
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#cbf078' }}>
+                          <Mail className="w-5 h-5" style={{ color: '#2d5016' }} />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-gray-900">Email</h3>
-                          <p className="text-gray-600 text-sm">{businessInfo.email}</p>
+                          <h3 className="font-semibold" style={{ color: '#2d5016' }}>Email</h3>
+                          <p className="text-sm" style={{ color: '#4a5d3a' }}>{businessInfo.email}</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                    <div className="rounded-lg p-4 border" style={{ backgroundColor: '#f8f398', borderColor: '#f1b963' }}>
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                          <MapPin className="w-5 h-5 text-orange-600" />
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#cbf078' }}>
+                          <MapPin className="w-5 h-5" style={{ color: '#2d5016' }} />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-gray-900">Address</h3>
-                          <p className="text-gray-600 text-sm">{businessInfo.address}</p>
+                          <h3 className="font-semibold" style={{ color: '#2d5016' }}>Address</h3>
+                          <p className="text-sm" style={{ color: '#4a5d3a' }}>{businessInfo.address}</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   {/* What's Included Card */}
-                  <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
-                    <h3 className="text-lg font-semibold text-blue-900 mb-4">What's Included in Your Free Site</h3>
+                  <div className="rounded-lg p-6 border" style={{ backgroundColor: '#f8f398', borderColor: '#f1b963' }}>
+                    <h3 className="text-lg font-semibold mb-4" style={{ color: '#2d5016' }}>What's Included in Your Free Site</h3>
                     <div className="space-y-3">
                       {freeTierFeatures.map((feature, index) => (
                         <div key={index} className="flex items-center space-x-3">
-                          <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                          <span className="text-blue-800 text-sm">{feature}</span>
+                          <Check className="w-4 h-4 flex-shrink-0" style={{ color: '#e46161' }} />
+                          <span className="text-sm" style={{ color: '#4a5d3a' }}>{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -146,12 +147,13 @@ export default function FreeTierDemoPage() {
 
                 {/* Call to Action */}
                 <div className="text-center">
-                  <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 border border-green-200">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Ready to Get Started?</h3>
-                    <p className="text-gray-600 mb-4">This is exactly what your free website will look like!</p>
+                  <div className="rounded-lg p-6 border" style={{ backgroundColor: '#f8f398', borderColor: '#f1b963' }}>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#2d5016' }}>Ready to Get Started?</h3>
+                    <p className="mb-4" style={{ color: '#4a5d3a' }}>This is exactly what your free website will look like!</p>
                     <Link
                       href="/contact"
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-colors"
+                      className="px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-colors text-white hover:bg-[#d14f4f]"
+                      style={{ backgroundColor: '#e46161' }}
                     >
                       Get Your Free Site
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -167,7 +169,7 @@ export default function FreeTierDemoPage() {
       <GoogleStyleReviews />
 
       {/* Features Breakdown - Clear cards showing each feature */}
-      <section className="py-16 bg-white">
+      <section className="py-16" style={{ backgroundColor: 'white' }}>
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -177,10 +179,10 @@ export default function FreeTierDemoPage() {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#2d5016' }}>
                 Every Feature Clearly Included
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg max-w-2xl mx-auto" style={{ color: '#4a5d3a' }}>
                 Your free tier website includes these exact features, no surprises or hidden costs.
               </p>
             </motion.div>
@@ -193,13 +195,14 @@ export default function FreeTierDemoPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white border-2 border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-blue-300"
+                  className="border-2 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#cbf078]"
+                  style={{ backgroundColor: 'white', borderColor: '#f1b963' }}
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                    <Check className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: '#cbf078' }}>
+                    <Check className="w-6 h-6" style={{ color: '#2d5016' }} />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>
-                  <p className="text-gray-600 text-sm">
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#2d5016' }}>{feature}</h3>
+                  <p className="text-sm" style={{ color: '#4a5d3a' }}>
                     {feature === '1-page scrolling site' && 'A single, scrollable page with all your business information'}
                     {feature === 'Business basics (logo, name, hours)' && 'Professional logo, business name, and operating hours prominently displayed'}
                     {feature === 'Contact info + Google Maps' && 'Phone, email, address with integrated Google Maps for easy navigation'}
@@ -216,7 +219,7 @@ export default function FreeTierDemoPage() {
       </section>
 
       {/* Demo Notice - Clear explanation */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16" style={{ backgroundColor: '#f8f398' }}>
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -226,49 +229,49 @@ export default function FreeTierDemoPage() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Globe className="w-8 h-8 text-blue-600" />
+              <div className="rounded-2xl p-8 shadow-lg border" style={{ backgroundColor: 'white', borderColor: '#f1b963' }}>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#cbf078' }}>
+                  <Globe className="w-8 h-8" style={{ color: '#2d5016' }} />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                <h2 className="text-2xl font-bold mb-4" style={{ color: '#2d5016' }}>
                   This is Your Free Tier Website
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-lg mb-8" style={{ color: '#4a5d3a' }}>
                   The card above shows exactly what your free tier website will look like. 
                   It's simple, professional, and includes everything your customers need to find and contact you.
                 </p>
                 
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-3">What You Get:</h3>
+                <div className="border rounded-lg p-6 mb-8" style={{ backgroundColor: '#f8f398', borderColor: '#f1b963' }}>
+                  <h3 className="text-lg font-semibold mb-3" style={{ color: '#2d5016' }}>What You Get:</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                     <div>
-                      <ul className="space-y-2 text-blue-800">
+                      <ul className="space-y-2" style={{ color: '#4a5d3a' }}>
                         <li className="flex items-center space-x-2">
-                          <Check className="w-4 h-4 text-blue-600" />
+                          <Check className="w-4 h-4" style={{ color: '#e46161' }} />
                           <span>Professional design</span>
                         </li>
                         <li className="flex items-center space-x-2">
-                          <Check className="w-4 h-4 text-blue-600" />
+                          <Check className="w-4 h-4" style={{ color: '#e46161' }} />
                           <span>Mobile-friendly layout</span>
                         </li>
                         <li className="flex items-center space-x-2">
-                          <Check className="w-4 h-4 text-blue-600" />
+                          <Check className="w-4 h-4" style={{ color: '#e46161' }} />
                           <span>Contact information</span>
                         </li>
                       </ul>
                     </div>
                     <div>
-                      <ul className="space-y-2 text-blue-800">
+                      <ul className="space-y-2" style={{ color: '#4a5d3a' }}>
                         <li className="flex items-center space-x-2">
-                          <Check className="w-4 h-4 text-blue-600" />
+                          <Check className="w-4 h-4" style={{ color: '#e46161' }} />
                           <span>Business hours</span>
                         </li>
                         <li className="flex items-center space-x-2">
-                          <Check className="w-4 h-4 text-blue-600" />
+                          <Check className="w-4 h-4" style={{ color: '#e46161' }} />
                           <span>Google Maps integration</span>
                         </li>
                         <li className="flex items-center space-x-2">
-                          <Check className="w-4 h-4 text-blue-600" />
+                          <Check className="w-4 h-4" style={{ color: '#e46161' }} />
                           <span>SEO optimized</span>
                         </li>
                       </ul>
@@ -279,14 +282,16 @@ export default function FreeTierDemoPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     href="/contact"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-colors"
+                    className="text-white px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-colors hover:bg-[#d14f4f]"
+                    style={{ backgroundColor: '#e46161' }}
                   >
                     Get Your Free Site
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                   <Link
                     href="/services"
-                    className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-colors"
+                    className="px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-colors hover:bg-[#e8a84a]"
+                    style={{ backgroundColor: '#f1b963', color: '#8b4513' }}
                   >
                     View All Packages
                     <ExternalLink className="w-4 h-4 ml-2" />
@@ -299,7 +304,7 @@ export default function FreeTierDemoPage() {
       </section>
 
       {/* Simple CTA Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16" style={{ backgroundColor: 'white' }}>
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <motion.div
@@ -308,24 +313,26 @@ export default function FreeTierDemoPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold mb-6" style={{ color: '#2d5016' }}>
                 Ready to Get Your Business Online?
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg mb-8" style={{ color: '#4a5d3a' }}>
                 Your free tier website is just a consultation away. Get started today and have your 
                 professional business website up and running in no time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center transition-colors"
+                  className="text-white px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center transition-colors hover:bg-[#d14f4f]"
+                  style={{ backgroundColor: '#e46161' }}
                 >
                   Start Your Free Site
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   href="/services"
-                  className="bg-white hover:bg-gray-50 text-gray-700 px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center border border-gray-200 transition-colors"
+                  className="px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center border transition-colors hover:bg-[#f8f398]"
+                  style={{ backgroundColor: 'white', color: '#4a5d3a', borderColor: '#f1b963' }}
                 >
                   View Pricing
                   <ExternalLink className="w-5 h-5 ml-2" />
@@ -337,9 +344,9 @@ export default function FreeTierDemoPage() {
       </section>
 
       {/* Footer Credit - As specified in free tier */}
-      <footer className="py-8 bg-gray-100 border-t border-gray-200">
+      <footer className="py-8 border-t" style={{ backgroundColor: '#f8f398', borderColor: '#f1b963' }}>
         <div className="container">
-          <div className="text-center text-gray-500">
+          <div className="text-center" style={{ color: '#4a5d3a' }}>
             <p>
               Website demo by <a href="https://cheaplocalwebsites.com" target="_blank" rel="noopener" className="underline">CheapLocalWebsites.com</a>.
             </p>

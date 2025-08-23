@@ -23,16 +23,16 @@
 
 @layer base {
   :root {
-    --bg: #0b0c10;
-    --ink: #e9ecef;
-    --muted: #b6bdc6;
-    --accent: #14b8a6; /* teal */
-    --accent-2: #22c55e; /* green */
-    --card: #121318;
-    --surface: #0f1115;
-    --border: #22262f;
-    --shadow: 0 12px 28px rgba(0,0,0,.35);
-    --shadow-lg: 0 18px 40px rgba(0,0,0,.45);
+    --bg: #d3d6db;
+    --ink: #303841;
+    --muted: #3a4750;
+    --accent: #be3144;
+    --accent-2: #a02838;
+    --card: #ffffff;
+    --surface: #f8f9fa;
+    --border: #3a4750;
+    --shadow: 0 12px 28px rgba(58, 71, 80, 0.15);
+    --shadow-lg: 0 18px 40px rgba(58, 71, 80, 0.25);
   }
 
   html, body { background: var(--bg); color: var(--ink); }
@@ -53,7 +53,7 @@
     border: none; text-decoration: none;
     transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
   }
-  .btn-primary:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: var(--shadow); background: var(--accent-2); }
   .btn-primary:focus-visible{ outline: 3px solid var(--accent-2); outline-offset: 2px; }
 
   .btn-secondary{
@@ -66,7 +66,7 @@
     text-decoration: none;
     transition: background .16s ease, transform .16s ease;
   }
-  .btn-secondary:hover{ background: rgba(255,255,255,.04); transform: translateY(-2px); }
+  .btn-secondary:hover{ background: rgba(58, 71, 80, 0.1); transform: translateY(-2px); }
 
   .grid-portfolio{
     display:grid;
@@ -82,7 +82,7 @@
   .badge {
     display:inline-flex; align-items:center;
     padding:.35rem .65rem; border-radius:999px;
-    border:1px solid var(--border); background: rgba(255,255,255,.03);
+    border:1px solid var(--border); background: var(--surface);
     font-size:.8rem; color: var(--muted);
   }
 

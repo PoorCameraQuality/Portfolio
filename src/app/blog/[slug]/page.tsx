@@ -48,13 +48,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen" style={{ backgroundColor: '#d3d6db' }}>
       {/* Back to Blog */}
-      <div className="bg-white border-b">
+      <div style={{ backgroundColor: 'white', borderBottom: '1px solid rgba(58, 71, 80, 0.2)' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/blog"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
+            className="inline-flex items-center font-medium transition-colors duration-200 hover:text-[#a02838]"
+            style={{ color: '#be3144' }}
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
@@ -66,7 +67,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <header className="mb-12">
-          <div className="flex items-center text-sm text-gray-500 mb-4">
+          <div className="flex items-center text-sm mb-4" style={{ color: '#3a4750' }}>
             <CalendarDays className="w-4 h-4 mr-2" />
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString('en-US', {
@@ -80,11 +81,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <span>{post.author}</span>
           </div>
           
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold mb-6" style={{ color: '#303841' }}>
             {post.title}
           </h1>
           
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="text-xl mb-6" style={{ color: '#3a4750' }}>
             {post.excerpt}
           </p>
           
@@ -92,7 +93,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800"
+                className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
+                style={{ backgroundColor: '#f8f9fa', color: '#3a4750', border: '1px solid rgba(58, 71, 80, 0.2)' }}
               >
                 <Tag className="w-4 h-4 mr-2" />
                 {tag}
@@ -113,15 +115,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         )}
 
         {/* Article Body */}
-        <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-strong:text-gray-900 prose-ul:text-gray-700 prose-li:text-gray-700">
+        <div className="prose prose-lg max-w-none">
           {/* Note: In a real implementation, you would use MDX rendering here */}
           {/* For now, we'll show a placeholder since MDX rendering requires additional setup */}
-          <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-500">
-            <p className="text-gray-600 mb-4">
-              <strong>Note:</strong> This is a blog post about "{post.title}". 
+          <div className="p-6 rounded-lg border-l-4" style={{ backgroundColor: '#f8f9fa', borderLeftColor: '#be3144' }}>
+            <p className="mb-4" style={{ color: '#3a4750' }}>
+              <strong style={{ color: '#303841' }}>Note:</strong> This is a blog post about "{post.title}". 
               In a production environment, this would render the full MDX content.
             </p>
-            <p className="text-gray-600">
+            <p style={{ color: '#3a4750' }}>
               The content includes detailed information about {post.tags.join(', ')} 
               and provides valuable insights for small business owners.
             </p>
@@ -129,16 +131,17 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 p-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg text-white text-center">
+        <div className="mt-16 p-8 rounded-lg text-white text-center" style={{ backgroundColor: '#be3144' }}>
           <h2 className="text-2xl font-bold mb-4">
             Ready to get your business online?
           </h2>
-          <p className="text-blue-100 mb-6 text-lg">
+          <p className="mb-6 text-lg" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
             Let's discuss how a professional website can transform your business and attract more customers.
           </p>
           <Link
             href="/services"
-            className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
+            className="inline-flex items-center px-6 py-3 font-semibold rounded-lg transition-colors duration-200 hover:bg-[#f8f9fa]"
+            style={{ backgroundColor: 'white', color: '#be3144' }}
           >
             Get Your $15 Website
           </Link>

@@ -45,15 +45,15 @@ const timeline = [
 
 export default function AboutPage() {
   return (
-    <main className="pt-32">
+    <main className="pt-32" style={{ backgroundColor: '#d3d6db' }}>
       {/* Hero Section */}
-      <section className="section bg-bg">
+      <section className="section">
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
-            <h1 className="h1 text-text-primary mb-6">
+            <h1 className="h1 mb-6" style={{ color: '#303841' }}>
               Helping Local Businesses Shine Online
             </h1>
-            <p className="lead text-text-primary/80 max-w-3xl mx-auto">
+            <p className="lead max-w-3xl mx-auto" style={{ color: '#3a4750' }}>
               I've spent 4 years building websites and backend systems, specializing in design and SEO. 
               My goal is simple: help small businesses get online with a site that looks professional, 
               works smoothly, and brings in customers. I handle the tech, hosting, and updates—you focus on your business.
@@ -63,7 +63,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <div className="relative">
-                <div className="w-full h-96 bg-gradient-to-br from-brand to-brand-accent rounded-2xl overflow-hidden flex items-center justify-center">
+                <div className="w-full h-96 rounded-2xl overflow-hidden flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #be3144, #a02838)' }}>
                   {/* BraxCraft Logo */}
                   <div className="text-center">
                     <div className="w-48 h-48 mx-auto mb-6 relative">
@@ -79,31 +79,31 @@ export default function AboutPage() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-surface rounded-2xl shadow-large flex items-center justify-center">
-                  <Award className="w-12 h-12 text-brand" />
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-2xl shadow-large flex items-center justify-center" style={{ backgroundColor: '#f8f9fa' }}>
+                  <Award className="w-12 h-12" style={{ color: '#be3144' }} />
                 </div>
               </div>
             </div>
 
             <div className="space-y-6">
-              <h2 className="h2 text-text-primary">
+              <h2 className="h2" style={{ color: '#303841' }}>
                 One-on-One{' '}
-                <span className="gradient-text">Client Focus</span>
+                <span style={{ background: 'linear-gradient(135deg, #be3144, #a02838)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Client Focus</span>
               </h2>
               
-              <p className="text-text-primary/80 text-body">
+              <p className="text-body" style={{ color: '#3a4750' }}>
                 I work one-on-one with every client to make sure your site not only represents your business but also gets found on Google, Maps, Yelp, and beyond.
               </p>
               
-              <p className="text-text-primary/80 text-body">
+              <p className="text-body" style={{ color: '#3a4750' }}>
                 My approach combines technical expertise with creative vision, ensuring that 
                 every solution is not only functional but also beautiful and engaging. I'm 
                 constantly learning and evolving, staying up-to-date with the latest 
                 technologies and design trends.
               </p>
               
-              <p className="text-text-primary/80 text-body">
-                <strong>Clean design, reliable hosting, and simple maintenance</strong> — 
+              <p className="text-body" style={{ color: '#3a4750' }}>
+                <strong style={{ color: '#303841' }}>Clean design, reliable hosting, and simple maintenance</strong> — 
                 so you can focus on running your business.
               </p>
 
@@ -114,13 +114,13 @@ export default function AboutPage() {
                   { icon: Clock, number: '2-Week', label: 'Turnaround' },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <div className="w-12 h-12 bg-surface rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <stat.icon className="w-6 h-6 text-brand" />
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: '#f8f9fa' }}>
+                      <stat.icon className="w-6 h-6" style={{ color: '#be3144' }} />
                     </div>
-                    <div className="text-2xl font-display font-bold text-text-primary mb-1">
+                    <div className="text-2xl font-display font-bold mb-1" style={{ color: '#303841' }}>
                       {stat.number}
                     </div>
-                    <div className="text-text-primary/60 text-sm">
+                    <div className="text-sm" style={{ color: 'rgba(48, 56, 65, 0.6)' }}>
                       {stat.label}
                     </div>
                   </div>
@@ -132,13 +132,13 @@ export default function AboutPage() {
       </section>
 
       {/* Skills Section */}
-      <section className="section bg-surface">
+      <section className="section" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
-            <h2 className="h2 text-text-primary mb-6">
+            <h2 className="h2 mb-6" style={{ color: '#303841' }}>
               What I Specialize In
             </h2>
-            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
+            <p className="lead max-w-2xl mx-auto" style={{ color: '#3a4750' }}>
               I focus on the specific skills that help local businesses succeed online.
             </p>
           </div>
@@ -151,13 +151,16 @@ export default function AboutPage() {
                   className="space-y-2"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-text-primary font-medium">{skill.name}</span>
-                    <span className="text-brand font-semibold">{skill.level}%</span>
+                    <span className="font-medium" style={{ color: '#303841' }}>{skill.name}</span>
+                    <span className="font-semibold" style={{ color: '#be3144' }}>{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-surface-light/20 rounded-full h-2">
+                  <div className="w-full rounded-full h-2" style={{ backgroundColor: 'rgba(58, 71, 80, 0.2)' }}>
                     <div
-                      className="bg-gradient-to-br from-brand to-brand-accent h-2 rounded-full"
-                      style={{ width: `${skill.level}%` }}
+                      className="h-2 rounded-full"
+                      style={{ 
+                        width: `${skill.level}%`,
+                        background: 'linear-gradient(135deg, #be3144, #a02838)'
+                      }}
                     />
                   </div>
                 </div>
@@ -168,13 +171,13 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="section bg-bg">
+      <section className="section">
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
-            <h2 className="h2 text-text-primary mb-6">
+            <h2 className="h2 mb-6" style={{ color: '#303841' }}>
               My Journey
             </h2>
-            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
+            <p className="lead max-w-2xl mx-auto" style={{ color: '#3a4750' }}>
               From general web development to specializing in local business websites.
             </p>
           </div>
@@ -182,7 +185,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-surface-light/30" />
+              <div className="absolute left-8 top-0 bottom-0 w-0.5" style={{ backgroundColor: 'rgba(58, 71, 80, 0.3)' }} />
               
               <div className="space-y-12">
                 {timeline.map((item, index) => (
@@ -191,22 +194,22 @@ export default function AboutPage() {
                     className="relative flex items-start space-x-8"
                   >
                     {/* Timeline dot */}
-                    <div className="relative z-10 w-16 h-16 bg-surface rounded-full flex items-center justify-center border-4 border-bg">
-                      <CheckCircle className="w-6 h-6 text-brand" />
+                    <div className="relative z-10 w-16 h-16 rounded-full flex items-center justify-center border-4" style={{ backgroundColor: '#f8f9fa', borderColor: '#d3d6db' }}>
+                      <CheckCircle className="w-6 h-6" style={{ color: '#be3144' }} />
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 pt-2">
-                      <div className="text-brand font-semibold mb-2">
+                      <div className="font-semibold mb-2" style={{ color: '#be3144' }}>
                         {item.year}
                       </div>
-                      <h3 className="h3 text-text-primary mb-2">
+                      <h3 className="h3 mb-2" style={{ color: '#303841' }}>
                         {item.title}
                       </h3>
-                      <div className="text-text-primary/60 font-medium mb-3">
+                      <div className="font-medium mb-3" style={{ color: 'rgba(48, 56, 65, 0.6)' }}>
                         {item.company}
                       </div>
-                      <p className="text-text-primary/80 text-body">
+                      <p className="text-body" style={{ color: '#3a4750' }}>
                         {item.description}
                       </p>
                     </div>

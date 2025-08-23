@@ -17,8 +17,8 @@ export default function FeedStoreHomePage() {
       <section id="shop" className="section bg-surface">
         <div className="container">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold">Shop Essentials</h2>
-            <p className="text-lg text-muted">Popular categories curated for local needs</p>
+            <h2 className="text-3xl font-bold text-[#004445]">Shop Essentials</h2>
+            <p className="text-lg text-[#2c786c]">Popular categories curated for local needs</p>
           </div>
           {/* Expect categories from products data; "All" will be injected by CategoryFilter */}
           <CategoryFilter 
@@ -41,9 +41,9 @@ export default function FeedStoreHomePage() {
       {/* CTA: Get Listed / Contact */}
       <section className="section">
         <div className="container text-center">
-          <h2 className="text-2xl font-bold mb-4">Want a site like this for your shop?</h2>
-          <p className="text-lg text-muted mb-6 max-w-2xl mx-auto">
-            We set up your site, Google Maps, hosting & monthly updates for <strong>$15/mo</strong>. No hassle.
+          <h2 className="text-2xl font-bold mb-4 text-[#004445]">Want a site like this for your shop?</h2>
+          <p className="text-lg text-[#2c786c] mb-6 max-w-2xl mx-auto">
+            We set up your site, Google Maps, hosting & monthly updates for <strong className="text-[#f8b400]">$15/mo</strong>. No hassle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://cheaplocalwebsites.com" target="_blank" rel="noopener" className="btn-primary">

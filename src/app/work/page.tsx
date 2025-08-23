@@ -98,37 +98,39 @@ const stats = [
 
 export default function WorkPage() {
   return (
-    <>
+    <div style={{ backgroundColor: '#d3d6db' }}>
       {/* Hero Section */}
-      <section className="section pt-24 pb-24 bg-gradient-to-br from-bg to-surface">
+      <section className="section pt-24 pb-24" style={{ background: 'linear-gradient(135deg, #d3d6db, #f8f9fa)' }}>
         <div className="container">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-4 py-2 bg-brand/10 rounded-full text-sm text-brand mb-8">
-              <Star className="w-4 h-4 mr-2 text-brand" />
+            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm mb-8" style={{ backgroundColor: 'rgba(190, 49, 68, 0.1)', color: '#be3144' }}>
+              <Star className="w-4 h-4 mr-2" />
               Creative Web Developer & Designer
             </div>
-            <h1 className="display mb-8">
+            <h1 className="display mb-8" style={{ color: '#303841' }}>
               Creative
               <br />
-              <span className="gradient-text">Digital</span>
+              <span style={{ background: 'linear-gradient(135deg, #be3144, #a02838)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Digital</span>
               <br />
               Solutions
             </h1>
-            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
+            <p className="lead max-w-2xl mx-auto" style={{ color: '#3a4750' }}>
               Transforming ideas into exceptional digital experiences. From developer tools to business websites, 
               I create solutions that drive results and exceed expectations.
             </p>
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#projects"
-                className="btn-primary inline-flex items-center"
+                className="inline-flex items-center px-6 py-3 rounded-full font-bold text-white transition-all duration-200 hover:bg-[#a02838]"
+                style={{ backgroundColor: '#be3144' }}
               >
                 View My Work
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 href="/contact"
-                className="btn-secondary"
+                className="px-6 py-3 rounded-full font-semibold transition-all duration-200 border hover:bg-[rgba(58,71,80,0.1)]"
+                style={{ backgroundColor: 'transparent', color: '#303841', borderColor: '#3a4750' }}
               >
                 Let's Talk
               </Link>
@@ -138,13 +140,13 @@ export default function WorkPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="section bg-surface text-text-primary">
+      <section className="section" style={{ backgroundColor: '#f8f9fa', color: '#303841' }}>
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
               <div key={index} className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-brand">{stat.number}</div>
-                <div className="text-text-muted text-sm uppercase tracking-wider">{stat.label}</div>
+                <div className="text-4xl md:text-5xl font-bold" style={{ color: '#be3144' }}>{stat.number}</div>
+                <div className="text-sm uppercase tracking-wider" style={{ color: '#3a4750' }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -152,29 +154,29 @@ export default function WorkPage() {
       </section>
 
       {/* Services Section */}
-      <section className="section bg-bg">
+      <section className="section">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="h1 mb-6">
+            <h2 className="h1 mb-6" style={{ color: '#303841' }}>
               What I Do
             </h2>
-            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
+            <p className="lead max-w-2xl mx-auto" style={{ color: '#3a4750' }}>
               Comprehensive web development and design services tailored to your business needs
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="card group hover:border-brand/20 hover:shadow-large transition-all duration-300">
-                <div className="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors duration-300">
-                  <service.icon className="w-8 h-8 text-brand" />
+              <div key={index} className="group hover:shadow-large transition-all duration-300 rounded-2xl shadow-medium p-6 lg:p-8 hover:border-[rgba(190,49,68,0.2)]" style={{ backgroundColor: 'white', border: '1px solid rgba(58, 71, 80, 0.2)' }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 hover:bg-[rgba(190,49,68,0.2)]" style={{ backgroundColor: 'rgba(190, 49, 68, 0.1)' }}>
+                  <service.icon className="w-8 h-8" style={{ color: '#be3144' }} />
                 </div>
-                <h3 className="h3 mb-4">{service.title}</h3>
-                <p className="text-text-primary/80 mb-6">{service.description}</p>
+                <h3 className="h3 mb-4" style={{ color: '#303841' }}>{service.title}</h3>
+                <p className="mb-6" style={{ color: '#3a4750' }}>{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-text-primary/80">
-                      <CheckCircle className="w-4 h-4 text-brand mr-2 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm" style={{ color: '#3a4750' }}>
+                      <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" style={{ color: '#be3144' }} />
                       {feature}
                     </li>
                   ))}
@@ -186,13 +188,13 @@ export default function WorkPage() {
       </section>
 
       {/* Process Section */}
-      <section className="section bg-surface">
+      <section className="section" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="h1 mb-6">
+            <h2 className="h1 mb-6" style={{ color: '#303841' }}>
               My Process
             </h2>
-            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
+            <p className="lead max-w-2xl mx-auto" style={{ color: '#3a4750' }}>
               A proven methodology that ensures quality, efficiency, and exceptional results
             </p>
           </div>
@@ -200,11 +202,11 @@ export default function WorkPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-brand text-text-primary rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                <div className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6" style={{ backgroundColor: '#be3144', color: 'white' }}>
                   {step.step}
                 </div>
-                <h3 className="h3 mb-4">{step.title}</h3>
-                <p className="text-text-primary/80">{step.description}</p>
+                <h3 className="h3 mb-4" style={{ color: '#303841' }}>{step.title}</h3>
+                <p style={{ color: '#3a4750' }}>{step.description}</p>
               </div>
             ))}
           </div>
@@ -212,13 +214,13 @@ export default function WorkPage() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="section bg-bg">
+      <section id="projects" className="section">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="h1 mb-6">
+            <h2 className="h1 mb-6" style={{ color: '#303841' }}>
               Featured Work
             </h2>
-            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
+            <p className="lead max-w-2xl mx-auto" style={{ color: '#3a4750' }}>
               A selection of my recent projects showcasing different skills and business solutions
             </p>
           </div>
@@ -234,42 +236,42 @@ export default function WorkPage() {
                     height={600}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-4 right-4 w-12 h-12 bg-surface-light rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: 'linear-gradient(to top, rgba(211, 214, 219, 0.8), transparent, transparent)' }} />
+                  <div className="absolute bottom-4 right-4 w-12 h-12 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" style={{ backgroundColor: '#f8f9fa' }}>
                     {project.external ? (
-                      <ExternalLink className="w-6 h-6 text-bg" />
+                      <ExternalLink className="w-6 h-6" style={{ color: '#303841' }} />
                     ) : (
-                      <ArrowRight className="w-6 h-6 text-bg" />
+                      <ArrowRight className="w-6 h-6" style={{ color: '#303841' }} />
                     )}
                   </div>
-                  <div className="absolute top-4 left-4 px-3 py-1 bg-surface-light/90 backdrop-blur-sm rounded-full text-xs font-medium text-bg">
+                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm" style={{ backgroundColor: 'rgba(248, 249, 250, 0.9)', color: '#303841' }}>
                     {project.year}
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-brand font-semibold">
+                    <span className="text-sm font-semibold" style={{ color: '#be3144' }}>
                       {project.category}
                     </span>
-                    <span className="text-xs text-text-muted font-medium">
+                    <span className="text-xs font-medium" style={{ color: '#3a4750' }}>
                       {project.client}
                     </span>
                   </div>
                   
-                  <h3 className="h3 group-hover:text-brand transition-colors duration-200">
+                  <h3 className="h3 transition-colors duration-200 hover:text-[#be3144]" style={{ color: '#303841' }}>
                     {project.title}
                   </h3>
                   
-                  <p className="text-text-primary/80">
+                  <p style={{ color: '#3a4750' }}>
                     {project.description}
                   </p>
 
                   {/* Project Features */}
                   <div className="space-y-2">
                     {project.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2 text-sm text-text-primary/80">
-                        <div className="w-1.5 h-1.5 bg-brand rounded-full" />
+                      <div key={index} className="flex items-center space-x-2 text-sm" style={{ color: '#3a4750' }}>
+                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#be3144' }} />
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -279,7 +281,8 @@ export default function WorkPage() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 bg-surface rounded-full text-xs text-text-primary/80 font-medium"
+                        className="px-3 py-1 rounded-full text-xs font-medium"
+                        style={{ backgroundColor: '#f8f9fa', color: '#3a4750' }}
                       >
                         {tag}
                       </span>
@@ -292,7 +295,8 @@ export default function WorkPage() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="link inline-flex items-center group"
+                      className="inline-flex items-center group transition-colors duration-200 underline-offset-4 hover:underline"
+                      style={{ color: '#be3144' }}
                     >
                       View Live Site
                       <ExternalLink className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
@@ -300,7 +304,8 @@ export default function WorkPage() {
                   ) : (
                     <Link
                       href={project.link}
-                      className="link inline-flex items-center group"
+                      className="inline-flex items-center group transition-colors duration-200 underline-offset-4 hover:underline"
+                      style={{ color: '#be3144' }}
                     >
                       View Details
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -314,31 +319,33 @@ export default function WorkPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section bg-gradient-to-r from-brand to-brand-accent text-text-primary">
+      <section className="section text-white" style={{ background: 'linear-gradient(135deg, #be3144, #a02838)' }}>
         <div className="container text-center">
           <h2 className="h1 mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="lead text-brand-light max-w-2xl mx-auto mb-8">
+          <p className="lead max-w-2xl mx-auto mb-8" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
             Let's discuss how I can help bring your vision to life with a custom web solution
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="btn bg-surface-light text-bg hover:bg-surface-light/90 transition-colors duration-200 inline-flex items-center"
+              className="inline-flex items-center px-6 py-3 rounded-xl font-medium transition-colors duration-200 hover:bg-[#d3d6db]"
+              style={{ backgroundColor: '#f8f9fa', color: '#303841' }}
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
               href="/"
-              className="btn border-2 border-surface-light/30 text-surface-light hover:border-surface-light/50 transition-colors duration-200"
+              className="px-6 py-3 rounded-xl font-medium border-2 transition-colors duration-200 hover:border-[rgba(248,249,250,0.5)]"
+              style={{ borderColor: 'rgba(248, 249, 250, 0.3)', color: '#f8f9fa' }}
             >
               Back to Home
             </Link>
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }

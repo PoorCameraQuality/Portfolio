@@ -34,9 +34,13 @@ export default function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled 
-          ? 'bg-bg/95 backdrop-blur-md shadow-medium' 
+          ? 'backdrop-blur-md shadow-medium' 
           : 'bg-transparent'
       )}
+      style={{
+        backgroundColor: scrolled ? 'rgba(211, 214, 219, 0.95)' : 'transparent',
+        boxShadow: scrolled ? '0 12px 28px rgba(58, 71, 80, 0.15)' : 'none'
+      }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -46,13 +50,14 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
-              className="w-8 h-8 bg-brand rounded-lg flex items-center justify-center"
+              className="w-8 h-8 rounded-lg flex items-center justify-center"
+              style={{ backgroundColor: '#be3144' }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-text-primary font-display font-bold text-sm">B</span>
+              <span className="text-white font-display font-bold text-sm">B</span>
             </motion.div>
-            <span className="text-text-primary font-display font-semibold text-lg">
+            <span className="font-display font-semibold text-lg" style={{ color: '#303841' }}>
               Braxcraft
             </span>
           </Link>
@@ -63,7 +68,8 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-text-primary/80 hover:text-text-primary transition-colors duration-200 font-medium"
+                className="transition-colors duration-200 font-medium hover:text-[#be3144]"
+                style={{ color: '#3a4750' }}
               >
                 {item.name}
               </Link>
@@ -74,7 +80,8 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className="btn-primary"
+              className="px-6 py-3 rounded-full font-bold text-white transition-all duration-200 inline-flex items-center gap-2 hover:bg-[#a02838]"
+              style={{ backgroundColor: '#be3144' }}
             >
               Get In Touch
             </Link>
@@ -83,7 +90,8 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="lg:hidden p-2 text-text-primary hover:text-text-primary/80 transition-colors"
+            className="lg:hidden p-2 transition-colors"
+            style={{ color: '#303841' }}
             onClick={() => setMobileMenuOpen(true)}
           >
             <Menu className="w-6 h-6" />
@@ -102,7 +110,8 @@ export default function Navbar() {
           >
             {/* Backdrop */}
             <motion.div
-              className="absolute inset-0 bg-bg/95 backdrop-blur-md"
+              className="absolute inset-0 backdrop-blur-md"
+              style={{ backgroundColor: 'rgba(211, 214, 219, 0.95)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -111,20 +120,22 @@ export default function Navbar() {
 
             {/* Menu content */}
             <motion.div
-              className="absolute right-0 top-0 h-full w-80 bg-surface shadow-large"
+              className="absolute right-0 top-0 h-full w-80 shadow-large"
+              style={{ backgroundColor: '#f8f9fa' }}
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             >
               <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between p-6 border-b border-surface-light/20">
-                  <span className="text-text-primary font-display font-semibold text-lg">
+                <div className="flex items-center justify-between p-6 border-b" style={{ borderColor: 'rgba(58, 71, 80, 0.2)' }}>
+                  <span className="font-display font-semibold text-lg" style={{ color: '#303841' }}>
                     Menu
                   </span>
                   <button
                     type="button"
-                    className="p-2 text-text-primary hover:text-text-primary/80 transition-colors"
+                    className="p-2 transition-colors"
+                    style={{ color: '#303841' }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <X className="w-6 h-6" />
@@ -137,7 +148,8 @@ export default function Navbar() {
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="text-text-primary/80 hover:text-text-primary transition-colors duration-200 font-medium text-lg"
+                        className="transition-colors duration-200 font-medium text-lg hover:text-[#be3144]"
+                        style={{ color: '#3a4750' }}
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
@@ -146,10 +158,11 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                <div className="p-6 border-t border-surface-light/20">
+                <div className="p-6 border-t" style={{ borderColor: 'rgba(58, 71, 80, 0.2)' }}>
                   <Link
                     href="/contact"
-                    className="btn-primary w-full justify-center"
+                    className="w-full justify-center px-6 py-3 rounded-full font-bold text-white transition-all duration-200 inline-flex items-center gap-2 hover:bg-[#a02838]"
+                    style={{ backgroundColor: '#be3144' }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Get In Touch

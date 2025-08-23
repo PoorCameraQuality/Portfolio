@@ -1,11 +1,11 @@
 /* Feed Store Theme - Isolated from main site */
 .theme-feed {
-  /* Custom CSS Variables */
-  --feed-bg: #faf8f3;
+  /* Custom CSS Variables - Updated Color Palette */
+  --feed-bg: #faf5e4; /* second-color */
   --feed-surface: #ffffff;
-  --feed-ink: #1b1b1b;
-  --feed-accent: #7a3e0e;   /* leather brown */
-  --feed-accent-2: #2e6b3f; /* pasture green */
+  --feed-ink: #004445; /* fourth-color */
+  --feed-accent: #f8b400; /* first-color */
+  --feed-accent-2: #2c786c; /* third-color */
   --feed-muted: #6b7280;
   --feed-border: #e5e7eb;
   --feed-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -50,7 +50,7 @@
 }
 
 .theme-feed .btn-primary:hover {
-  background-color: #6b3509;
+  background-color: #e0a300; /* darker shade of first-color */
   transform: translateY(-1px);
   box-shadow: var(--feed-shadow-lg);
 }
@@ -205,7 +205,7 @@
 /* Navigation styles */
 .theme-feed nav {
   background: #ffffff !important;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--feed-accent-2) !important;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -216,15 +216,15 @@
 }
 
 .theme-feed nav .text-ink {
-  color: #1b1b1b !important;
+  color: var(--feed-ink) !important;
 }
 
 .theme-feed nav .text-muted {
-  color: #6b7280 !important;
+  color: var(--feed-muted) !important;
 }
 
 .theme-feed nav .border-border {
-  border-color: #e5e7eb !important;
+  border-color: var(--feed-accent-2) !important;
 }
 
 /* Additional component styles */
@@ -234,7 +234,7 @@
   padding: 1.5rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.2s;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--feed-accent-2);
   margin-bottom: 1rem;
 }
 
@@ -281,11 +281,11 @@
 .theme-feed .timeline-content h3 {
   font-weight: 600;
   margin-bottom: 0.25rem;
-  color: #1b1b1b !important;
+  color: var(--feed-ink) !important;
 }
 
 .theme-feed .timeline-content p {
-  color: #6b7280 !important;
+  color: var(--feed-muted) !important;
   font-size: 0.875rem;
 }
 
@@ -297,7 +297,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--feed-accent-2);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -316,10 +316,10 @@
 .theme-feed .quantity-selector {
   width: 100%;
   padding: 0.5rem 1rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--feed-accent-2);
   border-radius: 0.5rem;
   background: #ffffff;
-  color: #1b1b1b;
+  color: var(--feed-ink);
   font-size: 1rem;
   transition: all 0.2s;
 }
@@ -353,7 +353,7 @@
   background: #ffffff !important;
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--feed-accent-2);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   margin-bottom: 1rem;
 }
@@ -373,16 +373,16 @@
 .theme-feed .review-author {
   font-weight: 600;
   margin-right: 0.75rem;
-  color: #1b1b1b !important;
+  color: var(--feed-ink) !important;
 }
 
 .theme-feed .review-date {
-  color: #6b7280 !important;
+  color: var(--feed-muted) !important;
   font-size: 0.875rem;
 }
 
 .theme-feed .review-text {
-  color: #6b7280 !important;
+  color: var(--feed-muted) !important;
   margin-bottom: 0.75rem;
   line-height: 1.6;
 }
@@ -399,7 +399,7 @@
   border-radius: 0.75rem;
   padding: 1.5rem;
   text-align: center;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--feed-accent-2);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.2s;
 }
@@ -417,11 +417,11 @@
 .theme-feed .related-product h3 {
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #1b1b1b !important;
+  color: var(--feed-ink) !important;
 }
 
 .theme-feed .related-product p {
-  color: #6b7280 !important;
+  color: var(--feed-muted) !important;
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
 }
@@ -454,7 +454,7 @@
 }
 
 .theme-feed .breadcrumb-item.active {
-  color: #1b1b1b;
+  color: var(--feed-ink);
   font-weight: 500;
 }
 

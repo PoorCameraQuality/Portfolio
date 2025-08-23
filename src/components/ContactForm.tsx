@@ -64,25 +64,28 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {/* Name Field */}
       <div>
-        <label htmlFor="name" className="block text-text-primary font-medium mb-2">
+        <label htmlFor="name" className="block font-medium mb-2" style={{ color: '#303841' }}>
           Name *
         </label>
         <input
           {...register('name')}
           type="text"
           id="name"
-          className={`w-full px-4 py-3 bg-surface-light/20 border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand transition-all duration-200 ${
-            errors.name
-              ? 'border-red-500 focus:ring-red-500'
-              : 'border-surface-light/30 focus:border-brand'
-          }`}
+          className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 transition-all duration-200"
+          style={{ 
+            backgroundColor: 'rgba(248, 249, 250, 0.2)',
+            borderColor: errors.name ? '#dc2626' : 'rgba(58, 71, 80, 0.3)'
+          }}
+          onFocus={(e) => e.currentTarget.style.borderColor = errors.name ? '#dc2626' : '#be3144'}
+          onBlur={(e) => e.currentTarget.style.borderColor = errors.name ? '#dc2626' : 'rgba(58, 71, 80, 0.3)'}
           placeholder="Your full name"
         />
         {errors.name && (
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-red-500 text-sm mt-2 flex items-center space-x-1"
+            className="text-sm mt-2 flex items-center space-x-1"
+            style={{ color: '#dc2626' }}
           >
             <AlertCircle className="w-4 h-4" />
             <span>{errors.name.message}</span>
@@ -92,25 +95,28 @@ export default function ContactForm() {
 
       {/* Email Field */}
       <div>
-        <label htmlFor="email" className="block text-text-primary font-medium mb-2">
+        <label htmlFor="email" className="block font-medium mb-2" style={{ color: '#303841' }}>
           Email *
         </label>
         <input
           {...register('email')}
           type="email"
           id="email"
-          className={`w-full px-4 py-3 bg-surface-light/20 border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand transition-all duration-200 ${
-            errors.email
-              ? 'border-red-500 focus:ring-red-500'
-              : 'border-surface-light/30 focus:border-brand'
-          }`}
+          className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 transition-all duration-200"
+          style={{ 
+            backgroundColor: 'rgba(248, 249, 250, 0.2)',
+            borderColor: errors.email ? '#dc2626' : 'rgba(58, 71, 80, 0.3)'
+          }}
+          onFocus={(e) => e.currentTarget.style.borderColor = errors.email ? '#dc2626' : '#be3144'}
+          onBlur={(e) => e.currentTarget.style.borderColor = errors.email ? '#dc2626' : 'rgba(58, 71, 80, 0.3)'}
           placeholder="your.email@example.com"
         />
         {errors.email && (
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-red-500 text-sm mt-2 flex items-center space-x-1"
+            className="text-sm mt-2 flex items-center space-x-1"
+            style={{ color: '#dc2626' }}
           >
             <AlertCircle className="w-4 h-4" />
             <span>{errors.email.message}</span>
@@ -120,25 +126,28 @@ export default function ContactForm() {
 
       {/* Subject Field */}
       <div>
-        <label htmlFor="subject" className="block text-text-primary font-medium mb-2">
+        <label htmlFor="subject" className="block font-medium mb-2" style={{ color: '#303841' }}>
           Subject *
         </label>
         <input
           {...register('subject')}
           type="text"
           id="subject"
-          className={`w-full px-4 py-3 bg-surface-light/20 border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand transition-all duration-200 ${
-            errors.subject
-              ? 'border-red-500 focus:ring-red-500'
-              : 'border-surface-light/30 focus:border-brand'
-          }`}
+          className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 transition-all duration-200"
+          style={{ 
+            backgroundColor: 'rgba(248, 249, 250, 0.2)',
+            borderColor: errors.subject ? '#dc2626' : 'rgba(58, 71, 80, 0.3)'
+          }}
+          onFocus={(e) => e.currentTarget.style.borderColor = errors.subject ? '#dc2626' : '#be3144'}
+          onBlur={(e) => e.currentTarget.style.borderColor = errors.subject ? '#dc2626' : 'rgba(58, 71, 80, 0.3)'}
           placeholder="What's this about?"
         />
         {errors.subject && (
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-red-500 text-sm mt-2 flex items-center space-x-1"
+            className="text-sm mt-2 flex items-center space-x-1"
+            style={{ color: '#dc2626' }}
           >
             <AlertCircle className="w-4 h-4" />
             <span>{errors.subject.message}</span>
@@ -148,25 +157,28 @@ export default function ContactForm() {
 
       {/* Message Field */}
       <div>
-        <label htmlFor="message" className="block text-text-primary font-medium mb-2">
+        <label htmlFor="message" className="block font-medium mb-2" style={{ color: '#303841' }}>
           Message *
         </label>
         <textarea
           {...register('message')}
           id="message"
           rows={5}
-          className={`w-full px-4 py-3 bg-surface-light/20 border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand transition-all duration-200 resize-none ${
-            errors.message
-              ? 'border-red-500 focus:ring-red-500'
-              : 'border-surface-light/30 focus:border-brand'
-          }`}
+          className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 transition-all duration-200 resize-none"
+          style={{ 
+            backgroundColor: 'rgba(248, 249, 250, 0.2)',
+            borderColor: errors.message ? '#dc2626' : 'rgba(58, 71, 80, 0.3)'
+          }}
+          onFocus={(e) => e.currentTarget.style.borderColor = errors.message ? '#dc2626' : '#be3144'}
+          onBlur={(e) => e.currentTarget.style.borderColor = errors.message ? '#dc2626' : 'rgba(58, 71, 80, 0.3)'}
           placeholder="Tell me about your project..."
         />
         {errors.message && (
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-red-500 text-sm mt-2 flex items-center space-x-1"
+            className="text-sm mt-2 flex items-center space-x-1"
+            style={{ color: '#dc2626' }}
           >
             <AlertCircle className="w-4 h-4" />
             <span>{errors.message.message}</span>
@@ -178,11 +190,12 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="btn-primary w-full group disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full group disabled:opacity-50 disabled:cursor-not-allowed px-6 py-3 rounded-xl font-bold text-white transition-all duration-200 inline-flex items-center gap-2 justify-center hover:bg-[#a02838]"
+        style={{ backgroundColor: '#be3144' }}
       >
         {isSubmitting ? (
           <div className="flex items-center space-x-2">
-            <div className="w-4 h-4 border-2 border-text-primary/30 border-t-text-primary rounded-full animate-spin" />
+            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
             <span>Sending...</span>
           </div>
         ) : (
@@ -198,11 +211,12 @@ export default function ContactForm() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className={`p-4 rounded-xl flex items-center space-x-3 ${
-            submitStatus === 'success'
-              ? 'bg-green-500/20 border border-green-500/30 text-green-400'
-              : 'bg-red-500/20 border border-red-500/30 text-red-400'
-          }`}
+          className="p-4 rounded-xl flex items-center space-x-3"
+          style={{
+            backgroundColor: submitStatus === 'success' ? 'rgba(34, 197, 94, 0.2)' : 'rgba(239, 68, 68, 0.2)',
+            border: submitStatus === 'success' ? '1px solid rgba(34, 197, 94, 0.3)' : '1px solid rgba(239, 68, 68, 0.3)',
+            color: submitStatus === 'success' ? '#16a34a' : '#dc2626'
+          }}
         >
           {submitStatus === 'success' ? (
             <CheckCircle className="w-5 h-5" />
