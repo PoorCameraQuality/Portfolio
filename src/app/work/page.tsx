@@ -100,7 +100,7 @@ export default function WorkPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="section pt-32 pb-24 bg-gradient-to-br from-surface-light to-bg-light">
+      <section className="section pt-24 pb-24 bg-gradient-to-br from-bg to-surface">
         <div className="container">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-brand/10 rounded-full text-sm text-brand mb-8">
@@ -114,7 +114,7 @@ export default function WorkPage() {
               <br />
               Solutions
             </h1>
-            <p className="lead text-text-secondary max-w-2xl mx-auto">
+            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               Transforming ideas into exceptional digital experiences. From developer tools to business websites, 
               I create solutions that drive results and exceed expectations.
             </p>
