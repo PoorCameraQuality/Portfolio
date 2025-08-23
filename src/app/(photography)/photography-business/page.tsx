@@ -20,40 +20,40 @@ export default function PhotographyBusinessPage() {
       <section className="section bg-surface">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How I Work</h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
+            <h2 className="h2 text-text-primary mb-4">How I Work</h2>
+            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               A simple, stress-free process to capture your perfect moments
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-accent">1</span>
+              <div className="w-16 h-16 bg-brand/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-brand">1</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Consultation</h3>
-              <p className="text-muted">We discuss your vision, location preferences, and any special requirements.</p>
+              <h3 className="h3 text-text-primary mb-3">Consultation</h3>
+              <p className="text-text-primary/80">We discuss your vision, location preferences, and any special requirements.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-accent">2</span>
+              <div className="w-16 h-16 bg-brand/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-brand">2</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Planning</h3>
-              <p className="text-muted">I'll scout locations, plan timing, and prepare for the perfect lighting conditions.</p>
+              <h3 className="h3 text-text-primary mb-3">Planning</h3>
+              <p className="text-text-primary/80">I'll scout locations, plan timing, and prepare for the perfect lighting conditions.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-accent">3</span>
+              <div className="w-16 h-16 bg-brand/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-brand">3</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Shoot</h3>
-              <p className="text-muted">Relax and enjoy the session while I capture authentic, beautiful moments.</p>
+              <h3 className="h3 text-text-primary mb-3">Shoot</h3>
+              <p className="text-text-primary/80">Relax and enjoy the session while I capture authentic, beautiful moments.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-accent">4</span>
+              <div className="w-16 h-16 bg-brand/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-brand">4</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Delivery</h3>
-              <p className="text-muted">Receive your professionally edited photos within 2-3 weeks.</p>
+              <h3 className="h3 text-text-primary mb-3">Delivery</h3>
+              <p className="text-text-primary/80">Receive your professionally edited photos within 2-3 weeks.</p>
             </div>
           </div>
         </div>
@@ -63,8 +63,8 @@ export default function PhotographyBusinessPage() {
       <section className="section">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
+            <h2 className="h2 text-text-primary mb-4">Frequently Asked Questions</h2>
+            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               Common questions about my photography services
             </p>
           </div>

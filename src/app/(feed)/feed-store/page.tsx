@@ -17,8 +17,8 @@ export default function FeedStorePage() {
       <section className="section" id="shop">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Shop by Category</h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
+            <h2 className="h2 text-text-primary mb-4">Shop by Category</h2>
+            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               Find everything you need for your farm, pets, and garden
             </p>
           </div>
@@ -35,33 +35,33 @@ export default function FeedStorePage() {
       <section className="section bg-surface">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Why Choose Our Feed Store?</h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
+            <h2 className="h2 text-text-primary mb-4">Why Choose Our Feed Store?</h2>
+            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               We're more than just a store - we're your partners in farming success
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 bg-brand/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-brand" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-accent-2">Local Expertise</h3>
-              <p className="text-muted">Our team has decades of combined farming experience in Central PA.</p>
+              <h3 className="h3 text-text-primary mb-3">Local Expertise</h3>
+              <p className="text-text-primary/80">Our team has decades of combined farming experience in Central PA.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Truck className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 bg-brand/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Truck className="w-8 h-8 text-brand" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-accent-2">Fast Delivery</h3>
-              <p className="text-muted">Same-day local delivery for urgent needs, next-day for regular orders.</p>
+              <h3 className="h3 text-text-primary mb-3">Fast Delivery</h3>
+              <p className="text-text-primary/80">Same-day local delivery for urgent needs, next-day for regular orders.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 bg-brand/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-brand" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-accent-2">Quality Guaranteed</h3>
-              <p className="text-muted">We only stock products we trust for our own farms and animals.</p>
+              <h3 className="h3 text-text-primary mb-3">Quality Guaranteed</h3>
+              <p className="text-text-primary/80">We only stock products we trust for our own farms and animals.</p>
             </div>
           </div>
         </div>
@@ -72,28 +72,28 @@ export default function FeedStorePage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-3 text-accent-2">Poultry</h3>
-              <p className="text-muted">Feeds and grit to keep your flock healthy and productive.</p>
+              <h3 className="h3 text-text-primary mb-3">Poultry</h3>
+              <p className="text-text-primary/80">Feeds and grit to keep your flock healthy and productive.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-3 text-accent-2">Livestock</h3>
-              <p className="text-muted">Daily nutrition and barn supplies built for hard work.</p>
+              <h3 className="h3 text-text-primary mb-3">Livestock</h3>
+              <p className="text-text-primary/80">Daily nutrition and barn supplies built for hard work.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-3 text-accent-2">Pet</h3>
-              <p className="text-muted">Kibble, treats, and basics for the animals that feel like family.</p>
+              <h3 className="h3 text-text-primary mb-3">Pet</h3>
+              <p className="text-text-primary/80">Kibble, treats, and basics for the animals that feel like family.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-3 text-accent-2">Fencing</h3>
-              <p className="text-muted">Practical fencing and hardware to keep things where they belong.</p>
+              <h3 className="h3 text-text-primary mb-3">Fencing</h3>
+              <p className="text-text-primary/80">Practical fencing and hardware to keep things where they belong.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-3 text-accent-2">Tools</h3>
-              <p className="text-muted">Reliable tools and gloves for chores and upkeep.</p>
+              <h3 className="h3 text-text-primary mb-3">Tools</h3>
+              <p className="text-text-primary/80">Reliable tools and gloves for chores and upkeep.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-3 text-accent-2">Garden</h3>
-              <p className="text-muted">Soil, seed, and simple gear for this season's projects.</p>
+              <h3 className="h3 text-text-primary mb-3">Garden</h3>
+              <p className="text-text-primary/80">Soil, seed, and simple gear for this season's projects.</p>
             </div>
           </div>
         </div>
@@ -103,8 +103,8 @@ export default function FeedStorePage() {
       <section className="section bg-surface">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
+            <h2 className="h2 text-text-primary mb-4">What Our Customers Say</h2>
+            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               Don't just take our word for it - hear from the farmers who trust us
             </p>
           </div>

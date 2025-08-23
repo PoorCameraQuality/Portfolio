@@ -31,61 +31,73 @@ export default function BlogPage() {
       {/* Blog Posts Grid */}
       <section className="section bg-surface">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article key={post.slug} className="card group hover:scale-105 transition-transform duration-300">
-                {post.image && (
-                  <div className="aspect-video overflow-hidden rounded-xl mb-6">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+          {posts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {posts.map((post) => (
+                <article key={post.slug} className="card group hover:scale-105 transition-transform duration-300">
+                  {post.image && (
+                    <div className="aspect-video overflow-hidden rounded-xl mb-6">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  <div>
+                    <div className="flex items-center text-sm text-text-muted mb-3">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      <time dateTime={post.date}>
+                        {new Date(post.date).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric',
+                        })}
+                      </time>
+                    </div>
+                    
+                    <h2 className="h3 text-text-primary mb-3 line-clamp-2 group-hover:text-brand transition-colors duration-200">
+                      {post.title}
+                    </h2>
+                    
+                    <p className="text-text-primary/80 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-secondary text-text-primary/80"
+                        >
+                          <Tag className="w-3 h-3 mr-1" />
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <Link
+                      href={post.url}
+                      className="link inline-flex items-center group"
+                    >
+                      Read More
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </div>
-                )}
-                <div>
-                  <div className="flex items-center text-sm text-text-muted mb-3">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric',
-                      })}
-                    </time>
-                  </div>
-                  
-                  <h2 className="h3 text-text-primary mb-3 line-clamp-2 group-hover:text-brand transition-colors duration-200">
-                    {post.title}
-                  </h2>
-                  
-                  <p className="text-text-primary/80 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-secondary text-text-primary/80"
-                      >
-                        <Tag className="w-3 h-3 mr-1" />
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <Link
-                    href={post.url}
-                    className="link inline-flex items-center group"
-                  >
-                    Read More
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <h2 className="h2 text-text-primary mb-4">No Blog Posts Yet</h2>
+              <p className="text-text-primary/80 mb-8">
+                Blog posts will appear here once they're published.
+              </p>
+              <Link href="/" className="btn-primary">
+                Back to Home
+              </Link>
+            </div>
+          )}
         </div>
       </section>
     </main>
