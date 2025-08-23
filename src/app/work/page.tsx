@@ -158,7 +158,7 @@ export default function WorkPage() {
             <h2 className="h1 mb-6">
               What I Do
             </h2>
-            <p className="lead text-text-secondary max-w-2xl mx-auto">
+            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               Comprehensive web development and design services tailored to your business needs
             </p>
           </div>
@@ -170,10 +170,10 @@ export default function WorkPage() {
                   <service.icon className="w-8 h-8 text-brand" />
                 </div>
                 <h3 className="h3 mb-4">{service.title}</h3>
-                <p className="text-text-secondary mb-6">{service.description}</p>
+                <p className="text-text-primary/80 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-text-secondary">
+                    <li key={featureIndex} className="flex items-center text-sm text-text-primary/80">
                       <CheckCircle className="w-4 h-4 text-brand mr-2 flex-shrink-0" />
                       {feature}
                     </li>
@@ -192,7 +192,7 @@ export default function WorkPage() {
             <h2 className="h1 mb-6">
               My Process
             </h2>
-            <p className="lead text-text-secondary max-w-2xl mx-auto">
+            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               A proven methodology that ensures quality, efficiency, and exceptional results
             </p>
           </div>
@@ -204,7 +204,7 @@ export default function WorkPage() {
                   {step.step}
                 </div>
                 <h3 className="h3 mb-4">{step.title}</h3>
-                <p className="text-text-secondary">{step.description}</p>
+                <p className="text-text-primary/80">{step.description}</p>
               </div>
             ))}
           </div>
@@ -218,7 +218,7 @@ export default function WorkPage() {
             <h2 className="h1 mb-6">
               Featured Work
             </h2>
-            <p className="lead text-text-secondary max-w-2xl mx-auto">
+            <p className="lead text-text-primary/80 max-w-2xl mx-auto">
               A selection of my recent projects showcasing different skills and business solutions
             </p>
           </div>
@@ -261,14 +261,14 @@ export default function WorkPage() {
                     {project.title}
                   </h3>
                   
-                  <p className="text-text-secondary">
+                  <p className="text-text-primary/80">
                     {project.description}
                   </p>
 
                   {/* Project Features */}
                   <div className="space-y-2">
                     {project.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2 text-sm text-text-secondary">
+                      <div key={index} className="flex items-center space-x-2 text-sm text-text-primary/80">
                         <div className="w-1.5 h-1.5 bg-brand rounded-full" />
                         <span>{feature}</span>
                       </div>
@@ -279,7 +279,7 @@ export default function WorkPage() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 bg-surface rounded-full text-xs text-text-secondary font-medium"
+                        className="px-3 py-1 bg-surface rounded-full text-xs text-text-primary/80 font-medium"
                       >
                         {tag}
                       </span>

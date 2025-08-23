@@ -59,7 +59,7 @@ export default function BlogPage() {
                     {post.title}
                   </h2>
                   
-                  <p className="text-text-secondary mb-4 line-clamp-3">
+                  <p className="text-text-primary/80 mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   
@@ -67,7 +67,7 @@ export default function BlogPage() {
                     {post.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-secondary text-text-secondary"
+                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-secondary text-text-primary/80"
                       >
                         <Tag className="w-3 h-3 mr-1" />
                         {tag}

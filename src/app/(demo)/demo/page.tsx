@@ -31,11 +31,11 @@ export default function DemoIndexPage() {
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="h3 text-text-primary">{onepager.title}</h3>
-                    <span className="px-3 py-1 bg-surface-secondary rounded-full text-xs text-text-secondary font-medium">
+                    <span className="px-3 py-1 bg-surface-secondary rounded-full text-xs text-text-primary/80 font-medium">
                       {onepager.category}
                     </span>
                   </div>
-                  <p className="text-text-secondary mb-3">{onepager.tagline}</p>
+                  <p className="text-text-primary/80 mb-3">{onepager.tagline}</p>
                   {onepager.city && (
                     <p className="text-text-muted text-sm mb-4">📍 {onepager.city}</p>
                   )}
@@ -53,7 +53,7 @@ export default function DemoIndexPage() {
           <div className="text-center mt-16">
             <div className="card max-w-2xl mx-auto">
               <h3 className="h3 text-text-primary mb-4">Want Your Own Demo?</h3>
-              <p className="text-text-secondary mb-6">
+              <p className="text-text-primary/80 mb-6">
                 These are free demo one-pagers. For a custom domain, up to 5 pages, 
                 full SEO and ongoing support, upgrade to the Starter Website Package 
                 ($50 setup + $15/month).
