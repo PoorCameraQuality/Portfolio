@@ -318,6 +318,35 @@ export default function WorkPage() {
         </div>
       </section>
 
+      {/* Demo Cards Section */}
+      <section className="section" style={{ backgroundColor: '#f8f9fa' }}>
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="h1 mb-6" style={{ color: '#303841' }}>
+              Live Demo Sites
+            </h2>
+            <p className="lead max-w-2xl mx-auto" style={{ color: '#3a4750' }}>
+              Explore these working examples of different website types and business solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="/feed-store" className="card p-8 hover:scale-105 transition-transform">
+              <h3 className="text-xl font-bold mb-2">Feed Store Demo</h3>
+              <p className="text-[var(--muted)]">Example ecommerce site for local farm/feed store.</p>
+            </a>
+            <a href="/photography-business" className="card p-8 hover:scale-105 transition-transform">
+              <h3 className="text-xl font-bold mb-2">Photography Business Demo</h3>
+              <p className="text-[var(--muted)]">Example service-site for local photographer.</p>
+            </a>
+            <a href="/one-pager-demo" className="card p-8 hover:scale-105 transition-transform">
+              <h3 className="text-xl font-bold mb-2">One-Pager Demo</h3>
+              <p className="text-[var(--muted)]">Basic single-page site ($10 setup + $5/mo) with logo, contact, Google Maps.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section text-white" style={{ background: 'linear-gradient(135deg, #be3144, #a02838)' }}>
         <div className="container text-center">
