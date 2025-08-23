@@ -27,4 +27,5 @@ export const Blog = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'src/content',
   documentTypes: [Blog],
+  disableImportAliasWarning: true,
 })

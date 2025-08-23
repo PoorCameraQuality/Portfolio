@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "contentlayer build --exit-code 0 && next dev",
+    "build": "contentlayer build --exit-code 0 && next build",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
@@ -23,7 +23,6 @@
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.541.0",
     "next": "^14.2.5",
-    "next-contentlayer": "^0.3.4",
     "next-seo": "^6.8.0",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.6.2",
