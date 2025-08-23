@@ -1,0 +1,189 @@
+/* Feed Store Theme - Isolated from main site */
+.theme-feed {
+  /* Custom CSS Variables */
+  --feed-bg: #faf8f3;
+  --feed-surface: #ffffff;
+  --feed-ink: #1b1b1b;
+  --feed-accent: #7a3e0e;   /* leather brown */
+  --feed-accent-2: #2e6b3f; /* pasture green */
+  --feed-muted: #6b7280;
+  --feed-border: #e5e7eb;
+  --feed-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --feed-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Override Tailwind variables */
+  --bg: var(--feed-bg);
+  --surface: var(--feed-surface);
+  --text: var(--feed-ink);
+  --brand: var(--feed-accent);
+  --brand-2: var(--feed-accent-2);
+  --muted: var(--feed-muted);
+  --border: var(--feed-border);
+}
+
+.theme-feed {
+  background-color: var(--feed-bg);
+  color: var(--feed-ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.theme-feed h1, .theme-feed h2, .theme-feed h3, .theme-feed h4, .theme-feed h5, .theme-feed h6 {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--feed-ink);
+}
+
+.theme-feed .btn-primary {
+  background-color: var(--feed-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.theme-feed .btn-primary:hover {
+  background-color: #6b3509;
+  transform: translateY(-1px);
+  box-shadow: var(--feed-shadow-lg);
+}
+
+.theme-feed .btn-secondary {
+  background-color: transparent;
+  color: var(--feed-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 2px solid var(--feed-accent);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.theme-feed .btn-secondary:hover {
+  background-color: var(--feed-accent);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.theme-feed .card {
+  background-color: var(--feed-surface);
+  border-radius: 0.75rem;
+  border: 1px solid var(--feed-border);
+  box-shadow: var(--feed-shadow);
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.theme-feed .card:hover {
+  box-shadow: var(--feed-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.theme-feed .category-pill {
+  background-color: var(--feed-accent-2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.theme-feed .price {
+  color: var(--feed-accent);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-poppins);
+}
+
+.theme-feed .grain-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Responsive grid */
+.theme-feed .product-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .theme-feed .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .theme-feed .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Filter pills */
+.theme-feed .filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.theme-feed .filter-pill {
+  background-color: var(--feed-surface);
+  color: var(--feed-muted);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--feed-border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.theme-feed .filter-pill:hover,
+.theme-feed .filter-pill.active {
+  background-color: var(--feed-accent);
+  color: white;
+  border-color: var(--feed-accent);
+}
+
+/* Container */
+.theme-feed .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .theme-feed .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .theme-feed .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Section spacing */
+.theme-feed .section {
+  padding: 4rem 0;
+}
+
+@media (min-width: 1024px) {
+  .theme-feed .section {
+    padding: 6rem 0;
+  }
+}
