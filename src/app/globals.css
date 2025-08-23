@@ -231,4 +231,16 @@
     scroll-timeline: inherit;
     scroll-timeline-axis: inherit;
   }
+
+  /* Fast scroll sections - apply to specific sections for faster scrolling */
+  .fast-scroll-section {
+    scroll-margin-top: 2rem;
+    scroll-snap-align: start;
+  }
+
+  /* Enhanced smooth scrolling for main page sections */
+  .main-page-section {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+  }
 }
