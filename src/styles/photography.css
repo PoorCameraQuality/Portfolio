@@ -1,0 +1,331 @@
+/* Photography Business Theme - Isolated from main site */
+.theme-photography {
+  /* Custom CSS Variables */
+  --photo-bg: #f8fafc;
+  --photo-surface: #ffffff;
+  --photo-ink: #0f172a;
+  --photo-accent: #7c3aed;   /* vibrant purple */
+  --photo-accent-2: #06b6d4; /* cyan blue */
+  --photo-muted: #64748b;
+  --photo-border: #e2e8f0;
+  --photo-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --photo-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Override Tailwind variables */
+  --bg: var(--photo-bg);
+  --surface: var(--photo-surface);
+  --text: var(--photo-ink);
+  --brand: var(--photo-accent);
+  --brand-2: var(--photo-accent-2);
+  --muted: var(--photo-muted);
+  --border: var(--photo-border);
+}
+
+.theme-photography {
+  background-color: var(--photo-bg);
+  color: var(--photo-ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.theme-photography h1, .theme-photography h2, .theme-photography h3, .theme-photography h4, .theme-photography h5, .theme-photography h6 {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--photo-ink);
+}
+
+.theme-photography .btn-primary {
+  background-color: var(--photo-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.theme-photography .btn-primary:hover {
+  background-color: #6d28d9;
+  transform: translateY(-1px);
+  box-shadow: var(--photo-shadow-lg);
+}
+
+.theme-photography .btn-secondary {
+  background-color: transparent;
+  color: var(--photo-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 2px solid var(--photo-accent);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.theme-photography .btn-secondary:hover {
+  background-color: var(--photo-accent);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.theme-photography .card {
+  background-color: var(--photo-surface);
+  border-radius: 1rem;
+  border: 1px solid var(--photo-border);
+  box-shadow: var(--photo-shadow);
+  padding: 1.5rem;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.theme-photography .card:hover {
+  box-shadow: var(--photo-shadow-lg);
+  transform: translateY(-4px);
+}
+
+.theme-photography .service-card {
+  background: linear-gradient(135deg, var(--photo-surface) 0%, #f8fafc 100%);
+  border: 1px solid var(--photo-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-photography .service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--photo-accent), var(--photo-accent-2));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.theme-photography .service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.theme-photography .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--photo-shadow-lg);
+}
+
+.theme-photography .portfolio-item {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.theme-photography .portfolio-item:hover {
+  transform: scale(1.02);
+}
+
+.theme-photography .portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.theme-photography .portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.theme-photography .price-card {
+  background: var(--photo-surface);
+  border: 2px solid var(--photo-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.theme-photography .price-card.featured {
+  border-color: var(--photo-accent);
+  transform: scale(1.05);
+}
+
+.theme-photography .price-card:hover {
+  border-color: var(--photo-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--photo-shadow-lg);
+}
+
+.theme-photography .price {
+  color: var(--photo-accent);
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--font-poppins);
+}
+
+.theme-photography .price-small {
+  color: var(--photo-accent);
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+}
+
+.theme-photography .testimonial-card {
+  background: var(--photo-surface);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--photo-shadow);
+  transition: all 0.3s;
+}
+
+.theme-photography .testimonial-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--photo-shadow-lg);
+}
+
+.theme-photography .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .theme-photography .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.theme-photography .stat-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.theme-photography .stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--photo-accent);
+  font-family: var(--font-poppins);
+}
+
+.theme-photography .stat-label {
+  color: var(--photo-muted);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Container */
+.theme-photography .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .theme-photography .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .theme-photography .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Section spacing */
+.theme-photography .section {
+  padding: 4rem 0;
+}
+
+@media (min-width: 1024px) {
+  .theme-photography .section {
+    padding: 6rem 0;
+  }
+}
+
+/* Hero section */
+.theme-photography .hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--photo-bg) 0%, #e0e7ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-photography .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c7d2fe' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+/* Portfolio grid */
+.theme-photography .portfolio-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .theme-photography .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .theme-photography .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Services grid */
+.theme-photography .services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .theme-photography .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .theme-photography .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Pricing grid */
+.theme-photography .pricing-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .theme-photography .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
