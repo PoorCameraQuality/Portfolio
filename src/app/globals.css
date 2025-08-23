@@ -23,79 +23,67 @@
 
 @layer base {
   :root {
-    /* New sophisticated color palette */
-    --color-barn-red: 120 0 0;
-    --color-barn-red-100: 24 0 0;
-    --color-barn-red-200: 49 0 0;
-    --color-barn-red-300: 73 0 0;
-    --color-barn-red-400: 98 0 0;
-    --color-barn-red-500: 120 0 0;
-    --color-barn-red-600: 200 0 0;
-    --color-barn-red-700: 255 22 22;
-    --color-barn-red-800: 255 100 100;
-    --color-barn-red-900: 255 177 177;
+    --bg: #0b0c10;
+    --ink: #e9ecef;
+    --muted: #b6bdc6;
+    --accent: #14b8a6; /* teal */
+    --accent-2: #22c55e; /* green */
+    --card: #121318;
+    --surface: #0f1115;
+    --border: #22262f;
+    --shadow: 0 12px 28px rgba(0,0,0,.35);
+    --shadow-lg: 0 18px 40px rgba(0,0,0,.45);
+  }
 
-    --color-fire-brick: 193 18 31;
-    --color-fire-brick-100: 38 4 6;
-    --color-fire-brick-200: 77 7 12;
-    --color-fire-brick-300: 115 11 18;
-    --color-fire-brick-400: 153 14 23;
-    --color-fire-brick-500: 193 18 31;
-    --color-fire-brick-600: 235 35 48;
-    --color-fire-brick-700: 240 90 100;
-    --color-fire-brick-800: 245 145 152;
-    --color-fire-brick-900: 250 200 203;
+  html, body { background: var(--bg); color: var(--ink); }
 
-    --color-papaya-whip: 253 240 213;
-    --color-papaya-whip-100: 89 60 4;
-    --color-papaya-whip-200: 177 121 8;
-    --color-papaya-whip-300: 245 174 34;
-    --color-papaya-whip-400: 249 207 123;
-    --color-papaya-whip-500: 253 240 213;
-    --color-papaya-whip-600: 253 242 220;
-    --color-papaya-whip-700: 254 245 229;
-    --color-papaya-whip-800: 254 249 237;
-    --color-papaya-whip-900: 255 252 246;
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 1rem; }
 
-    --color-prussian-blue: 0 48 73;
-    --color-prussian-blue-100: 0 9 14;
-    --color-prussian-blue-200: 0 19 29;
-    --color-prussian-blue-300: 0 28 43;
-    --color-prussian-blue-400: 0 37 57;
-    --color-prussian-blue-500: 0 48 73;
-    --color-prussian-blue-600: 0 103 159;
-    --color-prussian-blue-700: 0 160 247;
-    --color-prussian-blue-800: 80 194 255;
-    --color-prussian-blue-900: 167 224 255;
+  .section { padding: 64px 0; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); transition: transform .18s ease, box-shadow .18s ease; }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 
-    --color-air-superiority-blue: 102 155 188;
-    --color-air-superiority-blue-100: 18 32 40;
-    --color-air-superiority-blue-200: 35 63 81;
-    --color-air-superiority-blue-300: 53 95 121;
-    --color-air-superiority-blue-400: 71 127 162;
-    --color-air-superiority-blue-500: 102 155 188;
-    --color-air-superiority-blue-600: 133 175 201;
-    --color-air-superiority-blue-700: 164 195 215;
-    --color-air-superiority-blue-800: 194 215 228;
-    --color-air-superiority-blue-900: 225 235 242;
+  .btn-primary{
+    background: var(--accent);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    display: inline-flex; align-items: center; gap: .5rem;
+    border: none; text-decoration: none;
+    transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+  }
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-primary:focus-visible{ outline: 3px solid var(--accent-2); outline-offset: 2px; }
 
-    /* Semantic colors */
-    --color-bg: 0 48 73; /* prussian-blue */
-    --color-bg-secondary: 18 32 40; /* air-superiority-blue-100 */
-    --color-bg-tertiary: 120 0 0; /* barn-red */
-    --color-bg-light: 253 240 213; /* papaya-whip */
+  .btn-secondary{
+    background: transparent;
+    color: var(--ink);
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .16s ease, transform .16s ease;
+  }
+  .btn-secondary:hover{ background: rgba(255,255,255,.04); transform: translateY(-2px); }
 
-    --color-surface: 18 32 40; /* air-superiority-blue-100 */
-    --color-surface-secondary: 35 63 81; /* air-superiority-blue-200 */
-    --color-surface-light: 253 240 213; /* papaya-whip */
+  .grid-portfolio{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+  }
+  .grid-span-6{ grid-column: span 6 / span 6; }
+  .grid-span-12{ grid-column: span 12 / span 12; }
+  @media (max-width: 900px){
+    .grid-span-6{ grid-column: span 12 / span 12; }
+  }
 
-    --color-brand: 193 18 31; /* fire-brick */
-    --color-brand-light: 240 90 100; /* fire-brick-700 */
-    --color-brand-accent: 120 0 0; /* barn-red */
-
-    --color-text-primary: 253 240 213; /* papaya-whip */
-    --color-text-secondary: 102 155 188; /* air-superiority-blue */
-    --color-text-muted: 53 95 121; /* air-superiority-blue-300 */
+  .badge {
+    display:inline-flex; align-items:center;
+    padding:.35rem .65rem; border-radius:999px;
+    border:1px solid var(--border); background: rgba(255,255,255,.03);
+    font-size:.8rem; color: var(--muted);
   }
 
   html {

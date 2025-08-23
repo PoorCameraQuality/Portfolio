@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import { DemoOnePager } from '@/lib/demo/types'
+import type { Onepager } from '../_data/onepagers'
 
 interface HeroProps {
-  onepager: DemoOnePager
+  onepager: Onepager
 }
 
 export default function Hero({ onepager }: HeroProps) {
@@ -32,6 +32,17 @@ export default function Hero({ onepager }: HeroProps) {
                 Call Now
               </a>
             )}
+
+            <div className="mt-6">
+              <a
+                href="https://cheaplocalwebsites.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                Get a $15 Website Like This
+              </a>
+            </div>
           </div>
           
           <div className="hero-image">

@@ -1,4 +1,4 @@
-import { DemoOnePager } from '@/lib/demo/types'
+import { Onepager } from '../_data/onepagers'
 import { 
   Phone, 
   Smartphone, 
@@ -19,7 +19,7 @@ import {
 } from 'lucide-react'
 
 interface FeatureListProps {
-  onepager: DemoOnePager
+  onepager: Onepager
 }
 
 const iconMap: Record<string, React.ComponentType<any>> = {
@@ -53,21 +53,17 @@ export default function FeatureList({ onepager }: FeatureListProps) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {onepager.features.map((feature, index) => {
-            const IconComponent = feature.icon ? iconMap[feature.icon] : null
-            
-            return (
-              <div key={index} className="feature-card">
-                {IconComponent && (
-                  <div className="feature-icon">
-                    <IconComponent className="w-6 h-6" />
-                  </div>
-                )}
-                <h3>{feature.title}</h3>
-                <p>{feature.desc}</p>
+          {onepager.features.map((feature, index) => (
+            <div key={index} className="feature-card">
+              <div className="feature-icon">
+                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">{index + 1}</span>
+                </div>
               </div>
-            )
-          })}
+              <h3>{feature}</h3>
+              <p>Professional service for your business needs</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

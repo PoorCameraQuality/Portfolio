@@ -19,41 +19,20 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Braxcraft Portfolio | Creative Developer & Designer',
-    template: '%s | Braxcraft Portfolio'
-  },
-  description: 'Professional portfolio showcasing creative development, design work, and innovative solutions. Explore my projects, skills, and creative process.',
-  keywords: ['portfolio', 'developer', 'designer', 'creative', 'web development', 'UI/UX'],
-  authors: [{ name: 'Braxcraft' }],
-  creator: 'Braxcraft',
+  title: "CheapLocalWebsites.com — $15/mo Local Business Websites",
+  description: "We build and maintain affordable websites for local businesses — plus Google Maps — for just $15/mo.",
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://braxcraft-portfolio.vercel.app',
-    title: 'Braxcraft Portfolio | Creative Developer & Designer',
-    description: 'Professional portfolio showcasing creative development, design work, and innovative solutions.',
-    siteName: 'Braxcraft Portfolio',
+    title: "CheapLocalWebsites.com — $15/mo Local Business Websites",
+    description: "We build and maintain affordable websites for local businesses — plus Google Maps — for just $15/mo.",
+    url: "https://cheaplocalwebsites.com",
+    siteName: "CheapLocalWebsites.com",
+    type: "website"
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Braxcraft Portfolio | Creative Developer & Designer',
-    description: 'Professional portfolio showcasing creative development, design work, and innovative solutions.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
+    card: "summary_large_image",
+    title: "CheapLocalWebsites.com — $15/mo Websites",
+    description: "Affordable small-business websites + Google Maps maintenance."
+  }
 }
 
 export default function RootLayout({
@@ -68,6 +47,20 @@ export default function RootLayout({
         {children}
         <Footer />
         <Analytics />
+        {/* Organization schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "CheapLocalWebsites.com",
+              "url": "https://cheaplocalwebsites.com",
+              "description": "Affordable websites for local businesses, plus Google Maps setup & maintenance.",
+              "areaServed": "Shippensburg, Pennsylvania and surrounding areas"
+            }),
+          }}
+        />
       </body>
     </html>
   )

@@ -18,20 +18,11 @@ export default function Breadcrumb({ items = [] }: BreadcrumbProps) {
             className="flex items-center text-muted hover:text-accent transition-colors"
           >
             <Home className="w-4 h-4 mr-1" />
-            Braxcraft Portfolio
-          </Link>
-          
-          <ChevronRight className="w-4 h-4 text-muted" />
-          
-          <Link 
-            href="/feed-store" 
-            className="text-muted hover:text-accent transition-colors"
-          >
-            Feed Store Example
+            CheapLocalWebsites Portfolio
           </Link>
           
           {items.map((item, index) => (
-            <div key={index} className="flex items-center">
+            <div key={index} className="flex items-center space-x-2">
               <ChevronRight className="w-4 h-4 text-muted" />
               {item.href ? (
                 <Link 
@@ -41,7 +32,7 @@ export default function Breadcrumb({ items = [] }: BreadcrumbProps) {
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-accent font-medium">{item.label}</span>
+                <span className="text-foreground font-medium">{item.label}</span>
               )}
             </div>
           ))}

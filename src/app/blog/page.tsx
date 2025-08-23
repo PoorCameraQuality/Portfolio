@@ -4,9 +4,8 @@ import { allBlogs } from '../../../.contentlayer/generated'
 import { Calendar, Clock, Tag, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Blog | Benefits of Websites for Small Businesses',
-  description: 'Learn why every small business needs a website in 2025. Expert tips on web presence, SEO, and digital marketing for local businesses.',
-  keywords: ['small business website', 'local business SEO', 'web design tips', 'digital marketing', 'business website'],
+  title: "Blog | CheapLocalWebsites.com",
+  description: "Tips for small-business websites and local SEO — practical, local-first advice.",
 }
 
 export default function BlogPage() {
@@ -98,6 +97,13 @@ export default function BlogPage() {
               </Link>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section">
+        <div className="container text-center">
+          <a href="/services" className="btn-primary">Get Your $15 Website</a>
         </div>
       </section>
     </main>

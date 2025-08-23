@@ -9,6 +9,7 @@ interface CategoryFilterProps {
 
 export default function CategoryFilter({ categories, onCategoryChange }: CategoryFilterProps) {
   const [activeCategory, setActiveCategory] = useState('All')
+  const pills = Array.from(new Set(['All', ...categories.filter(c => c !== 'All')]))
 
   const handleCategoryClick = (category: string) => {
     setActiveCategory(category)
@@ -17,13 +18,15 @@ export default function CategoryFilter({ categories, onCategoryChange }: Categor
 
   return (
     <div className="filter-pills">
-      {categories.map((category) => (
+      {pills.map((category) => (
         <button
           key={category}
           onClick={() => handleCategoryClick(category)}
           className={`filter-pill ${
             activeCategory === category ? 'active' : ''
           }`}
+          type="button"
+          aria-pressed={activeCategory === category}
         >
           {category}
         </button>

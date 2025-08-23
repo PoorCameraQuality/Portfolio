@@ -1,17 +1,11 @@
-import { DemoOnePager } from '@/lib/demo/types'
-import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react'
+import { MapPin, Phone, Mail } from 'lucide-react'
+import type { Onepager } from '../_data/onepagers'
 
 interface ContactStripProps {
-  onepager: DemoOnePager
+  onepager: Onepager
 }
 
 export default function ContactStrip({ onepager }: ContactStripProps) {
-  const hasContactInfo = onepager.phone || onepager.email || onepager.address
-
-  if (!hasContactInfo) {
-    return null
-  }
-
   return (
     <section className="section">
       <div className="container">
@@ -23,24 +17,16 @@ export default function ContactStrip({ onepager }: ContactStripProps) {
           
           <div className="contact-buttons">
             {onepager.phone && (
-              <a href={`tel:${onepager.phone}`} className="contact-btn">
-                <Phone className="w-5 h-5" />
+              <a href={`tel:${onepager.phone}`} className="btn-primary">
+                <Phone className="w-4 h-4 mr-2" />
                 Call {onepager.phone}
               </a>
             )}
             
             {onepager.email && (
-              <a href={`mailto:${onepager.email}`} className="contact-btn">
-                <Mail className="w-5 h-5" />
+              <a href={`mailto:${onepager.email}`} className="btn-secondary">
+                <Mail className="w-4 h-4 mr-2" />
                 Email Us
-              </a>
-            )}
-            
-            {onepager.address && onepager.mapsUrl && (
-              <a href={onepager.mapsUrl} className="contact-btn secondary" target="_blank" rel="noopener noreferrer">
-                <MapPin className="w-5 h-5" />
-                Get Directions
-                <ExternalLink className="w-4 h-4" />
               </a>
             )}
           </div>
@@ -53,6 +39,17 @@ export default function ContactStrip({ onepager }: ContactStripProps) {
               </p>
             </div>
           )}
+
+          <div className="mt-8">
+            <a
+              href="https://cheaplocalwebsites.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Want a site like this? $15/mo
+            </a>
+          </div>
         </div>
       </div>
     </section>

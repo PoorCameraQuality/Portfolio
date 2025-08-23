@@ -121,11 +121,11 @@ export default function Footer() {
         <div className="border-t border-border pt-8 text-center">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
             <p className="text-blue-800 font-medium mb-2">
-              📸 This is an EXAMPLE SITE for Portfolio Demonstration 📸
+              📸 Demo Site for Portfolio Demonstration 📸
             </p>
             <p className="text-blue-700 text-sm">
-              This photography business website is a demo created to showcase web development skills. 
-              All content, images, and contact information are fictional and for demonstration purposes only.
+              This photography website is a demo created by <a href="https://cheaplocalwebsites.com" target="_blank" rel="noopener" className="underline text-accent">CheapLocalWebsites.com</a> to showcase $15/mo small business sites. 
+              All content, images, and contact info are fictional for demonstration only.
             </p>
           </div>
           
@@ -134,7 +134,7 @@ export default function Footer() {
               Portfolio images are for demonstration purposes. Final site will use licensed imagery 
               or original photos from actual client work.
             </p>
-            <p>© 2024 Capture Life Photography Example Site. All rights reserved.</p>
+            <p>© 2025 CheapLocalWebsites.com — Photography Demo Site.</p>
           </div>
         </div>
       </div>

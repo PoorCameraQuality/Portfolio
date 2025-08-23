@@ -65,6 +65,11 @@
   cursor: pointer;
 }
 
+.theme-dogger .btn-primary:focus-visible {
+  outline: 3px solid var(--d-accent-2);
+  outline-offset: 2px;
+}
+
 .theme-dogger .btn-primary:hover {
   background-color: #1f6b4f;
   transform: translateY(-1px);
@@ -90,6 +95,30 @@
 .theme-dogger .btn-secondary:hover {
   background-color: var(--d-accent);
   color: white;
+}
+
+/* Reviews */
+.theme-dogger .gm-review {
+  border: 1px solid var(--d-border);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--d-card);
+  box-shadow: var(--d-shadow);
+}
+.theme-dogger .gm-stars {
+  display: inline-flex;
+  gap: 2px;
+  margin-left: .5rem;
+}
+.theme-dogger .gm-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--d-accent-2);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
 }
 
 /* Cards */

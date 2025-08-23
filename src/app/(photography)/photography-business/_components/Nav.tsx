@@ -17,14 +17,14 @@ export default function Nav() {
 
   return (
     <nav className="bg-surface border-b border-border sticky top-0 z-50">
-      {/* Enhanced Example Site Banner */}
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-3 text-sm font-bold relative overflow-hidden">
-        <div className="flex items-center justify-center space-x-2">
+      {/* Demo Banner */}
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-3 text-sm font-semibold relative overflow-hidden">
+        <div className="flex items-center justify-center gap-2">
           <AlertTriangle className="w-4 h-4 animate-pulse" />
-          <span>📸 EXAMPLE SITE - Photography Business Demo for Portfolio 📸</span>
+          <span>📸 Demo by CheapLocalWebsites.com — $15/mo websites 📸</span>
           <AlertTriangle className="w-4 h-4 animate-pulse" />
         </div>
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-black/10" />
       </div>
       
       <div className="container">
@@ -96,13 +96,14 @@ export default function Nav() {
               Contact
             </Link>
             
-            {/* Portfolio Link */}
-            <Link 
-              href="/" 
-              className="flex items-center text-blue-600 hover:text-blue-500 transition-colors font-medium"
+            <a 
+              href="https://cheaplocalwebsites.com"
+              target="_blank"
+              rel="noopener"
+              className="flex items-center gap-2 bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-accent/90 transition-colors"
             >
-              ← Back to Portfolio
-            </Link>
+              Get Your $15 Website
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -180,13 +181,15 @@ export default function Nav() {
               </Link>
               
               <div className="pt-2 border-t border-border">
-                <Link 
-                  href="/" 
-                  className="flex items-center text-blue-600 hover:text-blue-500 transition-colors font-medium"
+                <a 
+                  href="https://cheaplocalwebsites.com"
+                  target="_blank"
+                  rel="noopener"
+                  className="flex items-center justify-center gap-2 bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-accent/90 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  ← Back to Portfolio
-                </Link>
+                  Get Your $15 Website
+                </a>
               </div>
             </div>
           </div>

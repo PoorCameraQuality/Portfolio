@@ -5,16 +5,19 @@ import { Product, getProductsByCategory } from '../_data/products'
 import ProductCard from './ProductCard'
 
 interface ProductGridProps {
-  selectedCategory: string
+  category?: string
 }
 
-export default function ProductGrid({ selectedCategory }: ProductGridProps) {
+export default function ProductGrid({ category }: ProductGridProps) {
   const filteredProducts = useMemo(() => {
-    return getProductsByCategory(selectedCategory)
-  }, [selectedCategory])
+    if (!category || category === 'All') {
+      return getProductsByCategory('All')
+    }
+    return getProductsByCategory(category)
+  }, [category])
 
   return (
-    <div>
+    <div aria-live="polite" aria-busy={filteredProducts.length === 0}>
       <div className="product-grid">
         {filteredProducts.map((product) => (
           <ProductCard key={product.slug} product={product} />
@@ -24,6 +27,7 @@ export default function ProductGrid({ selectedCategory }: ProductGridProps) {
       {filteredProducts.length === 0 && (
         <div className="text-center py-12">
           <p className="text-muted text-lg">No products found in this category.</p>
+          <p className="text-sm text-muted mt-2">Tip: Try "All" or another category.</p>
         </div>
       )}
     </div>

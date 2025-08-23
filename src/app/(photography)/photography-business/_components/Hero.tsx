@@ -17,10 +17,10 @@ export default function Hero() {
         }} />
       </div>
       
-      {/* Example Site Banner */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+      {/* Demo Banner */}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20">
         <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-          📸 EXAMPLE SITE - Portfolio Demo 📸
+          Demo by CheapLocalWebsites.com
         </div>
       </div>
       
@@ -62,6 +62,15 @@ export default function Hero() {
               className="btn-secondary text-base px-6 py-3"
             >
               Get in Touch
+            </a>
+            
+            <a 
+              href="https://cheaplocalwebsites.com"
+              target="_blank"
+              rel="noopener"
+              className="btn-secondary text-base px-6 py-3"
+            >
+              Get a $15 Website Like This
             </a>
           </div>
         </div>

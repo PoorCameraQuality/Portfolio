@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Check, MapPin, Clock, Phone, Mail, Globe, Star, ArrowRight, ExternalLink, Building2 } from 'lucide-react'
 import Link from 'next/link'
+import GoogleStyleReviews from "../(demo)/demo/_components/GoogleStyleReviews"; /* reuse the demo component */
 
 const businessInfo = {
   name: 'Sample Business',
@@ -27,6 +28,9 @@ const freeTierFeatures = [
 export default function FreeTierDemoPage() {
   return (
     <main className="min-h-screen bg-gray-50">
+      <div className="bg-yellow-50 text-yellow-900 text-center py-3 border-b border-yellow-200">
+        🚧 Demo site built by <a href="https://cheaplocalwebsites.com" target="_blank" rel="noopener" className="underline">CheapLocalWebsites.com</a> — example only.
+      </div>
       {/* Hero Section - Card showing the actual website */}
       <section className="pt-24 pb-16">
         <div className="container">
@@ -159,6 +163,8 @@ export default function FreeTierDemoPage() {
           </div>
         </div>
       </section>
+
+      <GoogleStyleReviews />
 
       {/* Features Breakdown - Clear cards showing each feature */}
       <section className="py-16 bg-white">
@@ -334,7 +340,9 @@ export default function FreeTierDemoPage() {
       <footer className="py-8 bg-gray-100 border-t border-gray-200">
         <div className="container">
           <div className="text-center text-gray-500">
-            <p>Website by <Link href="/" className="text-blue-600 hover:text-blue-700">BraxCraft</Link> - Free Tier Demo</p>
+            <p>
+              Website demo by <a href="https://cheaplocalwebsites.com" target="_blank" rel="noopener" className="underline">CheapLocalWebsites.com</a>.
+            </p>
           </div>
         </div>
       </footer>

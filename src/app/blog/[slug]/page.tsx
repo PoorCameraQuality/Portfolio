@@ -21,13 +21,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   
   if (!post) {
     return {
-      title: 'Post Not Found',
+      title: "Post not found | CheapLocalWebsites.com",
+      description: "This post no longer exists."
     }
   }
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: `${post.title} | CheapLocalWebsites.com`,
+    description: post.excerpt || "Small business website tips and local SEO.",
     keywords: post.tags,
     openGraph: {
       title: post.title,
@@ -136,10 +137,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             Let's discuss how a professional website can transform your business and attract more customers.
           </p>
           <Link
-            href="/contact"
+            href="/services"
             className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >
-            Book a Free Consultation Today
+            Get Your $15 Website
           </Link>
         </div>
       </article>

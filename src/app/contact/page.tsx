@@ -3,16 +3,16 @@ import ContactForm from '@/components/ContactForm'
 import { Mail, MapPin, Phone, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Get in touch to discuss your next project or just say hello.',
+  title: "Contact | CheapLocalWebsites.com",
+  description: "Let's get your business online for $15/mo.",
 }
 
 const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'hello@braxcraft.com',
-    link: 'mailto:hello@braxcraft.com',
+    value: 'hello@cheaplocalwebsites.com',
+    link: 'mailto:hello@cheaplocalwebsites.com',
   },
   {
     icon: MapPin,
@@ -42,11 +42,10 @@ export default function ContactPage() {
         <div className="container">
           <div className="text-center mb-16 lg:mb-20">
             <h1 className="h1 text-text-primary mb-6">
-              Let's Get Your Business Online
+              Let's get your business online for $15/mo
             </h1>
             <p className="lead text-text-primary/80 max-w-2xl mx-auto">
-              Book a free consultation to talk about your business needs. I'll walk you through the best options, 
-              give you transparent pricing, and get you set up quickly.
+              Tell me about your business — I'll handle the rest.
             </p>
           </div>
 

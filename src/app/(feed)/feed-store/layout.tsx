@@ -29,6 +29,21 @@ export default function FeedStoreLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "CheapLocalWebsites.com",
+              "url": "https://cheaplocalwebsites.com",
+              "sameAs": ["https://cheaplocalwebsites.com"],
+              "description": "$15/month websites for local businesses, including Google Maps setup and maintenance."
+            })
+          }}
+        />
+      </head>
       <body className="theme-feed">
         <div className="min-h-screen flex flex-col">
           <Nav />

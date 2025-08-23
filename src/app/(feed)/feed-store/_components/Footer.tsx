@@ -1,113 +1,97 @@
 import Link from 'next/link'
-import { MapPin, Phone, Mail, Clock, Truck, Package, Shield, Users } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Truck, Package, Shield, Users, ExternalLink } from 'lucide-react'
 
 export default function Footer() {
   return (
     <footer className="bg-surface border-t border-border py-12" id="contact">
       <div className="container">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-accent">Feed Store</h3>
+          <div className="md:col-span-2">
+            <h3 className="text-lg font-semibold mb-2 text-accent">Feed Store (Demo)</h3>
+            <p className="text-xs text-muted mb-2">Example built by CheapLocalWebsites.com</p>
             <p className="text-muted mb-4">
               Your trusted source for farm and feed essentials in Central Pennsylvania. 
               Quality products and expert advice since 1985.
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                <Truck className="w-5 h-5 text-white" />
+              <div className="flex items-center text-sm text-muted">
+                <MapPin className="w-4 h-4 mr-2" />
+                <span>123 Farm Road, Lancaster, PA</span>
               </div>
-              <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                <Package className="w-5 h-5 text-white" />
-              </div>
-              <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                <Shield className="w-5 h-5 text-white" />
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-accent">Contact Us</h3>
-            <div className="space-y-3 text-muted">
-              <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2 text-accent" />
-                <span>123 Farm Road, Central PA 17000</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2 text-accent" />
+              <div className="flex items-center text-sm text-muted">
+                <Phone className="w-4 h-4 mr-2" />
                 <span>(717) 555-0123</span>
               </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2 text-accent" />
-                <span>info@feedstore.com</span>
-              </div>
-              <div className="flex items-center">
-                <Users className="w-4 h-4 mr-2 text-accent" />
-                <span>@feedstorepa</span>
-              </div>
             </div>
           </div>
 
-          {/* Store Hours */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-accent">Store Hours</h3>
-            <div className="space-y-2 text-muted">
-              <div className="flex justify-between">
-                <span>Monday - Friday</span>
-                <span>7AM - 6PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Saturday</span>
-                <span>8AM - 4PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Sunday</span>
-                <span>Closed</span>
-              </div>
-              <div className="pt-2 text-sm">
-                <Clock className="w-4 h-4 inline mr-1 text-accent" />
-                <span>Holiday hours may vary</span>
-              </div>
-            </div>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/feed-store" className="text-muted hover:text-accent transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/feed-store/about" className="text-muted hover:text-accent transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-muted hover:text-accent transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-accent">Services</h3>
-            <div className="space-y-2 text-muted">
-              <p>✓ Local Delivery</p>
-              <p>✓ Bulk Orders</p>
-              <p>✓ Expert Advice</p>
-              <p>✓ Special Orders</p>
-              <p>✓ Product Training</p>
-              <p>✓ Emergency Support</p>
-            </div>
+            <h4 className="font-semibold mb-4">Our Services</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center text-muted">
+                <Truck className="w-4 h-4 mr-2" />
+                <span>Local Delivery</span>
+              </li>
+              <li className="flex items-center text-muted">
+                <Package className="w-4 h-4 mr-2" />
+                <span>Quality Products</span>
+              </li>
+              <li className="flex items-center text-muted">
+                <Shield className="w-4 h-4 mr-2" />
+                <span>Expert Advice</span>
+              </li>
+              <li className="flex items-center text-muted">
+                <Users className="w-4 h-4 mr-2" />
+                <span>Customer Support</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Business Hours */}
         <div className="border-t border-border pt-8 mb-8">
-          <div className="flex flex-wrap justify-center gap-8 text-sm">
-            <Link href="/feed-store" className="text-muted hover:text-accent transition-colors">
-              Home
-            </Link>
-            <Link href="/feed-store#shop" className="text-muted hover:text-accent transition-colors">
-              Shop
-            </Link>
-            <Link href="/feed-store/about" className="text-muted hover:text-accent transition-colors">
-              About Us
-            </Link>
-            <Link href="/feed-store#contact" className="text-muted hover:text-accent transition-colors">
-              Contact
-            </Link>
-            <Link href="/feed-store/privacy" className="text-muted hover:text-accent transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/feed-store/terms" className="text-muted hover:text-accent transition-colors">
-              Terms of Service
-            </Link>
+          <div className="text-center">
+            <h4 className="font-semibold mb-4">Business Hours</h4>
+            <div className="grid md:grid-cols-7 gap-4 text-sm">
+              <div className="text-muted">Mon</div>
+              <div className="text-muted">Tue</div>
+              <div className="text-muted">Wed</div>
+              <div className="text-muted">Thu</div>
+              <div className="text-muted">Fri</div>
+              <div className="text-muted">Sat</div>
+              <div className="text-muted">Sun</div>
+              <div>8AM-6PM</div>
+              <div>8AM-6PM</div>
+              <div>8AM-6PM</div>
+              <div>8AM-6PM</div>
+              <div>8AM-6PM</div>
+              <div>8AM-4PM</div>
+              <div>Closed</div>
+            </div>
           </div>
         </div>
 
@@ -115,7 +99,7 @@ export default function Footer() {
         <div className="border-t border-border pt-8 text-center">
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
             <p className="text-yellow-800 font-medium mb-2">
-              🚧 This is an EXAMPLE SITE for Portfolio Demonstration 🚧
+              🚧 Example Site for Portfolio Demonstration 🚧
             </p>
             <p className="text-yellow-700 text-sm">
               This feed store website is a demo created to showcase web development skills. 
@@ -128,7 +112,17 @@ export default function Footer() {
               Product images and names may reference third-party retailers for demonstration. 
               Final site will use licensed imagery or original photos.
             </p>
-            <p>© 2024 Feed Store Example Site. All rights reserved.</p>
+            <p>© 2025 CheapLocalWebsites.com — Demo site for $15/mo package.</p>
+            <p className="mt-2">
+              <a 
+                href="https://cheaplocalwebsites.com" 
+                target="_blank" 
+                rel="noopener" 
+                className="inline-flex items-center justify-center text-accent underline"
+              >
+                Get your $15 website <ExternalLink className="w-4 h-4 ml-1" />
+              </a>
+            </p>
           </div>
         </div>
       </div>

@@ -9,35 +9,32 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="card group">
-      <div className="relative overflow-hidden rounded-lg mb-4">
-        <Image
-          src={product.image}
-          alt={product.title}
-          width={400}
-          height={400}
-          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-      </div>
-      
-      <div className="space-y-3">
-        <span className="category-pill text-xs">
-          {product.category}
-        </span>
-        
-        <h3 className="text-lg font-semibold group-hover:text-accent transition-colors">
-          {product.title}
-        </h3>
-        
-        <div className="price">
-          ${product.price.toFixed(2)}
+      <Link href={`/feed-store/product/${product.slug}`} className="block">
+        <div className="relative overflow-hidden rounded-lg mb-4">
+          <Image
+            src={product.image}
+            alt={`${product.title} product image`}
+            width={400}
+            height={400}
+            className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
         </div>
-        
-        <Link 
-          href={`/feed-store/product/${product.slug}`}
-          className="btn-secondary w-full justify-center"
-        >
-          View Details
-        </Link>
+      </Link>
+      
+      <div className="p-4">
+        <h3 className="text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
+          <Link href={`/feed-store/product/${product.slug}`}>
+            {product.title}
+          </Link>
+        </h3>
+        <p className="text-muted text-sm mb-3 line-clamp-2">{product.description}</p>
+        <div className="flex items-center justify-between">
+          <span className="text-lg font-bold text-accent">${product.price}</span>
+          <button className="btn-primary text-sm px-4 py-2">
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   )

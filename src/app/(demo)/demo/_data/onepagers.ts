@@ -1,253 +1,161 @@
-import { DemoOnePager } from '@/lib/demo/types'
+export interface Onepager {
+  slug: string
+  title: string
+  tagline: string
+  category: string
+  city: string
+  heroImage: string
+  features: string[]
+  gallery: string[]
+  phone?: string
+  email?: string
+  address?: string
+  ctaLabel?: string
+  ctaHref?: string
+}
 
-export const onepagers: DemoOnePager[] = [
+export const onepagers: Onepager[] = [
   {
-    slug: "happy-paws-grooming",
-    title: "Happy Paws Grooming",
-    tagline: "Gentle care for every coat",
-    category: "pet",
-    city: "Shippensburg, PA",
-    heroImage: "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&h=600&fit=crop",
+    slug: 'elegant-salon',
+    title: 'Elegant Salon & Spa',
+    tagline: 'Professional beauty services in a relaxing atmosphere',
+    category: 'Beauty & Wellness',
+    city: 'Harrisburg, PA',
+    heroImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop',
     features: [
-      { 
-        icon: "phone", 
-        title: "Book by Phone", 
-        desc: "Simple contact-first flow that keeps things easy." 
-      },
-      { 
-        icon: "smartphone", 
-        title: "Mobile Friendly", 
-        desc: "Looks great on every device." 
-      },
-      { 
-        icon: "search", 
-        title: "Show Up on Google", 
-        desc: "Set up for local search and Maps." 
-      },
-      { 
-        icon: "clock", 
-        title: "Flexible Hours", 
-        desc: "Early morning and evening appointments available." 
-      }
+      'Hair styling & coloring',
+      'Manicures & pedicures',
+      'Facial treatments',
+      'Massage therapy',
+      'Bridal party packages',
+      'Gift certificates available'
     ],
     gallery: [
-      { 
-        src: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop", 
-        alt: "Professional dog grooming in progress" 
-      },
-      { 
-        src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop", 
-        alt: "Happy dog after grooming session" 
-      },
-      { 
-        src: "https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=300&fit=crop", 
-        alt: "Grooming tools and equipment" 
-      }
+      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop'
     ],
-    phone: "717-555-0142",
-    email: "hello@happypaws.example",
-    address: "123 Main St, Shippensburg, PA 17257",
-    mapsUrl: "https://maps.google.com/?q=123+Main+St+Shippensburg+PA",
-    ctaLabel: "Book Appointment",
-    ctaHref: "tel:717-555-0142"
+    phone: '(717) 555-0123',
+    email: 'info@elegantsalon.com',
+    address: '123 Main Street, Harrisburg, PA 17101',
+    ctaLabel: 'Book Appointment',
+    ctaHref: '#contact'
   },
   {
-    slug: "cumberland-auto",
-    title: "Cumberland Auto Service",
-    tagline: "Honest repairs, fair prices",
-    category: "auto",
-    city: "Carlisle, PA",
-    heroImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
+    slug: 'cozy-cafe',
+    title: 'Cozy Corner Café',
+    tagline: 'Fresh coffee, homemade pastries, and warm hospitality',
+    category: 'Food & Beverage',
+    city: 'Lancaster, PA',
+    heroImage: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=600&fit=crop',
     features: [
-      { 
-        icon: "wrench", 
-        title: "Full Diagnostics", 
-        desc: "Computer diagnostics to identify issues quickly." 
-      },
-      { 
-        icon: "list", 
-        title: "Service Clarity", 
-        desc: "Clear explanations of what needs to be done." 
-      },
-      { 
-        icon: "phone", 
-        title: "Easy Contact", 
-        desc: "Call or text for estimates and updates." 
-      },
-      { 
-        icon: "shield", 
-        title: "Warranty", 
-        desc: "All work guaranteed with written warranty." 
-      }
+      'Artisan coffee & espresso',
+      'Fresh-baked pastries daily',
+      'Local ingredient sourcing',
+      'Free WiFi for customers',
+      'Outdoor seating available',
+      'Catering services'
     ],
     gallery: [
-      { 
-        src: "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=400&h=300&fit=crop", 
-        alt: "Auto repair shop interior" 
-      },
-      { 
-        src: "https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&h=300&fit=crop", 
-        alt: "Mechanic working on engine" 
-      }
+      'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop'
     ],
-    phone: "717-555-0234",
-    email: "service@cumberlandauto.example",
-    address: "456 Industrial Blvd, Carlisle, PA 17013",
-    mapsUrl: "https://maps.google.com/?q=456+Industrial+Blvd+Carlisle+PA",
-    ctaLabel: "Get Estimate",
-    ctaHref: "tel:717-555-0234"
+    phone: '(717) 555-0456',
+    email: 'hello@cozycorner.com',
+    address: '456 Oak Avenue, Lancaster, PA 17601',
+    ctaLabel: 'View Menu',
+    ctaHref: '#gallery'
   },
   {
-    slug: "main-street-barber",
-    title: "Main Street Barber Shop",
-    tagline: "Classic cuts, modern style",
-    category: "barber",
-    city: "Mechanicsburg, PA",
-    heroImage: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&h=600&fit=crop",
+    slug: 'green-thumb-landscaping',
+    title: 'Green Thumb Landscaping',
+    tagline: 'Transforming outdoor spaces with creativity and care',
+    category: 'Home & Garden',
+    city: 'York, PA',
+    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
     features: [
-      { 
-        icon: "clock", 
-        title: "Walk-ins Welcome", 
-        desc: "No appointment needed, first come first served." 
-      },
-      { 
-        icon: "dollar-sign", 
-        title: "Clear Pricing", 
-        desc: "Simple menu with no hidden fees." 
-      },
-      { 
-        icon: "scissors", 
-        title: "Traditional Cuts", 
-        desc: "Classic barber techniques for all hair types." 
-      },
-      { 
-        icon: "users", 
-        title: "Family Friendly", 
-        desc: "All ages welcome, kids' cuts available." 
-      }
+      'Landscape design & installation',
+      'Lawn maintenance services',
+      'Tree trimming & removal',
+      'Garden design & planting',
+      'Hardscaping & patios',
+      'Seasonal cleanups'
     ],
     gallery: [
-      { 
-        src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=300&fit=crop", 
-        alt: "Barber shop interior with vintage chairs" 
-      },
-      { 
-        src: "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?w=400&h=300&fit=crop", 
-        alt: "Barber tools and equipment" 
-      }
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&h=400&fit=crop'
     ],
-    phone: "717-555-0345",
-    address: "789 Main St, Mechanicsburg, PA 17055",
-    mapsUrl: "https://maps.google.com/?q=789+Main+St+Mechanicsburg+PA",
-    ctaLabel: "Visit Today",
-    ctaHref: "https://maps.google.com/?q=789+Main+St+Mechanicsburg+PA"
+    phone: '(717) 555-0789',
+    email: 'info@greenthumb.com',
+    address: '789 Garden Lane, York, PA 17401',
+    ctaLabel: 'Get Free Estimate',
+    ctaHref: '#contact'
   },
   {
-    slug: "shippensburg-brews",
-    title: "Shippensburg Brews",
-    tagline: "Local coffee, community vibes",
-    category: "cafe",
-    city: "Shippensburg, PA",
-    heroImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&h=600&fit=crop",
+    slug: 'reliable-electric',
+    title: 'Reliable Electric Services',
+    tagline: 'Professional electrical work you can trust',
+    category: 'Home Services',
+    city: 'Reading, PA',
+    heroImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop',
     features: [
-      { 
-        icon: "coffee", 
-        title: "Fresh Roasted", 
-        desc: "Daily fresh coffee roasted locally." 
-      },
-      { 
-        icon: "image", 
-        title: "Photo Gallery", 
-        desc: "See our space and menu items." 
-      },
-      { 
-        icon: "phone", 
-        title: "Easy Contact", 
-        desc: "Call ahead for large orders." 
-      },
-      { 
-        icon: "wifi", 
-        title: "Free WiFi", 
-        desc: "Perfect spot for remote work." 
-      }
+      'Residential electrical work',
+      'Commercial installations',
+      'Emergency repairs 24/7',
+      'Electrical inspections',
+      'LED lighting upgrades',
+      'Generator installations'
     ],
     gallery: [
-      { 
-        src: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=300&fit=crop", 
-        alt: "Coffee shop interior with seating" 
-      },
-      { 
-        src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop", 
-        alt: "Fresh coffee being poured" 
-      },
-      { 
-        src: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=400&h=300&fit=crop", 
-        alt: "Coffee shop counter and menu" 
-      }
+      'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop'
     ],
-    phone: "717-555-0456",
-    email: "hello@shippensburgbrews.example",
-    address: "321 College Ave, Shippensburg, PA 17257",
-    mapsUrl: "https://maps.google.com/?q=321+College+Ave+Shippensburg+PA",
-    ctaLabel: "Visit Cafe",
-    ctaHref: "https://maps.google.com/?q=321+College+Ave+Shippensburg+PA"
+    phone: '(717) 555-0321',
+    email: 'service@reliableelectric.com',
+    address: '321 Power Street, Reading, PA 19601',
+    ctaLabel: 'Schedule Service',
+    ctaHref: '#contact'
   },
   {
-    slug: "petal-and-stem",
-    title: "Petal & Stem",
-    tagline: "Blooms for every occasion",
-    category: "florist",
-    city: "Carlisle, PA",
-    heroImage: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&h=600&fit=crop",
+    slug: 'pet-paradise',
+    title: 'Pet Paradise Grooming',
+    tagline: 'Pampering your pets with love and expertise',
+    category: 'Pet Services',
+    city: 'Allentown, PA',
+    heroImage: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=800&h=600&fit=crop',
     features: [
-      { 
-        icon: "flower", 
-        title: "Seasonal Bouquets", 
-        desc: "Fresh flowers arranged for every season." 
-      },
-      { 
-        icon: "mail", 
-        title: "Simple Inquiry", 
-        desc: "Easy form for custom arrangements." 
-      },
-      { 
-        icon: "clock", 
-        title: "Pickup Times", 
-        desc: "Flexible pickup and delivery options." 
-      },
-      { 
-        icon: "heart", 
-        title: "Special Occasions", 
-        desc: "Weddings, birthdays, and celebrations." 
-      }
+      'Professional pet grooming',
+      'Breed-specific styling',
+      'Nail trimming & ear cleaning',
+      'Flea & tick treatments',
+      'Pet photography sessions',
+      'Grooming supplies shop'
     ],
     gallery: [
-      { 
-        src: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400&h=300&fit=crop", 
-        alt: "Beautiful flower arrangement" 
-      },
-      { 
-        src: "https://images.unsplash.com/photo-1562690868-60bbe7293e94?w=400&h=300&fit=crop", 
-        alt: "Florist working on arrangement" 
-      },
-      { 
-        src: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400&h=300&fit=crop", 
-        alt: "Colorful flower display" 
-      }
+      'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&h=400&fit=crop'
     ],
-    phone: "717-555-0567",
-    email: "orders@petalandstem.example",
-    address: "654 Market St, Carlisle, PA 17013",
-    mapsUrl: "https://maps.google.com/?q=654+Market+St+Carlisle+PA",
-    ctaLabel: "Order Flowers",
-    ctaHref: "mailto:orders@petalandstem.example"
+    phone: '(717) 555-0654',
+    email: 'grooming@petparadise.com',
+    address: '654 Paw Print Way, Allentown, PA 18101',
+    ctaLabel: 'Book Grooming',
+    ctaHref: '#contact'
   }
 ]
 
-export function getAllOnepagers(): DemoOnePager[] {
+export function getAllOnepagers(): Onepager[] {
   return onepagers
 }
 
-export function getOnepagerBySlug(slug: string): DemoOnePager | undefined {
+export function getOnepagerBySlug(slug: string): Onepager | undefined {
   return onepagers.find(onepager => onepager.slug === slug)
 }

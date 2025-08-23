@@ -3,8 +3,8 @@ import { Check, Plus, Star, Zap, Shield, Globe, Smartphone, Search, ArrowRight, 
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Services & Pricing',
-  description: 'Transparent pricing for local business websites. Starter package from $50 upfront + $15/month hosting.',
+  title: "Services & Pricing | CheapLocalWebsites.com",
+  description: "Starter package: $50 setup + $15/mo. Add-ons for ecommerce, bookings, and more.",
 }
 
 const starterPackage = [
@@ -328,6 +328,21 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* Schema: ProfessionalService */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "CheapLocalWebsites.com",
+            "areaServed": "Shippensburg, PA and surrounding towns",
+            "serviceType": ["Website design", "Website maintenance", "Google Maps optimization"],
+            "priceRange": "$15/month",
+          })
+        }}
+      />
     </main>
   )
 }

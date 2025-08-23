@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import { DemoOnePager } from '@/lib/demo/types'
+import { Onepager } from '../_data/onepagers'
 
 interface GalleryProps {
-  onepager: DemoOnePager
+  onepager: Onepager
 }
 
 export default function Gallery({ onepager }: GalleryProps) {
@@ -24,8 +24,8 @@ export default function Gallery({ onepager }: GalleryProps) {
           {onepager.gallery.map((image, index) => (
             <div key={index} className="relative">
               <Image
-                src={image.src}
-                alt={image.alt}
+                src={image}
+                alt={`${onepager.title} gallery image ${index + 1}`}
                 width={400}
                 height={300}
                 className="w-full h-64 object-cover rounded-2xl"

@@ -18,7 +18,7 @@ export default function Breadcrumb({ items = [] }: BreadcrumbProps) {
             className="flex items-center text-muted hover:text-accent transition-colors"
           >
             <Home className="w-4 h-4 mr-1" />
-            Braxcraft Portfolio
+            CheapLocalWebsites Portfolio
           </Link>
           
           <ChevronRight className="w-4 h-4 text-muted" />

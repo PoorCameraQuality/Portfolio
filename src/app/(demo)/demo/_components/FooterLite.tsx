@@ -4,9 +4,9 @@ export default function FooterLite() {
       <div className="container">
         <div className="text-center space-y-4">
           <p>
-            This is a free demo one-pager. For a custom domain, up to 5 pages, 
-            full SEO and ongoing support, upgrade to the Starter Website Package 
-            ($50 setup + $15/month).
+            This is a free demo one-pager by <a href="https://cheaplocalwebsites.com" target="_blank" rel="noopener">CheapLocalWebsites.com</a>.
+            For a custom domain, up to 5 pages, full SEO and ongoing support, upgrade to the Starter Website Package
+            (<strong>$50 setup + $15/month</strong>).
           </p>
           
           <div className="text-sm space-y-2">

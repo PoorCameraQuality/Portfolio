@@ -9,6 +9,22 @@ import { MapPin, Phone, Mail, Instagram, Clock, HelpCircle, CheckCircle, Camera,
 export default function PhotographyBusinessPage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "CheapLocalWebsites.com Photography Demo",
+            "url": "https://cheaplocalwebsites.com/photography-business",
+            "description": "Demo photography site — see how a local photography business could look online for $15/month.",
+            "areaServed": "Central Pennsylvania",
+            "serviceType": ["Wedding Photography", "Portrait Photography", "Event Photography"]
+          })
+        }}
+      />
+      
       <Hero />
       <Stats />
       <Services />
