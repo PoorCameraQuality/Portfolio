@@ -1,0 +1,410 @@
+/* Demo One-Pager Theme - Dogger-inspired */
+.theme-dogger {
+  /* CSS Variables */
+  --d-bg: #fffdf7;
+  --d-ink: #1c1c1c;
+  --d-accent: #2a7f62;      /* pine green */
+  --d-accent-2: #f59e0b;    /* warm amber */
+  --d-muted: #64748b;       /* slate-500 */
+  --d-card: #ffffff;
+  --d-border: #e5e7eb;
+  --d-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --d-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Base styles */
+  background-color: var(--d-bg);
+  color: var(--d-ink);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* Typography */
+.theme-dogger h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--d-ink);
+  margin-bottom: 1rem;
+}
+
+.theme-dogger h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--d-ink);
+  margin-bottom: 1rem;
+}
+
+.theme-dogger h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--d-ink);
+  margin-bottom: 0.75rem;
+}
+
+.theme-dogger p {
+  color: var(--d-muted);
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.theme-dogger .btn-primary {
+  background-color: var(--d-accent);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-dogger .btn-primary:hover {
+  background-color: #1f6b4f;
+  transform: translateY(-1px);
+  box-shadow: var(--d-shadow-lg);
+}
+
+.theme-dogger .btn-secondary {
+  background-color: transparent;
+  color: var(--d-accent);
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  border: 2px solid var(--d-accent);
+  cursor: pointer;
+}
+
+.theme-dogger .btn-secondary:hover {
+  background-color: var(--d-accent);
+  color: white;
+}
+
+/* Cards */
+.theme-dogger .card {
+  background-color: var(--d-card);
+  border-radius: 1.5rem;
+  border: 1px solid var(--d-border);
+  box-shadow: var(--d-shadow);
+  padding: 2rem;
+  transition: all 0.2s;
+}
+
+.theme-dogger .card:hover {
+  box-shadow: var(--d-shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Category chips */
+.theme-dogger .category-chip {
+  background-color: var(--d-accent-2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Contact buttons */
+.theme-dogger .contact-btn {
+  background-color: var(--d-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-dogger .contact-btn:hover {
+  background-color: #1f6b4f;
+  transform: translateY(-1px);
+}
+
+.theme-dogger .contact-btn.secondary {
+  background-color: transparent;
+  color: var(--d-accent);
+  border: 1px solid var(--d-accent);
+}
+
+.theme-dogger .contact-btn.secondary:hover {
+  background-color: var(--d-accent);
+  color: white;
+}
+
+/* Layout utilities */
+.theme-dogger .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.theme-dogger .section {
+  padding: 4rem 0;
+}
+
+.theme-dogger .grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.theme-dogger .grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.theme-dogger .grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.theme-dogger .grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.theme-dogger .grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive grid */
+@media (min-width: 640px) {
+  .theme-dogger .grid-cols-1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .theme-dogger .grid-cols-2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .theme-dogger .grid-cols-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .theme-dogger .grid-cols-2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .theme-dogger .grid-cols-3 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Top bar */
+.theme-dogger .top-bar {
+  background-color: var(--d-card);
+  border-bottom: 1px solid var(--d-border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.theme-dogger .top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-dogger .top-bar a {
+  color: var(--d-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.theme-dogger .top-bar a:hover {
+  color: var(--d-ink);
+}
+
+/* Hero section */
+.theme-dogger .hero {
+  padding: 4rem 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.theme-dogger .hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .theme-dogger .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+.theme-dogger .hero-image {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--d-shadow-lg);
+}
+
+.theme-dogger .hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Feature cards */
+.theme-dogger .feature-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.theme-dogger .feature-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--d-accent-2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Gallery */
+.theme-dogger .gallery {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.theme-dogger .gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.2s;
+}
+
+.theme-dogger .gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* Contact strip */
+.theme-dogger .contact-strip {
+  background-color: var(--d-card);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--d-shadow);
+}
+
+.theme-dogger .contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* Footer */
+.theme-dogger .footer-lite {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--d-border);
+  color: var(--d-muted);
+  font-size: 0.875rem;
+}
+
+.theme-dogger .footer-lite a {
+  color: var(--d-accent);
+  text-decoration: none;
+}
+
+.theme-dogger .footer-lite a:hover {
+  text-decoration: underline;
+}
+
+/* Demo index page */
+.theme-dogger .demo-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.theme-dogger .demo-card {
+  background-color: var(--d-card);
+  border-radius: 1.5rem;
+  border: 1px solid var(--d-border);
+  box-shadow: var(--d-shadow);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.theme-dogger .demo-card:hover {
+  box-shadow: var(--d-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.theme-dogger .demo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.theme-dogger .demo-card-content {
+  padding: 1.5rem;
+}
+
+.theme-dogger .demo-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.theme-dogger .demo-card .city {
+  color: var(--d-muted);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.theme-dogger .demo-card .view-demo {
+  background-color: var(--d-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.theme-dogger .demo-card .view-demo:hover {
+  background-color: #1f6b4f;
+  transform: translateY(-1px);
+}
+
+/* Subtle background pattern */
+.theme-dogger .pattern-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232a7f62' fill-opacity='0.03'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px 60px;
+}

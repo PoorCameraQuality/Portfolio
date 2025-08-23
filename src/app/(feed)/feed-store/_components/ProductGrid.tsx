@@ -1,36 +1,20 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useMemo } from 'react'
 import { Product, getProductsByCategory } from '../_data/products'
 import ProductCard from './ProductCard'
 
 interface ProductGridProps {
-  products: Product[]
+  selectedCategory: string
 }
 
-export default function ProductGrid({ products }: ProductGridProps) {
-  const [selectedCategory, setSelectedCategory] = useState('All')
-  
+export default function ProductGrid({ selectedCategory }: ProductGridProps) {
   const filteredProducts = useMemo(() => {
     return getProductsByCategory(selectedCategory)
   }, [selectedCategory])
 
   return (
     <div>
-      <div className="filter-pills">
-        {['All', 'Poultry', 'Livestock', 'Pet', 'Fencing', 'Tools', 'Garden'].map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`filter-pill ${
-              selectedCategory === category ? 'active' : ''
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-      
       <div className="product-grid">
         {filteredProducts.map((product) => (
           <ProductCard key={product.slug} product={product} />

@@ -28,4 +28,7 @@ export default makeSource({
   contentDirPath: 'src/content',
   documentTypes: [Blog],
   disableImportAliasWarning: true,
+  onSuccess: async (importData) => {
+    console.log('Contentlayer build successful')
+  },
 })

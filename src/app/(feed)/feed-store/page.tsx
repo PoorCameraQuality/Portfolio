@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Hero from './_components/Hero'
 import CategoryFilter from './_components/CategoryFilter'
 import ProductGrid from './_components/ProductGrid'
@@ -5,6 +8,8 @@ import { products, categories } from './_data/products'
 import { MapPin, Phone, Mail, Clock, Star, Quote, Users, Award, Truck } from 'lucide-react'
 
 export default function FeedStorePage() {
+  const [selectedCategory, setSelectedCategory] = useState('All')
+
   return (
     <>
       <Hero />
@@ -18,8 +23,11 @@ export default function FeedStorePage() {
             </p>
           </div>
           
-          <CategoryFilter categories={categories} />
-          <ProductGrid products={products} />
+          <CategoryFilter 
+            categories={categories} 
+            onCategoryChange={setSelectedCategory}
+          />
+          <ProductGrid selectedCategory={selectedCategory} />
         </div>
       </section>
 

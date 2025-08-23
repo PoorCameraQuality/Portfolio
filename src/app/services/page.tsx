@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { Check, Plus, Star, Zap, Shield, Globe, Smartphone, Search, ArrowRight } from 'lucide-react'
+import { Check, Plus, Star, Zap, Shield, Globe, Smartphone, Search, ArrowRight, Calendar, Edit, Share2, Camera, Users } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -289,6 +289,28 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Demo Section */}
+      <section className="section">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="h2 text-text-primary mb-6">
+              See What's Possible
+            </h2>
+            <p className="lead text-text-primary/80">
+              Check out our free demo one-pagers to see how your business could look online. 
+              No commitment, just inspiration.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <Link href="/demo" className="btn-secondary text-lg px-8 py-4 inline-flex items-center gap-2">
+              View Demo One-Pagers
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section bg-surface">
         <div className="container">
@@ -307,54 +329,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </main>
-  )
-}
-
-// Icon components
-function Calendar(props: any) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" />
-    </svg>
-  )
-}
-
-function Edit(props: any) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
-      <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
-    </svg>
-  )
-}
-
-function Share2(props: any) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="18" cy="5" r="3" />
-      <circle cx="6" cy="12" r="3" />
-      <circle cx="18" cy="19" r="3" />
-      <path d="M8.59 13.51l6.83 3.98M8.59 10.49l6.82-3.98" />
-    </svg>
-  )
-}
-
-function Camera(props: any) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
-      <circle cx="12" cy="13" r="4" />
-    </svg>
-  )
-}
-
-function Users(props: any) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M23 21v-2a4 4 0 00-3-3.87" />
-      <path d="M16 3.13a4 4 0 010 7.75" />
-    </svg>
   )
 }
