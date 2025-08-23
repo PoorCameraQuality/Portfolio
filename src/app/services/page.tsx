@@ -150,9 +150,7 @@ export default function ServicesPage() {
                   <h3 className="h3 text-text-primary mb-4">{pkg.name}</h3>
                   <div className="flex items-baseline justify-center space-x-2 mb-2">
                     <span className="text-4xl font-display font-bold text-brand">{pkg.price}</span>
-                    {pkg.price === 'Free' ? (
-                      <span className="text-text-primary/60 text-lg">forever</span>
-                    ) : pkg.price !== 'Custom' ? (
+                    {pkg.price !== 'Free' && pkg.price !== 'Custom' ? (
                       <>
                         <span className="text-text-primary/60">setup</span>
                         <span className="text-2xl font-display font-bold text-text-primary">+</span>
