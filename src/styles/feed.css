@@ -202,18 +202,44 @@
   background-size: 100px 100px;
 }
 
+/* Navigation styles */
+.theme-feed nav {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.theme-feed nav .bg-surface {
+  background: #ffffff !important;
+}
+
+.theme-feed nav .text-ink {
+  color: #1b1b1b !important;
+}
+
+.theme-feed nav .text-muted {
+  color: #6b7280 !important;
+}
+
+.theme-feed nav .border-border {
+  border-color: #e5e7eb !important;
+}
+
 /* Additional component styles */
 .theme-feed .testimonial-card {
-  background: var(--feed-surface);
+  background: #ffffff !important;
   border-radius: 0.75rem;
   padding: 1.5rem;
-  box-shadow: var(--feed-shadow);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.2s;
-  border: 1px solid var(--feed-border);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
 }
 
 .theme-feed .testimonial-card:hover {
-  box-shadow: var(--feed-shadow-lg);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transform: translateY(-2px);
 }
 
@@ -255,23 +281,24 @@
 .theme-feed .timeline-content h3 {
   font-weight: 600;
   margin-bottom: 0.25rem;
+  color: #1b1b1b !important;
 }
 
 .theme-feed .timeline-content p {
-  color: var(--feed-muted);
+  color: #6b7280 !important;
   font-size: 0.875rem;
 }
 
 /* Product page styles */
 .theme-feed .product-image {
-  background: var(--feed-surface);
+  background: #ffffff !important;
   border-radius: 0.75rem;
   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--feed-border);
-  box-shadow: var(--feed-shadow);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .theme-feed .product-features {
@@ -289,10 +316,10 @@
 .theme-feed .quantity-selector {
   width: 100%;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--feed-border);
+  border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
-  background: var(--feed-surface);
-  color: var(--feed-ink);
+  background: #ffffff;
+  color: #1b1b1b;
   font-size: 1rem;
   transition: all 0.2s;
 }
@@ -316,18 +343,19 @@
 }
 
 .theme-feed .quick-info p {
-  color: var(--feed-muted);
+  color: #6b7280;
   font-size: 0.875rem;
   margin-bottom: 0.25rem;
 }
 
 /* Review styles */
 .theme-feed .review-item {
-  background: var(--feed-surface);
+  background: #ffffff !important;
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid var(--feed-border);
-  box-shadow: var(--feed-shadow);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 1rem;
 }
 
 .theme-feed .review-header {
@@ -345,38 +373,39 @@
 .theme-feed .review-author {
   font-weight: 600;
   margin-right: 0.75rem;
+  color: #1b1b1b !important;
 }
 
 .theme-feed .review-date {
-  color: var(--feed-muted);
+  color: #6b7280 !important;
   font-size: 0.875rem;
 }
 
 .theme-feed .review-text {
-  color: var(--feed-muted);
+  color: #6b7280 !important;
   margin-bottom: 0.75rem;
   line-height: 1.6;
 }
 
 .theme-feed .review-verified {
-  color: var(--feed-muted);
+  color: #6b7280 !important;
   font-size: 0.875rem;
   font-style: italic;
 }
 
 /* Related products */
 .theme-feed .related-product {
-  background: var(--feed-surface);
+  background: #ffffff !important;
   border-radius: 0.75rem;
   padding: 1.5rem;
   text-align: center;
-  border: 1px solid var(--feed-border);
-  box-shadow: var(--feed-shadow);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.2s;
 }
 
 .theme-feed .related-product:hover {
-  box-shadow: var(--feed-shadow-lg);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transform: translateY(-2px);
 }
 
@@ -388,10 +417,11 @@
 .theme-feed .related-product h3 {
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #1b1b1b !important;
 }
 
 .theme-feed .related-product p {
-  color: var(--feed-muted);
+  color: #6b7280 !important;
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
 }
@@ -414,7 +444,7 @@
 }
 
 .theme-feed .breadcrumb-item {
-  color: var(--feed-muted);
+  color: #6b7280;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -424,11 +454,11 @@
 }
 
 .theme-feed .breadcrumb-item.active {
-  color: var(--feed-ink);
+  color: #1b1b1b;
   font-weight: 500;
 }
 
 .theme-feed .breadcrumb-separator {
-  color: var(--feed-muted);
+  color: #6b7280;
   margin: 0 0.25rem;
 }
