@@ -71,6 +71,9 @@ export default function CTASection() {
             <Link href="/services" className="btn-ghost text-text-primary border-text-primary/30 hover:bg-surface/20">
               View Packages
             </Link>
+            <Link href="/free-tier-demo" className="btn-ghost text-text-primary border-text-primary/30 hover:bg-surface/20">
+              See Free Demo
+            </Link>
           </motion.div>
 
           {/* Contact info */}

@@ -81,6 +81,11 @@
     --color-text-muted: 53 95 121; /* air-superiority-blue-300 */
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+  }
+
   body {
     @apply bg-bg text-text-primary font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -212,5 +217,18 @@
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Fast scroll behavior - doubles the scroll speed */
+  .scroll-fast {
+    scroll-behavior: smooth;
+    scroll-timeline: auto;
+    scroll-timeline-axis: block;
+  }
+
+  /* Custom scroll timing for faster scrolling */
+  .scroll-fast * {
+    scroll-timeline: inherit;
+    scroll-timeline-axis: inherit;
   }
 }

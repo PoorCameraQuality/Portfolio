@@ -96,13 +96,32 @@ export default function WorkShowcase() {
               variants={itemVariants}
             >
               <div className="relative overflow-hidden rounded-2xl mb-6 group-hover:scale-105 transition-transform duration-300">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={800}
-                  height={600}
-                  className="w-full h-64 object-cover"
-                />
+                {project.external ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block cursor-pointer"
+                  >
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={800}
+                      height={600}
+                      className="w-full h-64 object-cover"
+                    />
+                  </a>
+                ) : (
+                  <Link href={project.link} className="block cursor-pointer">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={800}
+                      height={600}
+                      className="w-full h-64 object-cover"
+                    />
+                  </Link>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-4 right-4 w-10 h-10 bg-brand rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
                   {project.external ? (
@@ -120,9 +139,24 @@ export default function WorkShowcase() {
                   </span>
                 </div>
                 
-                <h3 className="h3 text-text-primary group-hover:text-brand transition-colors duration-200">
-                  {project.title}
-                </h3>
+                {project.external ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <h3 className="h3 text-text-primary group-hover:text-brand transition-colors duration-200 cursor-pointer">
+                      {project.title}
+                    </h3>
+                  </a>
+                ) : (
+                  <Link href={project.link} className="block">
+                    <h3 className="h3 text-text-primary group-hover:text-brand transition-colors duration-200 cursor-pointer">
+                      {project.title}
+                    </h3>
+                  </Link>
+                )}
                 
                 <p className="text-text-primary/80 text-body">
                   {project.description}

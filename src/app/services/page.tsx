@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { Check, Plus, Star, Zap, Shield, Globe, Smartphone, Search } from 'lucide-react'
+import { Check, Plus, Star, Zap, Shield, Globe, Smartphone, Search, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -183,6 +183,19 @@ export default function ServicesPage() {
                 >
                   {pkg.cta}
                 </Link>
+                
+                {/* Add demo link for free tier */}
+                {pkg.name === 'Free Tier' && (
+                  <div className="mt-4 text-center">
+                    <Link
+                      href="/free-tier-demo"
+                      className="text-brand hover:text-brand-light transition-colors text-sm font-medium inline-flex items-center"
+                    >
+                      See Demo Site
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
+                )}
               </div>
             ))}
           </div>
