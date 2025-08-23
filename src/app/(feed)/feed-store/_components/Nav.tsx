@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X, Store, Home, Info, Phone } from 'lucide-react'
+import { ChevronDown, Menu, X, Store, Home, Info, Phone, AlertTriangle } from 'lucide-react'
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -19,17 +19,30 @@ export default function Nav() {
 
   return (
     <nav className="bg-surface border-b border-border sticky top-0 z-50">
-      {/* Example Site Banner */}
-      <div className="bg-accent text-white text-center py-2 text-sm font-medium">
-        🚧 EXAMPLE SITE - Feed Store Demo for Portfolio 🚧
+      {/* Enhanced Example Site Banner */}
+      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-center py-3 text-sm font-bold relative overflow-hidden">
+        <div className="flex items-center justify-center space-x-2">
+          <AlertTriangle className="w-4 h-4 animate-pulse" />
+          <span>🚧 EXAMPLE SITE - Feed Store Demo for Portfolio 🚧</span>
+          <AlertTriangle className="w-4 h-4 animate-pulse" />
+        </div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
       
       <div className="container">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/feed-store" className="flex items-center text-2xl font-bold text-accent">
-            <Store className="w-8 h-8 mr-2" />
-            Feed Store
+          {/* Logo with Example Site Indicator */}
+          <Link href="/feed-store" className="flex items-center group">
+            <div className="relative">
+              <div className="flex items-center text-2xl font-bold text-accent">
+                <Store className="w-8 h-8 mr-2" />
+                Feed Store
+              </div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
+            </div>
+            <span className="ml-2 text-xs text-muted bg-muted/20 px-2 py-1 rounded-full">
+              DEMO
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -73,6 +86,14 @@ export default function Nav() {
             <Link href="/feed-store#contact" className="flex items-center text-ink hover:text-accent transition-colors">
               <Phone className="w-4 h-4 mr-1" />
               Contact
+            </Link>
+            
+            {/* Portfolio Link */}
+            <Link 
+              href="/" 
+              className="flex items-center text-yellow-600 hover:text-yellow-500 transition-colors font-medium"
+            >
+              ← Back to Portfolio
             </Link>
           </div>
 
@@ -131,6 +152,16 @@ export default function Nav() {
                 <Phone className="w-4 h-4 mr-2" />
                 Contact
               </Link>
+              
+              <div className="pt-2 border-t border-border">
+                <Link 
+                  href="/" 
+                  className="flex items-center text-yellow-600 hover:text-yellow-500 transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  ← Back to Portfolio
+                </Link>
+              </div>
             </div>
           </div>
         )}

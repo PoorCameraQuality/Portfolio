@@ -130,12 +130,41 @@
     @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
 
+  /* Smooth scrolling for skills showcase */
+  .skills-scroll-container {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+
+  /* Ensure proper spacing for sections */
   .section {
-    @apply py-20 lg:py-32;
+    padding: 4rem 0;
+  }
+
+  @media (min-width: 1024px) {
+    .section {
+      padding: 6rem 0;
+    }
   }
 
   .section-sm {
-    @apply py-16 lg:py-24;
+    padding: 2rem 0;
+  }
+
+  @media (min-width: 1024px) {
+    .section-sm {
+      padding: 3rem 0;
+    }
   }
 
   .card {

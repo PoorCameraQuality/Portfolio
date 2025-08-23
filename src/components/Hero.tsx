@@ -3,8 +3,80 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
+import { useEffect, useRef } from 'react'
 
 export default function Hero() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current
+    if (!scrollContainer) return
+
+    const scroll = () => {
+      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+        scrollContainer.scrollLeft = 0
+      } else {
+        scrollContainer.scrollLeft += 1
+      }
+    }
+
+    const interval = setInterval(scroll, 50)
+    return () => clearInterval(interval)
+  }, [])
+
+  const skills = [
+    {
+      icon: '💻',
+      title: 'Modern Web Tech',
+      description: 'Built with Next.js, React, and Tailwind CSS for fast, responsive websites'
+    },
+    {
+      icon: '🎨',
+      title: 'Professional Design',
+      description: 'Clean, modern designs that reflect your brand and convert visitors'
+    },
+    {
+      icon: '📱',
+      title: 'Mobile-First',
+      description: 'Every site works perfectly on phones, tablets, and desktops'
+    },
+    {
+      icon: '🔍',
+      title: 'SEO Optimized',
+      description: 'Built to rank well in Google and attract local customers'
+    },
+    {
+      icon: '⚡',
+      title: 'Fast Performance',
+      description: 'Lightning-fast loading times for better user experience'
+    },
+    {
+      icon: '🛡️',
+      title: 'Secure & Reliable',
+      description: 'Professional hosting with security and uptime guarantees'
+    },
+    {
+      icon: '🚀',
+      title: 'Custom Solutions',
+      description: 'Tailored features and functionality for your specific business needs'
+    },
+    {
+      icon: '📊',
+      title: 'Analytics & Insights',
+      description: 'Track performance and understand your customers better'
+    },
+    {
+      icon: '🔄',
+      title: 'Easy Updates',
+      description: 'Simple content management system for ongoing maintenance'
+    },
+    {
+      icon: '💼',
+      title: 'Business Focused',
+      description: 'Designed to generate leads and grow your local business'
+    }
+  ]
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -81,7 +153,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+          className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
@@ -95,12 +167,71 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        {/* Mini-features */}
+        {/* Auto-scrolling Skills Showcase */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto"
+          className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-semibold text-text-primary/80 mb-2">
+              What I Bring to Your Business
+            </h3>
+            <p className="text-text-primary/60 text-sm">
+              Professional web development skills tailored for local businesses
+            </p>
+          </div>
+          
+          <div className="relative">
+            <div 
+              ref={scrollContainerRef}
+              className="flex gap-6 pb-4 overflow-hidden"
+              style={{ scrollBehavior: 'smooth' }}
+            >
+              {skills.map((skill, index) => (
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 w-80 bg-surface/50 backdrop-blur-sm rounded-2xl p-6 border border-surface-light/20 hover:border-brand/30 transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  <div className="text-4xl mb-4">{skill.icon}</div>
+                  <h4 className="text-lg font-semibold text-text-primary mb-2">
+                    {skill.title}
+                  </h4>
+                  <p className="text-text-primary/70 text-sm leading-relaxed">
+                    {skill.description}
+                  </p>
+                </div>
+              ))}
+              {/* Duplicate first few items for seamless loop */}
+              {skills.slice(0, 3).map((skill, index) => (
+                <div 
+                  key={`duplicate-${index}`} 
+                  className="flex-shrink-0 w-80 bg-surface/50 backdrop-blur-sm rounded-2xl p-6 border border-surface-light/20 hover:border-brand/30 transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  <div className="text-4xl mb-4">{skill.icon}</div>
+                  <h4 className="text-lg font-semibold text-text-primary mb-2">
+                    {skill.title}
+                  </h4>
+                  <p className="text-text-primary/70 text-sm leading-relaxed">
+                    {skill.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+            
+            {/* Gradient fade indicators */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-bg to-transparent pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-bg to-transparent pointer-events-none" />
+          </div>
+        </motion.div>
+
+        {/* Mini-features */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
         >
           {[
             { number: 'Show up on', label: 'Google' },
@@ -116,77 +247,6 @@ export default function Hero() {
               </div>
             </div>
           ))}
-        </motion.div>
-
-        {/* Horizontal Scrolling Skills Section */}
-        <motion.div
-          className="mt-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-text-primary/80 mb-2">
-              What I Bring to Your Business
-            </h3>
-            <p className="text-text-primary/60 text-sm">
-              Professional web development skills tailored for local businesses
-            </p>
-          </div>
-          
-          <div className="relative">
-            <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
-              {[
-                {
-                  icon: '💻',
-                  title: 'Modern Web Tech',
-                  description: 'Built with Next.js, React, and Tailwind CSS for fast, responsive websites'
-                },
-                {
-                  icon: '🎨',
-                  title: 'Professional Design',
-                  description: 'Clean, modern designs that reflect your brand and convert visitors'
-                },
-                {
-                  icon: '📱',
-                  title: 'Mobile-First',
-                  description: 'Every site works perfectly on phones, tablets, and desktops'
-                },
-                {
-                  icon: '🔍',
-                  title: 'SEO Optimized',
-                  description: 'Built to rank well in Google and attract local customers'
-                },
-                {
-                  icon: '⚡',
-                  title: 'Fast Performance',
-                  description: 'Lightning-fast loading times for better user experience'
-                },
-                {
-                  icon: '🛡️',
-                  title: 'Secure & Reliable',
-                  description: 'Professional hosting with security and uptime guarantees'
-                }
-              ].map((skill, index) => (
-                <div 
-                  key={index} 
-                  className="flex-shrink-0 w-80 bg-surface/50 backdrop-blur-sm rounded-2xl p-6 border border-surface-light/20 hover:border-brand/30 transition-all duration-300 hover:scale-105"
-                >
-                  <div className="text-4xl mb-4">{skill.icon}</div>
-                  <h4 className="text-lg font-semibold text-text-primary mb-2">
-                    {skill.title}
-                  </h4>
-                  <p className="text-text-primary/70 text-sm leading-relaxed">
-                    {skill.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-            
-            {/* Gradient fade indicators */}
-            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-bg to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-bg to-transparent pointer-events-none" />
-          </div>
         </motion.div>
       </div>
 

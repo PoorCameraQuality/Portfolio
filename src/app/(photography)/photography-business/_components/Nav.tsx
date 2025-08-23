@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X, Camera, Home, Info, Phone, Image, DollarSign } from 'lucide-react'
+import { ChevronDown, Menu, X, Camera, Home, Info, Phone, Image, DollarSign, AlertTriangle } from 'lucide-react'
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -17,17 +17,30 @@ export default function Nav() {
 
   return (
     <nav className="bg-surface border-b border-border sticky top-0 z-50">
-      {/* Example Site Banner */}
-      <div className="bg-accent text-white text-center py-2 text-sm font-medium">
-        📸 EXAMPLE SITE - Photography Business Demo for Portfolio 📸
+      {/* Enhanced Example Site Banner */}
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-3 text-sm font-bold relative overflow-hidden">
+        <div className="flex items-center justify-center space-x-2">
+          <AlertTriangle className="w-4 h-4 animate-pulse" />
+          <span>📸 EXAMPLE SITE - Photography Business Demo for Portfolio 📸</span>
+          <AlertTriangle className="w-4 h-4 animate-pulse" />
+        </div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
       
       <div className="container">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/photography-business" className="flex items-center text-2xl font-bold text-accent">
-            <Camera className="w-8 h-8 mr-2" />
-            Capture Life
+          {/* Logo with Example Site Indicator */}
+          <Link href="/photography-business" className="flex items-center group">
+            <div className="relative">
+              <div className="flex items-center text-2xl font-bold text-accent">
+                <Camera className="w-8 h-8 mr-2" />
+                Capture Life
+              </div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+            </div>
+            <span className="ml-2 text-xs text-muted bg-muted/20 px-2 py-1 rounded-full">
+              DEMO
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -81,6 +94,14 @@ export default function Nav() {
             <Link href="#contact" className="flex items-center text-ink hover:text-accent transition-colors">
               <Phone className="w-4 h-4 mr-1" />
               Contact
+            </Link>
+            
+            {/* Portfolio Link */}
+            <Link 
+              href="/" 
+              className="flex items-center text-blue-600 hover:text-blue-500 transition-colors font-medium"
+            >
+              ← Back to Portfolio
             </Link>
           </div>
 
@@ -157,6 +178,16 @@ export default function Nav() {
                 <Phone className="w-4 h-4 mr-2" />
                 Contact
               </Link>
+              
+              <div className="pt-2 border-t border-border">
+                <Link 
+                  href="/" 
+                  className="flex items-center text-blue-600 hover:text-blue-500 transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  ← Back to Portfolio
+                </Link>
+              </div>
             </div>
           </div>
         )}
