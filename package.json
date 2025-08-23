@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "contentlayer build --exit-code 0 && next dev",
-    "build": "contentlayer build --exit-code 0 && next build",
+    "dev": "npm run contentlayer && next dev",
+    "build": "npm run contentlayer && next build",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "contentlayer": "contentlayer build"
+    "contentlayer": "contentlayer build || exit 0"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
