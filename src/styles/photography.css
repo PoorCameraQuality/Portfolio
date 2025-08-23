@@ -1,15 +1,17 @@
 /* Photography Business Theme - Isolated from main site */
 .theme-photography {
-  /* Custom CSS Variables */
-  --photo-bg: #f8fafc;
-  --photo-surface: #ffffff;
-  --photo-ink: #0f172a;
-  --photo-accent: #7c3aed;   /* vibrant purple */
-  --photo-accent-2: #06b6d4; /* cyan blue */
-  --photo-muted: #64748b;
-  --photo-border: #e2e8f0;
-  --photo-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --photo-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Custom CSS Variables - Updated Color Palette */
+  --photo-bg: #fdfdcb;           /* Light cream background */
+  --photo-surface: #ffffff;      /* White surface */
+  --photo-ink: #2d1b3d;         /* Dark purple for text */
+  --photo-accent: #c54c82;      /* Deep rose - primary accent */
+  --photo-accent-2: #ec729c;    /* Medium rose - secondary accent */
+  --photo-accent-3: #f4aeba;    /* Light rose - tertiary accent */
+  --photo-accent-4: #fdfdcb;    /* Light cream - background accent */
+  --photo-muted: #6b4e71;       /* Muted purple */
+  --photo-border: #f4aeba;      /* Light rose border */
+  --photo-shadow: 0 1px 3px 0 rgba(197, 76, 130, 0.1), 0 1px 2px 0 rgba(197, 76, 130, 0.06);
+  --photo-shadow-lg: 0 20px 25px -5px rgba(197, 76, 130, 0.1), 0 10px 10px -5px rgba(197, 76, 130, 0.04);
   
   /* Override Tailwind variables */
   --bg: var(--photo-bg);
@@ -50,7 +52,7 @@
 }
 
 .theme-photography .btn-primary:hover {
-  background-color: #6d28d9;
+  background-color: #b03d6f;
   transform: translateY(-1px);
   box-shadow: var(--photo-shadow-lg);
 }
@@ -269,7 +271,7 @@
   min-height: 60vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--photo-bg) 0%, #e0e7ff 100%);
+  background: linear-gradient(135deg, var(--photo-accent-4) 0%, var(--photo-accent-3) 100%);
   position: relative;
   overflow: hidden;
   padding: 3rem 0;
@@ -289,7 +291,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c7d2fe' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f4aeba' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   opacity: 0.5;
 }
 
@@ -353,7 +355,7 @@
 .theme-photography .process-number {
   width: 4rem;
   height: 4rem;
-  background-color: var(--photo-accent/20);
+  background-color: var(--photo-accent-3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -366,7 +368,7 @@
 }
 
 .theme-photography .process-step:hover .process-number {
-  background-color: var(--photo-accent/30);
+  background-color: var(--photo-accent-2);
   transform: scale(1.05);
 }
 
@@ -420,7 +422,7 @@
 .theme-photography .timeline-marker {
   width: 3rem;
   height: 3rem;
-  background-color: var(--photo-accent/20);
+  background-color: var(--photo-accent-3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -505,10 +507,10 @@
 }
 
 .theme-photography .quick-response {
-  background: var(--photo-accent/10);
+  background: var(--photo-accent-3);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid var(--photo-accent/20);
+  border: 1px solid var(--photo-accent-2);
 }
 
 .theme-photography .quick-response h4 {
@@ -594,4 +596,55 @@
 .theme-photography .breadcrumb-separator {
   color: var(--photo-muted);
   margin: 0 0.25rem;
+}
+
+/* User-defined color palette classes */
+.first-color { 
+  background: #c54c82; 
+}
+
+.second-color { 
+  background: #ec729c; 
+}
+
+.third-color { 
+  background: #f4aeba; 
+}
+
+.fourth-color { 
+  background: #fdfdcb; 
+}
+
+/* Text color variants for the palette */
+.text-first-color { 
+  color: #c54c82; 
+}
+
+.text-second-color { 
+  color: #ec729c; 
+}
+
+.text-third-color { 
+  color: #f4aeba; 
+}
+
+.text-fourth-color { 
+  color: #fdfdcb; 
+}
+
+/* Border color variants for the palette */
+.border-first-color { 
+  border-color: #c54c82; 
+}
+
+.border-second-color { 
+  border-color: #ec729c; 
+}
+
+.border-third-color { 
+  border-color: #f4aeba; 
+}
+
+.border-fourth-color { 
+  border-color: #fdfdcb; 
 }
