@@ -260,12 +260,13 @@
 
 /* Hero section */
 .theme-photography .hero-section {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, var(--photo-bg) 0%, #e0e7ff 100%);
   position: relative;
   overflow: hidden;
+  padding: 4rem 0;
 }
 
 .theme-photography .hero-section::before {

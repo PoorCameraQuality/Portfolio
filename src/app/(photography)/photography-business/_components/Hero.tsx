@@ -11,18 +11,18 @@ export default function Hero() {
     <section className="hero-section">
       <div className="container relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-accent rounded-full mb-6">
-              <Camera className="w-10 h-10 text-white" />
+          <div className="mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-accent rounded-full mb-4">
+              <Camera className="w-8 h-8 text-white" />
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Capture Life's
             <span className="block text-accent">Precious Moments</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted mb-6 max-w-3xl mx-auto">
             Professional photography services for weddings, portraits, events, and more. 
             Creating timeless memories in Central Pennsylvania.
           </p>
@@ -30,21 +30,21 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={scrollToServices}
-              className="btn-primary text-lg px-8 py-4"
+              className="btn-primary text-base px-6 py-3"
             >
               View Services
             </button>
             
             <a 
               href="#contact" 
-              className="btn-secondary text-lg px-8 py-4"
+              className="btn-secondary text-base px-6 py-3"
             >
               Get in Touch
             </a>
           </div>
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <button 
             onClick={scrollToServices}
             className="inline-flex items-center text-muted hover:text-accent transition-colors"
