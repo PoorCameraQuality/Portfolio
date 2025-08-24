@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter, Poppins } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import SiteNav from './_components/SiteNav'
+import SiteFooter from './_components/SiteFooter'
 import './globals.css'
 
 const inter = Inter({
@@ -11,27 +11,27 @@ const inter = Inter({
   display: 'swap',
 })
 
-const poppins = Poppins({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-poppins',
-  weight: ['300', '400', '500', '600', '700', '800'],
+  weight: ['600', '700'],
+  variable: '--font-playfair',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: "CheapLocalWebsites.com — $15/mo Local Business Websites",
-  description: "We build and maintain affordable websites for local businesses — plus Google Maps — for just $15/mo.",
+  title: "Braxcraft Web Design — Local Business Websites with Heart",
+  description: "We build beautiful, affordable websites for local businesses with a focus on community, sustainability, and authentic connection.",
   openGraph: {
-    title: "CheapLocalWebsites.com — $15/mo Local Business Websites",
-    description: "We build and maintain affordable websites for local businesses — plus Google Maps — for just $15/mo.",
-    url: "https://cheaplocalwebsites.com",
-    siteName: "CheapLocalWebsites.com",
+    title: "Braxcraft Web Design — Local Business Websites with Heart",
+    description: "We build beautiful, affordable websites for local businesses with a focus on community, sustainability, and authentic connection.",
+    url: "https://braxcraftwebdesign.com",
+    siteName: "Braxcraft Web Design",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "CheapLocalWebsites.com — $15/mo Websites",
-    description: "Affordable small-business websites + Google Maps maintenance."
+    title: "Braxcraft Web Design — Local Business Websites with Heart",
+    description: "Beautiful, affordable websites for local businesses with a focus on community and sustainability."
   }
 }
 
@@ -41,11 +41,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className={`${inter.className} antialiased`}>
-        <Navbar />
+        <SiteNav />
         {children}
-        <Footer />
+        <SiteFooter />
         <Analytics />
         {/* Organization schema */}
         <script
@@ -54,9 +54,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "CheapLocalWebsites.com",
-              "url": "https://cheaplocalwebsites.com",
-              "description": "Affordable websites for local businesses, plus Google Maps setup & maintenance.",
+              "name": "Braxcraft Web Design",
+              "url": "https://braxcraftwebdesign.com",
+              "description": "We build beautiful, affordable websites for local businesses with a focus on community, sustainability, and authentic connection.",
               "areaServed": "Shippensburg, Pennsylvania and surrounding areas"
             }),
           }}

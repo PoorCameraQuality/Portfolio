@@ -38,50 +38,50 @@ export default function Navbar() {
           : 'bg-transparent'
       )}
       style={{
-        backgroundColor: scrolled ? 'rgba(211, 214, 219, 0.95)' : 'transparent',
-        boxShadow: scrolled ? '0 12px 28px rgba(58, 71, 80, 0.15)' : 'none'
+        backgroundColor: scrolled ? 'rgba(246, 243, 238, 0.95)' : 'transparent',
+        boxShadow: scrolled ? '0 6px 18px rgba(20,20,20,.08)' : 'none'
       }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+        <div className="flex items-center justify-center h-20 lg:h-24">
+          {/* Logo - Centered */}
+          <Link href="/" className="flex items-center space-x-3">
             <motion.div
-              className="w-8 h-8 rounded-lg flex items-center justify-center"
-              style={{ backgroundColor: '#be3144' }}
+              className="w-10 h-10 rounded-xl flex items-center justify-center"
+              style={{ backgroundColor: 'var(--sage)' }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-white font-display font-bold text-sm">B</span>
+              <span className="text-white font-bold text-lg">B</span>
             </motion.div>
-            <span className="font-display font-semibold text-lg" style={{ color: '#303841' }}>
+            <span className="font-bold text-xl" style={{ color: 'var(--ink)' }}>
               Braxcraft
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden lg:flex items-center space-x-8 ml-16">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="transition-colors duration-200 font-medium hover:text-[#be3144]"
-                style={{ color: '#3a4750' }}
+                className="transition-colors duration-200 font-medium hover:text-[var(--sage)]"
+                style={{ color: 'var(--muted)' }}
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* CTA Button - Right side */}
+          <div className="hidden lg:block absolute right-6">
             <Link
               href="/contact"
-              className="px-6 py-3 rounded-full font-bold text-white transition-all duration-200 inline-flex items-center gap-2 hover:bg-[#a02838]"
-              style={{ backgroundColor: '#be3144' }}
+              className="px-6 py-3 rounded-full font-bold text-white transition-all duration-200 inline-flex items-center gap-2 hover:bg-[var(--forest)]"
+              style={{ backgroundColor: 'var(--sage)' }}
             >
               Get In Touch
             </Link>
@@ -90,8 +90,8 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="lg:hidden p-2 transition-colors"
-            style={{ color: '#303841' }}
+            className="lg:hidden absolute right-6 p-2 transition-colors"
+            style={{ color: 'var(--ink)' }}
             onClick={() => setMobileMenuOpen(true)}
           >
             <Menu className="w-6 h-6" />
@@ -111,7 +111,7 @@ export default function Navbar() {
             {/* Backdrop */}
             <motion.div
               className="absolute inset-0 backdrop-blur-md"
-              style={{ backgroundColor: 'rgba(211, 214, 219, 0.95)' }}
+              style={{ backgroundColor: 'rgba(246, 243, 238, 0.95)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -121,21 +121,21 @@ export default function Navbar() {
             {/* Menu content */}
             <motion.div
               className="absolute right-0 top-0 h-full w-80 shadow-large"
-              style={{ backgroundColor: '#f8f9fa' }}
+              style={{ backgroundColor: 'var(--paper)' }}
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             >
               <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between p-6 border-b" style={{ borderColor: 'rgba(58, 71, 80, 0.2)' }}>
-                  <span className="font-display font-semibold text-lg" style={{ color: '#303841' }}>
+                <div className="flex items-center justify-between p-6 border-b" style={{ borderColor: 'var(--border)' }}>
+                  <span className="font-bold text-lg" style={{ color: 'var(--ink)' }}>
                     Menu
                   </span>
                   <button
                     type="button"
                     className="p-2 transition-colors"
-                    style={{ color: '#303841' }}
+                    style={{ color: 'var(--ink)' }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <X className="w-6 h-6" />
@@ -148,8 +148,8 @@ export default function Navbar() {
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="transition-colors duration-200 font-medium text-lg hover:text-[#be3144]"
-                        style={{ color: '#3a4750' }}
+                        className="transition-colors duration-200 font-medium text-lg hover:text-[var(--sage)]"
+                        style={{ color: 'var(--muted)' }}
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
@@ -158,11 +158,11 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                <div className="p-6 border-t" style={{ borderColor: 'rgba(58, 71, 80, 0.2)' }}>
+                <div className="p-6 border-t" style={{ borderColor: 'var(--border)' }}>
                   <Link
                     href="/contact"
-                    className="w-full justify-center px-6 py-3 rounded-full font-bold text-white transition-all duration-200 inline-flex items-center gap-2 hover:bg-[#a02838]"
-                    style={{ backgroundColor: '#be3144' }}
+                    className="w-full justify-center px-6 py-3 rounded-full font-bold text-white transition-all duration-200 inline-flex items-center gap-2 hover:bg-[var(--forest)]"
+                    style={{ backgroundColor: 'var(--sage)' }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Get In Touch
