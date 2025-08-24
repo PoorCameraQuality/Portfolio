@@ -1,6 +1,6 @@
 export default function Mosaic(){
   const tiles = [
-    { title:"Feed Store Demo", img:"https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1200&auto=format&fit=crop", href:"/feed-store" },
+    { title:"Feed Store Demo", img:"https://images.unsplash.com/photo-dPyXl4XKfbY?q=80&w=1200&auto=format&fit=crop", href:"/feed-store" },
     { title:"Photography Demo", img:"https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200&auto=format&fit=crop", href:"/photography-business" },
     { title:"One-Pager Demo", img:"https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=1200&auto=format&fit=crop", href:"/one-pager-demo" },
   ]
