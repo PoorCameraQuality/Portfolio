@@ -10,7 +10,7 @@ export default function TestimonialStrip(){
         {items.map(i=>(
           <div key={i.a} className="px-2">
             <p className="text-xl font-medium mb-3">{i.q}</p>
-            <p className="text-[var(--muted)]">{i.a}</p>
+            <p className="lead" style={{ color: 'var(--muted)' }}>{i.a}</p>
           </div>
         ))}
       </div>

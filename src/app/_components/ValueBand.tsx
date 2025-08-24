@@ -9,8 +9,8 @@ export default function ValueBand(){
       <div className="container py-10 grid md:grid-cols-3 gap-8">
         {items.map((it)=>(
           <div key={it.title}>
-            <div className="font-semibold text-[var(--forest)] mb-1">{it.title}</div>
-            <p className="text-[var(--muted)]">{it.desc}</p>
+            <div className="h2 text-xl mb-1" style={{ color: 'var(--forest)' }}>{it.title}</div>
+            <p className="lead" style={{ color: 'var(--muted)' }}>{it.desc}</p>
           </div>
         ))}
       </div>

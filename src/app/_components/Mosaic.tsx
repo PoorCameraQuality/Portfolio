@@ -9,7 +9,7 @@ export default function Mosaic(){
       <div className="container">
         <div className="text-center mb-8">
           <div className="eyebrow mb-2">Selected Work</div>
-          <h2 className="text-4xl">Calm, handcrafted site styles</h2>
+          <h2 className="h2 text-4xl">Calm, handcrafted site styles</h2>
         </div>
         <div className="mosaic">
           {tiles.map((t,i)=>(
