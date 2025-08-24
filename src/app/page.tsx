@@ -20,7 +20,7 @@ export default function HomePage(){
         ctaHref="/services"
       />
       <AltSection
-        image="/images/parx-casino-google-maps.png"
+        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop"
         eyebrow="Made for local customers"
         title="Hours, directions, and contact — obvious"
         body="Your phone number, address, Google Map, and hours are never buried. We build for foot traffic and phone calls, just like this local business found on Google Maps."

@@ -64,17 +64,14 @@ export default function AboutPage() {
             <div>
               <div className="relative">
                 <div className="w-full h-96 rounded-2xl overflow-hidden flex items-center justify-center" style={{ background: 'linear-gradient(135deg, var(--sage), var(--forest))' }}>
-                  {/* BraxCraft Logo */}
+                  {/* Business/Technology Image */}
                   <div className="text-center">
                     <div className="w-48 h-48 mx-auto mb-6 relative">
-                      {/* BraxCraft Logo Image */}
-                      <Image
-                        src="/braxcraft-logo.png"
-                        alt="BraxCraft Logo - Deer Skull with Antlers and BRAXCRAFT Text"
-                        width={192}
-                        height={192}
-                        className="w-full h-full object-contain"
-                        priority
+                      {/* Business/Technology Image */}
+                      <img
+                        src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=400&auto=format&fit=crop"
+                        alt="Business and Technology - Representing BraxCraft's expertise"
+                        className="w-full h-full object-cover rounded-xl"
                       />
                     </div>
                   </div>
