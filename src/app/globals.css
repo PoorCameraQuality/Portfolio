@@ -24,6 +24,36 @@
     text-wrap: balance;
   }
 
+  /* Text color utilities */
+  .text-muted {
+    color: var(--muted);
+  }
+
+  .text-sage {
+    color: var(--sage);
+  }
+
+  .text-forest {
+    color: var(--forest);
+  }
+
+  .text-soil {
+    color: var(--soil);
+  }
+
+  .text-leaf {
+    color: var(--leaf);
+  }
+
+  /* Shadow utilities */
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow);
+  }
+
   /* Fast scroll behavior - doubles the scroll speed */
   .scroll-fast {
     scroll-behavior: smooth;
@@ -64,6 +94,7 @@
     --card:  #ffffff;
     --shadow: 0 6px 18px rgba(20,20,20,.08);
     --shadow-lg: 0 12px 28px rgba(20,20,20,.12);
+    --shadow-large: 0 20px 40px rgba(20,20,20,.15);
   }
 
   html, body { 

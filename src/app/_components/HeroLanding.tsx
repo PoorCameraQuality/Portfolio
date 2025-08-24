@@ -2,8 +2,8 @@ export default function HeroLanding(){
   return (
     <section className="hero-bleed">
       <img
-        src="https://images.unsplash.com/photo-1523419409543-05ae2320b5c9?q=80&w=1600&auto=format&fit=crop"
-        alt="Local main street"
+        src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1600&auto=format&fit=crop"
+        alt="Open for Biz - Local business signage"
         className="w-full h-[72vh] object-cover"
       />
       <div className="overlay" />

@@ -20,10 +20,10 @@ export default function HomePage(){
         ctaHref="/services"
       />
       <AltSection
-        image="https://images.unsplash.com/photo-1533777333168-21231f97bd2e?q=80&w=1400&auto=format&fit=crop"
+        image="/images/parx-casino-google-maps.png"
         eyebrow="Made for local customers"
         title="Hours, directions, and contact — obvious"
-        body="Your phone number, address, Google Map, and hours are never buried. We build for foot traffic and phone calls."
+        body="Your phone number, address, Google Map, and hours are never buried. We build for foot traffic and phone calls, just like this local business found on Google Maps."
         flip
       />
       <Mosaic />
