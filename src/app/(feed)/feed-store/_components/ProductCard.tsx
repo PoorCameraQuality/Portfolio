@@ -37,9 +37,12 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className="text-[#2c786c] text-sm mb-3 line-clamp-2">{product.description}</p>
         <div className="flex items-center justify-between">
           <span className="text-lg font-bold text-[#f8b400]">${product.price}</span>
-          <button className="btn-primary text-sm px-4 py-2">
-            Add to Cart
-          </button>
+          <Link 
+            href={product.externalUrl} 
+            className="btn-primary text-sm px-4 py-2"
+          >
+            {product.category === 'Web Services' ? 'Get Quote' : 'View Demo'}
+          </Link>
         </div>
       </div>
     </div>

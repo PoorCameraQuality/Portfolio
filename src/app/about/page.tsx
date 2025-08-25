@@ -26,19 +26,19 @@ const timeline = [
   {
     year: '2021 - 2023',
     title: 'Full-Stack Developer',
-    company: 'BraxCraft',
+    company: 'Digital Solutions Inc.',
     description: 'Built scalable web applications and led development teams.',
   },
   {
     year: '2019 - 2021',
     title: 'Frontend Developer',
-    company: 'MMO.TM',
+    company: 'WebCraft Studios',
     description: 'Created responsive websites and interactive user interfaces.',
   },
   {
     year: '2013 - 2016',
     title: 'Junior Developer',
-    company: 'Freelance Dec',
+    company: 'Freelance Development',
     description: 'Started my journey in web development and design.',
   },
 ]
@@ -106,7 +106,7 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-3 gap-6 pt-6">
                 {[
-                  { icon: Users, number: '50+', label: 'Projects Completed' },
+                  { icon: Users, number: '25+', label: 'Projects Completed' },
                   { icon: Award, number: '4 Years', label: 'Experience' },
                   { icon: Clock, number: '2-Week', label: 'Turnaround' },
                 ].map((stat) => (

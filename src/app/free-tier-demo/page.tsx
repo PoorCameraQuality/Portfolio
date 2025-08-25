@@ -6,13 +6,13 @@ import Link from 'next/link'
 import GoogleStyleReviews from "../(demo)/demo/_components/GoogleStyleReviews"; /* reuse the demo component */
 
 const businessInfo = {
-  name: 'Sample Business',
-  tagline: 'Your Local Service Provider',
-  description: 'This is exactly what your free tier website will look like - a simple, professional 1-page site that gets your business online quickly.',
-  hours: 'Mon-Fri: 9AM-6PM | Sat: 10AM-4PM | Sun: Closed',
-  phone: '(555) 123-4567',
-  email: 'info@samplebusiness.com',
-  address: '123 Main Street, Anytown, ST 12345',
+  name: 'Green Valley Landscaping',
+  tagline: 'Professional Landscaping & Garden Care',
+  description: 'Your trusted partner for beautiful outdoor spaces. From lawn maintenance to garden design, we bring your landscape vision to life with quality service and attention to detail.',
+  hours: 'Mon-Fri: 7AM-6PM | Sat: 8AM-4PM | Sun: Closed',
+  phone: '(717) 555-0123',
+  email: 'hello@greenvalleylandscaping.com',
+  address: '456 Garden Lane, Shippensburg, PA 17257',
 }
 
 const freeTierFeatures = [

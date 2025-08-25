@@ -10,64 +10,64 @@ export const metadata: Metadata = {
 
 const allWork = [
   {
-    id: 'unity-synclock',
-    title: 'Unity SyncLock',
-    description: 'A Unity development tool that eliminates dependency headaches by keeping teams in sync with one simple lockfile system. Built for game developers, hackathons, and teams.',
-    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop',
-    tags: ['Unity Tool', 'Dependency Management', 'Game Development'],
-    category: 'Developer Tools',
-    link: 'https://unitysynclockwebsite.vercel.app/',
-    external: true,
-    features: ['Dependency Lockfile', 'UPM + Asset Store', 'Cache Import', 'Game Jam Friendly'],
-    year: '2024',
-    client: 'Unity Developers',
-  },
-  {
-    id: 'feed-store',
-    title: 'Feed Store Website',
-    description: 'Professional website mockup for a local feed store business. Demonstrates e-commerce capabilities, product showcases, and local business optimization.',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
-    tags: ['E-commerce', 'Local Business', 'Product Showcase'],
+    id: 'web-services-demo',
+    title: 'Web Services Showcase',
+    description: 'Comprehensive demo showcasing our website design services and pricing. Features service packages, business examples, and clear pricing structure.',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop',
+    tags: ['Web Services', 'Local Business', 'Service Packages'],
     category: 'Business Websites',
     link: '/feed-store',
     external: false,
-    features: ['Product Catalog', 'Local Delivery', 'Customer Reviews', 'Mobile-First Design'],
+    features: ['Service Showcase', 'Pricing Display', 'Business Examples', 'Mobile-First Design'],
     year: '2024',
-    client: 'Local Feed Store',
+    client: 'Local Business Services',
   },
   {
-    id: 'photography-business',
-    title: 'Photography Business',
-    description: 'Creative business website mockup showcasing portfolio work, service packages, and client testimonials. Perfect for creative service businesses.',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop',
-    tags: ['Portfolio', 'Creative Services', 'Service Packages'],
+    id: 'restaurant-demo',
+    title: 'Local Restaurant Website',
+    description: 'Professional restaurant website demo featuring online menu, hours, location, and delivery options. Perfect for local dining establishments.',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
+    tags: ['Restaurant', 'Local Business', 'Online Menu'],
     category: 'Business Websites',
-    link: '/photography-business',
+    link: '/demo/restaurant',
     external: false,
-    features: ['Portfolio Gallery', 'Service Pricing', 'Client Testimonials', 'Booking System'],
+    features: ['Online Menu', 'Hours & Location', 'Delivery Options', 'Mobile-First Design'],
     year: '2024',
-    client: 'Creative Agency',
+    client: 'Local Restaurant Business',
+  },
+  {
+    id: 'contractor-demo',
+    title: 'Local Contractor Website',
+    description: 'Service business website demo showcasing project portfolio, service areas, and quote request forms. Ideal for construction and home service businesses.',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop',
+    tags: ['Contractor', 'Service Business', 'Portfolio'],
+    category: 'Business Websites',
+    link: '/demo/contractor',
+    external: false,
+    features: ['Project Portfolio', 'Service Areas', 'Quote Requests', 'Customer Testimonials'],
+    year: '2024',
+    client: 'Local Contractor Business',
   },
 ]
 
 const services = [
   {
     icon: Code,
-    title: 'Web Development',
-    description: 'Modern, responsive websites built with cutting-edge technologies like Next.js, React, and TypeScript.',
-    features: ['Custom Development', 'Performance Optimization', 'SEO Integration', 'Mobile-First Design']
+    title: 'Local Business Websites',
+    description: 'Professional websites specifically designed for local businesses with Google Maps integration and local SEO.',
+    features: ['Local SEO', 'Google Maps Setup', 'Mobile-First Design', 'Contact Forms']
   },
   {
     icon: Package,
-    title: 'Business Solutions',
-    description: 'Complete business website solutions including e-commerce, portfolios, and service showcases.',
-    features: ['E-commerce Setup', 'Content Management', 'Analytics Integration', 'Business Optimization']
+    title: 'E-commerce Solutions',
+    description: 'Online stores and product showcases for local businesses to sell products and services.',
+    features: ['Product Catalogs', 'Online Ordering', 'Payment Integration', 'Inventory Management']
   },
   {
     icon: Zap,
-    title: 'Developer Tools',
-    description: 'Specialized tools and utilities for developers, built with modern best practices.',
-    features: ['Tool Development', 'API Integration', 'Performance Tools', 'Developer Experience']
+    title: 'Service Business Sites',
+    description: 'Portfolio and service showcase websites for contractors, salons, and other service businesses.',
+    features: ['Service Showcases', 'Portfolio Galleries', 'Quote Requests', 'Online Booking']
   }
 ]
 
@@ -90,8 +90,8 @@ const process = [
 ]
 
 const stats = [
-  { number: '3+', label: 'Years Experience' },
-  { number: '15+', label: 'Projects Completed' },
+  { number: '4+', label: 'Years Experience' },
+  { number: '25+', label: 'Projects Completed' },
   { number: '100%', label: 'Client Satisfaction' },
   { number: '24/7', label: 'Support Available' }
 ]
@@ -328,18 +328,18 @@ export default function WorkPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a href="/feed-store" className="card p-8 hover:scale-105 transition-transform">
-              <h3 className="text-xl font-bold mb-2">Feed Store Demo</h3>
-              <p className="text-muted">Example ecommerce site for local farm/feed store.</p>
+              <h3 className="text-xl font-bold mb-2">Web Services Demo</h3>
+              <p className="text-muted">See our service packages and pricing for local business websites.</p>
             </a>
-            <a href="/photography-business" className="card p-8 hover:scale-105 transition-transform">
-              <h3 className="text-xl font-bold mb-2">Photography Business Demo</h3>
-              <p className="text-muted">Example service-site for local photographer.</p>
+            <a href="/demo/restaurant" className="card p-8 hover:scale-105 transition-transform">
+              <h3 className="text-xl font-bold mb-2">Restaurant Demo</h3>
+              <p className="text-muted">Example restaurant website with online menu and delivery options.</p>
             </a>
-            <a href="/one-pager-demo" className="card p-8 hover:scale-105 transition-transform">
-              <h3 className="text-xl font-bold mb-2">One-Pager Demo</h3>
-              <p className="text-muted">Basic single-page site ($10 setup + $5/mo) with logo, contact, Google Maps.</p>
+            <a href="/demo/contractor" className="card p-8 hover:scale-105 transition-transform">
+              <h3 className="text-xl font-bold mb-2">Contractor Demo</h3>
+              <p className="text-muted">Example service business site with portfolio and quote requests.</p>
             </a>
           </div>
         </div>

@@ -13,18 +13,20 @@ export default function HomePage(){
       <ValueBand />
       <AltSection
         image="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1400&auto=format&fit=crop"
-        eyebrow="A calm, editorial look"
-        title="Design that feels warm and human"
-        body="We prioritize legibility, soft color, and simple layouts that let your business shine. No clutter — just what locals need."
+        eyebrow="Built for local businesses"
+        title="Websites that drive foot traffic and phone calls"
+        body="We prioritize what local customers need: clear hours, easy directions, contact info, and Google Maps integration. No clutter — just what drives business."
         ctaLabel="See Services"
         ctaHref="/services"
       />
       <AltSection
         image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop"
-        eyebrow="Made for local customers"
-        title="Hours, directions, and contact — obvious"
-        body="Your phone number, address, Google Map, and hours are never buried. We build for foot traffic and phone calls, just like this local business found on Google Maps."
+        eyebrow="Local business focused"
+        title="From restaurants to contractors — we've got you covered"
+        body="See examples of our work with local restaurants, service businesses, and retail shops. Each site is optimized for local search and customer conversion."
         flip
+        ctaLabel="View Demos"
+        ctaHref="/work"
       />
       <Mosaic />
       <TestimonialStrip />

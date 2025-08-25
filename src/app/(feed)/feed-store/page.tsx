@@ -13,16 +13,16 @@ export default function FeedStoreHomePage() {
     <>
       <Hero />
       
-      {/* Shop Section */}
+      {/* Services Section */}
       <section id="shop" className="section bg-surface">
         <div className="container">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-[#004445]">Shop Essentials</h2>
-            <p className="text-lg text-[#2c786c]">Popular categories curated for local needs</p>
+            <h2 className="text-3xl font-bold text-[#004445]">Our Website Services</h2>
+            <p className="text-lg text-[#2c786c]">Professional websites built for local businesses</p>
           </div>
           {/* Expect categories from products data; "All" will be injected by CategoryFilter */}
           <CategoryFilter 
-            categories={['Poultry', 'Livestock', 'Pet', 'Fencing', 'Tools', 'Garden']} 
+            categories={['Web Services', 'Business Examples']} 
             onCategoryChange={(c) => {
               const event = new CustomEvent('feedstore:category', { detail: c })
               window.dispatchEvent(event)
@@ -38,19 +38,19 @@ export default function FeedStoreHomePage() {
       {/* Reviews Section */}
       <GoogleStyleReviews />
 
-      {/* CTA: Get Listed / Contact */}
+      {/* CTA: Get Your Website */}
       <section className="section">
         <div className="container text-center">
-          <h2 className="text-2xl font-bold mb-4 text-[#004445]">Want a site like this for your shop?</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#004445]">Ready for your own website?</h2>
           <p className="text-lg text-[#2c786c] mb-6 max-w-2xl mx-auto">
-            We set up your site, Google Maps, hosting & monthly updates for <strong className="text-[#f8b400]">$15/mo</strong>. No hassle.
+            Get a professional website with Google Maps, hosting & monthly updates starting at <strong className="text-[#f8b400]">$15/mo</strong>. No hassle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://cheaplocalwebsites.com" target="_blank" rel="noopener" className="btn-primary">
-              Get Your $15 Website
+            <a href="/contact" className="btn-primary">
+              Get Free Consultation
             </a>
-            <a href="/#contact" className="btn-secondary">
-              Talk to Us
+            <a href="/services" className="btn-secondary">
+              View All Services
             </a>
           </div>
         </div>

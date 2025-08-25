@@ -18,8 +18,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Feed Store | Farm & Feed Essentials',
-  description: 'Everyday supplies for poultry, livestock, pets, fencing, tools, and garden—curated for local needs.',
+  title: 'Web Services Demo | Braxcraft Web Design',
+  description: 'See examples of our local business website services and pricing. From basic sites to premium packages with e-commerce and booking systems.',
 }
 
 export default function FeedStoreLayout({

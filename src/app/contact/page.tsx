@@ -23,8 +23,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    value: '+1 (555) 123-4567',
-    link: 'tel:+15551234567',
+    value: 'Available upon request',
+    link: null,
   },
   {
     icon: Clock,
